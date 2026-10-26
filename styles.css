@@ -104,14 +104,13 @@ section{position:relative}
 
 /* del almacén a tu negocio */
 .van-world{background:var(--paper)}
-.van-stage{position:relative;min-height:100svh;overflow:hidden;background:var(--paper);display:flex;flex-direction:column;align-items:center;--vw:min(66vw,1060px)}
+.van-stage{position:relative;min-height:100svh;overflow:hidden;background:var(--paper);display:flex;flex-direction:column;align-items:center;--vw:min(54vw,880px)}
 .van-title{position:absolute;left:0;right:0;top:calc(12vh + 50px);text-align:center;font-size:clamp(2.6rem,.6rem + 7.4vw,9rem);white-space:nowrap;font-weight:500;letter-spacing:-.055em;line-height:.9;color:var(--ink);padding:0 var(--m)}
 .van-sub{display:none}
-.van-fig{position:absolute;left:50%;top:calc(13vh + 78px);width:var(--vw);aspect-ratio:1291/689;margin-left:calc(var(--vw) / -2);will-change:transform}
+.van-fig{position:absolute;left:50%;top:calc(13vh + 78px);width:var(--vw);aspect-ratio:963/576;margin-left:calc(var(--vw) / -2);will-change:transform}
 .van-photo{position:absolute;inset:0;filter:drop-shadow(0 18px 22px rgba(20,16,13,.22))} /* taste-skill-ignore: sombra física de la furgoneta */
-.van-img{position:absolute;inset:0;width:100%;height:100%;clip-path:polygon(35.09% 10.16%,32.07% 13.93%,28.51% 20.03%,26.34% 28.45%,24.86% 33.09%,20.45% 38.90%,17.35% 44.41%,14.87% 48.48%,11.00% 52.25%,8.83% 56.89%,7.98% 64.59%,8.29% 72.57%,10.22% 80.70%,12.86% 83.31%,17.51% 84.47%,18.13% 88.53%,20.37% 91.15%,22.85% 91.73%,25.87% 89.40%,27.58% 83.89%,28.51% 79.39%,36.41% 76.78%,42.45% 75.33%,43.38% 72.42%,54.22% 70.39%,65.84% 66.91%,67.23% 70.97%,69.25% 76.63%,73.20% 79.10%,76.53% 77.36%,78.70% 73.00%,78.70% 61.54%,85.21% 60.23%,91.48% 58.93%,92.02% 57.76%,92.02% 13.35%,90.63% 10.16%,87.53% 9.00%,61.97% 8.71%)}
-.van-logo{position:absolute;left:46.5%;top:48%;width:10.5%;height:auto;mix-blend-mode:multiply;transform:rotate(-4.5deg) skewY(-1.5deg);transform-origin:0 0;clip-path:circle(41% at 50% 50%)}
-.van-shadow{position:absolute;left:6%;top:80%;width:80%;height:11%;border-radius:50%;background:rgba(20,16,13,.38);filter:blur(16px);transform:rotate(-5deg)}
+.van-img{position:absolute;inset:0;width:100%;height:100%}
+.van-shadow{position:absolute;left:7%;top:86%;width:84%;height:10%;border-radius:50%;background:rgba(20,16,13,.3);filter:blur(16px);transform:rotate(-3deg)}
 .van-steps{list-style:none;padding:0;position:absolute;left:var(--m);right:var(--m);bottom:clamp(20px,5vh,56px);display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,3vw,48px);max-width:1320px;margin:0 auto}
 .van-step b{display:block;font-size:clamp(2.6rem,1.4rem + 3.6vw,5rem);font-weight:500;letter-spacing:-.05em;line-height:.9;color:var(--red)}
 .van-step h3{font-size:clamp(1.25rem,1rem + .9vw,1.75rem);margin:10px 0 8px;letter-spacing:-.025em}
@@ -214,7 +213,7 @@ form{margin-top:48px;display:grid;gap:10px;grid-template-columns:1fr 1fr 1fr}
   .cafe-stage::after{background:linear-gradient(to top,rgba(14,10,7,.88) 0%,rgba(14,10,7,.35) 70%,rgba(14,10,7,.2) 100%)} /* taste-skill-ignore: velo neutro o sombra física sobre fotografía */
 }
 @media (max-width:640px){
-  .van-stage{--vw:116vw}
+  .van-stage{--vw:104vw}
   .van-title{top:calc(76px + 3vh);white-space:normal;font-size:clamp(2.6rem,13vw,4rem)}
   .van-fig{top:calc(22vh + 40px)}
   .van-steps{grid-template-columns:1fr;bottom:3vh;height:150px}
@@ -223,7 +222,7 @@ form{margin-top:48px;display:grid;gap:10px;grid-template-columns:1fr 1fr 1fr}
   .reco-title{font-size:clamp(1.8rem,9vw,2.6rem)}
   .reco-scene{left:0;right:0;width:100%;top:calc(275px);bottom:calc(26vh)}
   .reco-caps{bottom:calc(8vh + 8px)}
-  .van-stage{--vw:116vw}
+  .van-stage{--vw:104vw}
   .van-title{top:calc(76px + 3vh);white-space:normal;font-size:clamp(2.6rem,13vw,4rem)}
   .van-fig{top:calc(22vh + 40px)}
   .van-steps{grid-template-columns:1fr;bottom:3vh}
