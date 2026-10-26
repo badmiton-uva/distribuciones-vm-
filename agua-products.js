@@ -6,7 +6,7 @@ window.ProductWorld.init({
       eyebrow:'Agua mineral natural', title:'Ligera desde el origen.',
       description:'Bezoya procede de manantiales de Segovia. Su mineralización muy débil acompaña el día a día en distintos formatos.',
       backword:'BEZOYA', bottom:'01 — Agua sin gas',
-      product:{name:'Bezoya · 1,5 L', image:'assets/agua/bezoya-15.jpg', width:1200, height:1200, alt:'Botella Bezoya de 1,5 litros'}
+      product:{name:'Bezoya · 1,5 L', image:'assets/agua/bezoya-cutout.png', width:1254, height:1254, alt:'Botella Bezoya de 1,5 litros'}
     },
     {
       template:'range', family:'Nestlé Aquarel', color:'#e8f3e7', ink:'#194a43',
@@ -22,7 +22,7 @@ window.ProductWorld.init({
       eyebrow:'Agua mineral con gas', title:'La mesa tiene su estrella.',
       description:'La botella de vidrio de S.Pellegrino aporta su silueta inconfundible a la mesa. Un formato de 75 cl pensado para compartir.',
       backword:'ITALIA', bottom:'03 — S.Pellegrino',
-      product:{name:'S.Pellegrino · 75 cl',image:'assets/agua/pellegrino-75.png',width:1000,height:1000,alt:'Botella de vidrio S.Pellegrino de 75 centilitros'}
+      product:{name:'S.Pellegrino · 75 cl',image:'assets/agua/pellegrino-cutout.png',width:1254,height:1254,alt:'Botella de vidrio S.Pellegrino de 75 centilitros'}
     },
     {
       template:'story', family:'Pedras', color:'#dcead3', ink:'#173b30',
