@@ -58,6 +58,9 @@ section{position:relative}
 .vid-frame iframe,.vid-poster{position:absolute;inset:0;width:100%;height:100%;border:0}
 .vid-poster{object-fit:cover;transition:opacity 500ms var(--ease)}
 .vid-ready .vid-poster{opacity:0;pointer-events:none}
+.vid-fallback{position:absolute;left:50%;bottom:7%;transform:translateX(-50%);display:none;padding:14px 24px;border-radius:999px;background:var(--red);color:#fff;text-decoration:none;font-weight:500;white-space:nowrap}
+.vid-fail .vid-fallback{display:inline-flex;gap:10px;z-index:3}
+.vid-fail:not(.vid-ready) .vid-poster{z-index:1}
 
 /* por qué elegirnos */
 .why{padding:clamp(80px,13vw,200px) 0 clamp(64px,10vw,150px);background:var(--paper)}

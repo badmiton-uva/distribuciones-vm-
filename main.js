@@ -63,20 +63,25 @@
     var host = document.getElementById('vid-player');
     if (!host) return Promise.resolve(null);
     var frame = host.parentNode, start = +host.dataset.start || 0, id = host.dataset.id;
+    // si YouTube no responde (bloqueador, red, abrir el archivo en local), se ofrece el enlace directo
+    function fail() { frame.classList.add('vid-fail'); }
+    var failTimer = setTimeout(fail, 9000);
     return loadYT().then(function () {
       return new Promise(function (resolve) {
         var p = new window.YT.Player('vid-player', {
           videoId: id,
           host: 'https://www.youtube-nocookie.com',
-          playerVars: { controls: 1, modestbranding: 1, rel: 0, playsinline: 1, start: start, fs: 1, iv_load_policy: 3 },
+          playerVars: Object.assign({ controls: 1, modestbranding: 1, rel: 0, playsinline: 1, start: start, fs: 1, iv_load_policy: 3 }, /^https?:$/.test(location.protocol) ? { origin: location.origin } : {}),
           events: {
             onReady: function (e) {
+              clearTimeout(failTimer);
               frame.classList.add('vid-ready');
               resolve(e.target);
             },
-            onError: function () { resolve(null); }
+            onError: function () { fail(); resolve(null); }
           }
         });
+
       });
     });
   }
