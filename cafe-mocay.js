@@ -6,7 +6,7 @@
   var spriteSets = media.map(function (item) { return Array.prototype.slice.call(item.querySelectorAll('.m-sprite')); });
   var journey = document.querySelector('.m-journey');
   var index = document.getElementById('m-stage-index');
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var reduce = window.VM_REDUCE || window.matchMedia('(prefers-reduced-motion: reduce)');
   var ticking = false;
   var centers = [];
   var lastActive = -1;

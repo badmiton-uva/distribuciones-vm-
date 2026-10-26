@@ -1,7 +1,7 @@
 (function () {
   'use strict';
   var html = document.documentElement;
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var reduce = window.VM_REDUCE ? window.VM_REDUCE.matches : window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var dbg = location.search;
   window.addEventListener('error', function (e) { window.__err = e.message + ' @' + e.lineno; });
 
