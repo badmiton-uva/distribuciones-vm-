@@ -1,0 +1,17 @@
+.water-world{--red:#007e9f;--cream:#e8f3f3;--dark:#102e39}
+.water-world .pw-opening{background:#e8f3f3}
+.water-world .pw-opening-circle{background:#b8e1df}
+.water-world .pw-opening-word{color:rgba(0,104,137,.12)}
+.water-world .pw-opening-bottle{height:min(67vh,620px);transform:rotate(-6deg);mix-blend-mode:multiply}
+.water-world .pw-opening h1{font-size:clamp(4.2rem,7.2vw,8.6rem)}
+.water-world .pw-a-product,.water-world .pw-b-image img{mix-blend-mode:multiply}
+.water-world .pw-a-ring{border-color:rgba(0,91,108,.3)}
+.water-world .pw-a-ring:after{border-color:rgba(0,91,108,.16)}
+.water-world .pw-b-panel{background:#fff}
+.water-world .pw-b-panel:nth-child(even){background:#fff}
+.water-world .pw-d-frame{color:#173b30}
+.water-world .pw-d-image img{mix-blend-mode:multiply}
+.water-world .pw-end{background:#103746}
+.water-world .pw-end .pw-kicker{color:#8adce0}
+@media(max-width:760px){.water-world .pw-opening-bottle{height:390px}.water-world .pw-d-frame{background:var(--frame-color)}}
+@media(prefers-reduced-motion:reduce){.water-world .pw-d-frame{background:var(--frame-color)}}
