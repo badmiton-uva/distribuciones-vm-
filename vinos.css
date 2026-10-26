@@ -1,0 +1,16 @@
+.wine-world{--red:#9a3d2f;--cream:#f5eddf;--dark:#241c19}
+.wine-world .pw-opening{background:#f5eddf}
+.wine-world .pw-opening-circle{background:#e9b380}
+.wine-world .pw-opening-word{color:rgba(132,62,35,.10)}
+.wine-world .pw-opening-bottle{height:min(73vh,700px);transform:rotate(-7deg);mix-blend-mode:normal}
+.wine-world .pw-opening h1{font-size:clamp(4.3rem,7.5vw,9rem)}
+.wine-world .pw-a-product,.wine-world .pw-b-image img{mix-blend-mode:normal}
+.wine-world .pw-c-item:first-child .pw-c-photo{background:#ede6d7}
+.wine-world .pw-c-item:nth-child(2) .pw-c-photo{background:#e8ded1}
+.wine-world .pw-c-item:nth-child(3) .pw-c-photo{background:#e7e7e4}
+.wine-world .pw-c-item:nth-child(4) .pw-c-photo{background:#e92b50}
+.wine-world .pw-c-item:nth-child(3){margin-top:-5vh}
+.wine-world .pw-d-frame{color:#281c16}
+.wine-world .pw-end{background:#281a19}
+@media(max-width:760px){.wine-world .pw-opening-bottle{height:410px}.wine-world .pw-c-item:nth-child(3){margin-top:0}.wine-world .pw-d-frame{background:var(--frame-color)}}
+@media(prefers-reduced-motion:reduce){.wine-world .pw-d-frame{background:var(--frame-color)}}
