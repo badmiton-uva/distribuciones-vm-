@@ -121,43 +121,14 @@
     mm.add({ desk: '(min-width: 1001px)', mob: '(max-width: 1000px)' }, function (ctx) {
       var mob = ctx.conditions.mob;
 
-      /* café: pantalla fija con caída de granos reales (recortes fotográficos) y profundidad de campo */
-      var rain = document.querySelector('.rain');
-      rain.innerHTML = '';
-      var N = mob ? 16 : 34, beans = [];
-      var seed = 7;
-      function rnd() { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; }
-      for (var i = 0; i < N; i++) {
-        var depth = rnd();                    // 0 lejos, 1 cerca
-        var size = (mob ? 46 : 54) + depth * (mob ? 120 : 190);
-        var img = document.createElement('img');
-        img.src = 'assets/grano-recortado.png'; img.alt = ''; img.className = 'bean';
-        img.width = 438; img.height = 398;
-        img.style.width = size + 'px'; img.style.height = 'auto';
-        var blur = depth > 0.82 ? (depth - 0.82) * 36 : (depth < 0.25 ? (0.25 - depth) * 14 : 0);
-        img.style.filter = 'drop-shadow(0 ' + (10 + depth * 22) + 'px ' + (8 + depth * 14) + 'px rgba(0,0,0,.45)) blur(' + blur.toFixed(1) + 'px) brightness(' + (0.7 + depth * 0.35).toFixed(2) + ')'; // taste-skill-ignore: sombra física del grano
-        rain.appendChild(img);
-        beans.push({ el: img, size: size, depth: depth, x: rnd(), rot: rnd() * 360, spin: (rnd() < 0.5 ? -1 : 1) * (180 + rnd() * 420), flip: rnd() < 0.5 ? -1 : 1, start: rnd() * 5.4, dur: 5.2 - depth * 2.6 });
-      }
-      var tl = gsap.timeline({ scrollTrigger: { trigger: '.cafe', start: 'top top', end: '+=' + (mob ? 220 : 280) + '%', pin: '.cafe-stage', scrub: 0.9, invalidateOnRefresh: true } });
-      tl.fromTo('.cafe-bg', { scale: 1.3, filter: 'brightness(.28) saturate(1)' }, { scale: 1.02, filter: 'brightness(.55) saturate(1.1)', duration: 10, ease: 'none' }, 0);
-      beans.forEach(function (b) {
-        var W = function () { return rain.clientWidth; }, H = function () { return rain.clientHeight; };
-        gsap.set(b.el, { x: function () { return b.x * (W() - b.size * 0.4) - b.size * 0.2; }, scaleX: b.flip, rotation: b.rot });
-        tl.fromTo(b.el, { y: function () { return -b.size * 1.4; } }, { y: function () { return H() + b.size * 0.4; }, rotation: b.rot + b.spin, ease: 'none', duration: b.dur }, b.start);
-      });
-      tl.from('.cafe-copy .big', { y: 70, autoAlpha: 0, duration: 1.6, ease: 'power3.out' }, 0.5);
-      tl.from('.cafe-copy p', { y: 40, autoAlpha: 0, duration: 1.3, ease: 'power3.out' }, 1.2);
-      tl.from('.cafe-copy .actions', { y: 30, autoAlpha: 0, duration: 1.1, ease: 'power3.out' }, 1.8);
-      tl.from('.cafe-card', { x: mob ? 0 : 120, y: mob ? -40 : 0, autoAlpha: 0, rotation: mob ? 0 : 4, duration: 1.6, ease: 'power3.out' }, 3.4);
-      tl.fromTo('.cafe-logo', { autoAlpha: 0, scale: 0.8 }, { autoAlpha: 1, scale: 1, duration: 1.4, ease: 'power3.out' }, 9.6);
-      tl.to({}, { duration: 1.2 });
-      var dc = (/[?&]cafe=([0-9.]+)/.exec(dbg) || [])[1];
-      if (dc) { // depuración: muestra el café en un punto exacto de la línea de tiempo
-        var st = document.createElement('style');
-        st.textContent = 'main>section:not(.cafe),.top,.foot{display:none!important}';
-        document.head.appendChild(st);
-        tl.scrollTrigger.kill(true); tl.progress(parseFloat(dc)); }
+      /* café: bloque informativo sin pin; la caída de granos vive en la página de Café Mocay */
+      gsap.fromTo('.cafe-bg', { scale: 1.18, filter: 'brightness(.4) saturate(1)' }, { scale: 1.02, filter: 'brightness(.55) saturate(1.1)', ease: 'none', scrollTrigger: { trigger: '.cafe', start: 'top bottom', end: 'bottom top', scrub: true } });
+      var ct = gsap.timeline({ scrollTrigger: { trigger: '.cafe', start: 'top 65%', toggleActions: 'play none none reverse' } });
+      ct.from('.cafe-copy .big', { y: 50, autoAlpha: 0, duration: 1, ease: 'power3.out' }, 0)
+        .from('.cafe-copy p', { y: 30, autoAlpha: 0, duration: 0.9, ease: 'power3.out' }, 0.2)
+        .from('.cafe-copy .actions', { y: 24, autoAlpha: 0, duration: 0.8, ease: 'power3.out' }, 0.4)
+        .from('.cafe-card', { x: mob ? 0 : 80, y: mob ? -30 : 0, autoAlpha: 0, rotation: mob ? 0 : 3, duration: 1.1, ease: 'power3.out' }, 0.5)
+        .from('.cafe-logo', { autoAlpha: 0, scale: 0.85, duration: 1, ease: 'power3.out' }, 0.7);
 
       /* zona de reparto: paralaje suave */
       gsap.fromTo('.reparto-photo img', { scale: 1.2, yPercent: -6 }, { scale: 1.02, yPercent: 6, ease: 'none', scrollTrigger: { trigger: '.reparto-photo', start: 'top bottom', end: 'bottom top', scrub: true } });

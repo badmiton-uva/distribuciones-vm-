@@ -209,3 +209,6 @@ button,a{-webkit-tap-highlight-color:transparent}
   .m-stage-media{transition:none!important}
   .m-no-gsap .m-hero-copy>*,.m-no-gsap .m-hero-pack{animation:none}
 }
+
+.m-rain{position:absolute;inset:0;overflow:hidden;z-index:1;pointer-events:none}
+.m-bean{position:absolute;top:0;left:0;max-width:none;will-change:transform}

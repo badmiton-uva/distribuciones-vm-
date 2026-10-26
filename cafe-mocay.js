@@ -78,6 +78,38 @@
   var gsap = window.gsap;
   gsap.registerPlugin(window.ScrollTrigger);
 
+  /* caída de granos al abrir la página: recortes fotográficos con profundidad de campo */
+  (function () {
+    var hero = document.querySelector('.m-hero');
+    if (!hero) return;
+    var mob = window.matchMedia('(max-width: 900px)').matches;
+    var rain = document.createElement('div');
+    rain.className = 'm-rain';
+    rain.setAttribute('aria-hidden', 'true');
+    hero.appendChild(rain);
+    var seed = 7;
+    function rnd() { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; }
+    var count = mob ? 14 : 30, beans = [], maxEnd = 0;
+    for (var i = 0; i < count; i++) {
+      var depth = rnd();
+      var size = (mob ? 38 : 46) + depth * (mob ? 90 : 150);
+      var img = document.createElement('img');
+      img.src = 'assets/grano-recortado.png'; img.alt = ''; img.className = 'm-bean';
+      img.width = 438; img.height = 398;
+      img.style.width = size + 'px'; img.style.height = 'auto';
+      var blur = depth > 0.82 ? (depth - 0.82) * 30 : (depth < 0.25 ? (0.25 - depth) * 12 : 0);
+      img.style.filter = 'drop-shadow(0 ' + (8 + depth * 18) + 'px ' + (6 + depth * 12) + 'px rgba(20,16,13,.32)) blur(' + blur.toFixed(1) + 'px)';
+      rain.appendChild(img);
+      beans.push({ el: img, size: size, x: rnd(), rot: rnd() * 360, spin: (rnd() < 0.5 ? -1 : 1) * (180 + rnd() * 380), flip: rnd() < 0.5 ? -1 : 1, start: 0.3 + rnd() * 3.2, dur: 4.6 - depth * 2.2 });
+    }
+    var W = function () { return rain.clientWidth; }, H = function () { return rain.clientHeight; };
+    var tl = gsap.timeline({ onComplete: function () { rain.parentNode && rain.parentNode.removeChild(rain); } });
+    beans.forEach(function (b) {
+      gsap.set(b.el, { x: b.x * (W() - b.size * 0.4) - b.size * 0.2, scaleX: b.flip, rotation: b.rot });
+      tl.fromTo(b.el, { y: -b.size * 1.4 }, { y: H() + b.size * 0.4, rotation: b.rot + b.spin, ease: 'power1.in', duration: b.dur }, b.start);
+    });
+  })();
+
   gsap.from('.m-hero-copy > *', {
     y: 24, autoAlpha: 0, duration: 1, stagger: .09, ease: 'power3.out', delay: .08
   });
