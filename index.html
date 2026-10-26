@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Distribuciones Valentín · Distribución para hostelería en Medina del Campo</title>
+<meta name="description" content="Alimentación, bebidas y menaje de primeras marcas para hostelería. Distribución desde Medina del Campo, hasta 90 km a la redonda.">
+<meta name="theme-color" content="#14100d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=6">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<header class="top" id="top">
+  <a class="brand" href="#inicio"><img src="assets/logo.png" width="204" height="192" alt="Distribuciones Valentín, inicio"><span>Distribuciones Valentín</span></a>
+  <nav aria-label="Principal"><a href="#inicio">Inicio</a><a href="#catalogo">Catálogo</a><a href="cafe-mocay.html">Café Mocay</a><a href="#reparto">Reparto</a></nav>
+  <a class="btn" href="#contacto">Contactar</a>
+</header>
+
+<main>
+
+<!-- PORTADA -->
+<section class="hero" id="inicio" aria-labelledby="h-hero">
+  <div class="hero-media"><img class="hero-bg" src="assets/portada.jpg" width="1360" height="931" alt="Furgoneta de reparto de caja cerrada frente al Castillo de la Mota, en Medina del Campo" fetchpriority="high"></div>
+  <div class="hero-in">
+    <h1 id="h-hero">Distribución para hostelería</h1>
+    <p class="hero-sub">Alimentación, bebidas y menaje de primeras marcas, desde Medina del Campo y hasta 90 km a la redonda.</p>
+    <div class="actions"><a class="btn" href="#contacto">Pedir información</a><a class="btn ghost" href="#catalogo">Ver el catálogo</a></div>
+  </div>
+  <p class="hero-cap">Castillo de la Mota, Medina del Campo</p>
+  <span class="hero-cue" aria-hidden="true">Desliza</span>
+</section>
+
+<!-- VÍDEO: se reproduce al ritmo del scroll (YouTube, vídeo de cabecera de la web actual) -->
+<section class="vid" id="video" aria-labelledby="h-vid">
+  <div class="vid-stage">
+    <h2 id="h-vid" class="sr">Vídeo de Distribuciones Valentín</h2>
+    <div class="vid-frame">
+      <div id="vid-player" data-id="-XPwp-jmOn0" data-start="11"></div>
+      <img class="vid-poster" src="https://i.ytimg.com/vi/-XPwp-jmOn0/maxresdefault.jpg" alt="" width="1280" height="720" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- POR QUÉ -->
+<section class="why" id="nosotros" aria-labelledby="h-why">
+  <div class="wrap">
+    <h2 id="h-why" class="big">Un solo proveedor para toda tu carta.</h2>
+    <div class="why-grid">
+      <article class="why-item"><h3>Amplia gama de productos</h3><p>Desde café y bebidas hasta menaje, embutidos y conservas, todo en un solo distribuidor.</p></article>
+      <article class="why-item"><h3>Marcas reconocidas</h3><p>Trabajamos con Grupo Leche Pascual, Bodega Palacio de Bornos, Campofrío, Conservas Calvo y más.</p></article>
+      <article class="why-item"><h3>Atención personalizada</h3><p>Servicio profesional adaptado a las necesidades específicas de cada cliente.</p></article>
+      <article class="why-item"><h3>Cobertura local</h3><p>Distribución eficiente en Medina del Campo y comarca, hasta 90 km alrededor.</p></article>
+    </div>
+    <div class="figs">
+      <p class="fig"><b data-count="40">40</b><span>años de experiencia</span></p>
+      <p class="fig"><b data-count="500">500</b><span>clientes satisfechos</span></p>
+      <p class="fig"><b data-count="2000">2000</b><span>productos distribuidos</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ALMACÉN Y FLOTA: sección preparada, se activa cuando haya fotografía o vídeo propios -->
+<section class="almacen" id="almacen" hidden aria-labelledby="h-almacen" data-pendiente="Fotografía o vídeo real del almacén y de los vehículos de reparto">
+  <div class="wrap">
+    <h2 id="h-almacen" class="big">Del almacén a tu negocio.</h2>
+    <div class="media-slot" data-slot="almacen"><!-- <video muted playsinline loop src="assets/almacen/recorrido.mp4" poster="assets/almacen/recorrido.jpg"></video> --></div>
+  </div>
+</section>
+
+<!-- RECORRIDO: escenas ilustradas con zoom y fundido controlados por el scroll.
+     Se muestra solo si existen assets/escenas/escena-1.jpg, escena-2.jpg y escena-3.jpg -->
+<section class="reco" id="recorrido" hidden aria-labelledby="h-reco">
+  <div class="reco-stage">
+    <h2 id="h-reco" class="reco-title">Todo lo que distribuimos, en un solo reparto.</h2>
+    <div class="reco-scenes">
+      <figure class="reco-scene" data-i="0"><img src="assets/escenas/escena-1.jpg" alt="Ilustración de un almacén de distribución con palés, cajas y una furgoneta de reparto" width="1536" height="1024"></figure>
+      <figure class="reco-scene" data-i="1"><img src="assets/escenas/escena-2.jpg" alt="Ilustración de un rincón de café con sacos, granos y estanterías" width="1536" height="1024"></figure>
+      <figure class="reco-scene" data-i="2"><img src="assets/escenas/escena-3.jpg" alt="Ilustración de una bodega con viñedo y barricas" width="1536" height="1024"></figure>
+    </div>
+    <ol class="reco-caps">
+      <li class="reco-cap"><h3>Un solo almacén</h3><p>Café, bebidas, lácteos, conservas, embutidos y menaje en un solo distribuidor.</p></li>
+      <li class="reco-cap"><h3>Café de primera marca</h3><p>Café Mocay para barras y cafeterías.</p></li>
+      <li class="reco-cap"><h3>Vinos de Rueda</h3><p>Bodega Palacio de Bornos, entre las marcas que distribuimos.</p></li>
+    </ol>
+    <div class="reco-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+  </div>
+</section>
+
+<!-- CAFÉ MOCAY -->
+<section class="cafe" id="cafe" aria-labelledby="h-cafe">
+  <div class="cafe-stage">
+    <img class="cafe-bg" src="assets/macro-close-up-look-of-roasted-coffee.jpg" width="1920" height="1280" alt="" loading="lazy">
+    <div class="rain" aria-hidden="true"></div>
+    <img class="cafe-logo" src="assets/marcas/mocay-logo.svg" width="600" height="600" alt="Mocay, maestros del café">
+    <div class="cafe-copy">
+      <h2 id="h-cafe" class="big">Café Mocay</h2>
+      <p>Café de primera marca para barras y cafeterías. Una de las marcas que distribuimos en hostelería.</p>
+      <div class="actions"><a class="btn" href="cafe-mocay.html">Explorar Café Mocay</a><a class="btn ghost" href="#contacto">Consultar café Mocay</a></div>
+    </div>
+    <figure class="cafe-card">
+      <img src="assets/cliente/web-5.jpg" width="512" height="512" loading="lazy" alt="Mocay Academy: manos de un barista preparando café con leche">
+    </figure>
+  </div>
+</section>
+
+<!-- DEL ALMACÉN A TU NEGOCIO: furgoneta controlada por el scroll -->
+<section class="van-world" id="distribucion" aria-labelledby="h-van">
+  <div class="van-stage">
+    <h2 id="h-van" class="van-title">Del almacén a tu negocio.</h2>
+    <p class="van-sub">Distribución profesional para que cada producto llegue a su destino.</p>
+    <div class="van-fig" id="van-fig">
+      <div class="van-shadow" aria-hidden="true"></div>
+      <div class="van-photo">
+        <img class="van-img" src="assets/furgoneta-referencia.jpg" width="1291" height="689" alt="Furgoneta de reparto de caja cerrada, vista de tres cuartos" loading="lazy">
+        <img class="van-logo" src="assets/logo.png" width="204" height="192" alt="" aria-hidden="true">
+      </div>
+    </div>
+    <ol class="van-steps">
+      <li class="van-step"><b>01</b><!-- taste-skill-ignore: numeración pedida por el cliente --><h3>Preparación de pedidos</h3><p>Reunimos en un solo pedido café, bebidas, lácteos, conservas, embutidos, congelados y menaje.</p></li>
+      <li class="van-step"><b>02</b><!-- taste-skill-ignore: numeración pedida por el cliente --><h3>Distribución</h3><p>Reparto en Medina del Campo y comarca, hasta unos 90 km a la redonda.</p></li>
+      <li class="van-step"><b>03</b><!-- taste-skill-ignore: numeración pedida por el cliente --><h3>Atención al cliente</h3><p>Trato cercano y atención personalizada, con un equipo con experiencia para asesorarte.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- CATÁLOGO -->
+<section class="catalogo" id="catalogo" aria-labelledby="h-cat">
+  <div class="wrap">
+    <div class="cat-head">
+      <h2 id="h-cat" class="big">Lo que distribuimos.</h2>
+      <p>Productos de primeras marcas para tu cocina, tu barra y tu sala.</p>
+    </div>
+    <div class="cards">
+      <a class="card card-pack" href="#contacto"><img src="assets/marcas/mocay-cafe-arabica.jpg" width="515" height="515" loading="lazy" alt="Café Mocay Colombia Maestro, bolsa de 1 kg y caja de 6 unidades"><div class="card-in"><h3>Café</h3><p>Café Mocay</p></div></a>
+      <a class="card card-pack" href="#contacto"><img src="assets/marcas/pascual-leche-extra-creme.jpg" width="515" height="515" loading="lazy" alt="Botella de leche Pascual Profesional Extra Crème"><div class="card-in"><h3>Lácteos</h3><p>Grupo Leche Pascual</p></div></a>
+      <a class="card card-pack card-duo" href="#contacto"><span class="duo"><img src="assets/marcas/bornos-verdejo.png" width="187" height="622" loading="lazy" alt="Palacio de Bornos Verdejo"><img src="assets/marcas/bornos-sauvignon-2025.png" width="270" height="612" loading="lazy" alt="Palacio de Bornos Sauvignon Blanc"><img src="assets/marcas/bornos-fermentado.png" width="270" height="612" loading="lazy" alt="Palacio de Bornos Verdejo fermentado en barrica"></span><div class="card-in"><h3>Vinos</h3><p>Bodega Palacio de Bornos</p></div></a>
+      <a class="card card-photo" href="#contacto"><img src="assets/cliente/web-4.jpg" width="911" height="911" loading="lazy" alt="Pedras Salgadas y Pedras Limão"><div class="card-in"><h3>Aguas</h3><p>Pedras Salgadas, Pedras Limão</p></div></a>
+      <a class="card card-pack card-wide" href="#contacto"><img src="assets/marcas/calvo-atun-oliva.png" width="1920" height="916" loading="lazy" alt="Calvo atún claro en aceite de oliva, pack de tres latas"><div class="card-in"><h3>Aceite y conservas</h3><p>Salsas, conservas y AOVE. Conservas Calvo</p></div></a>
+      <a class="card card-pack card-duo2" href="#contacto"><span class="duo2"><img src="assets/marcas/campofrio-chorizo.png" width="600" height="384" loading="lazy" alt="Chorizo Campofrío"><img src="assets/marcas/campofrio-salchichon.png" width="600" height="384" loading="lazy" alt="Salchichón ibérico Campofrío"><img src="assets/marcas/campofrio-jamon-cocido.png" width="624" height="414" loading="lazy" alt="Jamón cocido extra Campofrío"></span><div class="card-in"><h3>Refrigerados</h3><p>Embutidos y refrigerados. Campofrío</p></div></a>
+      <a class="card" href="#contacto"><div class="card-in"><h3>Congelados</h3><p>Gama de congelados para hostelería</p></div></a>
+      <a class="card" href="#contacto"><div class="card-in"><h3>Menaje</h3><p>Vajilla, cubertería, cristalería, mantelería y auxiliar</p></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- REPARTO -->
+<section class="reparto" id="reparto" aria-labelledby="h-rep">
+  <div class="wrap reparto-grid">
+    <div class="reparto-copy">
+      <h2 id="h-rep" class="big">¿Llegamos a tu pueblo?</h2>
+      <p>Repartimos en Medina del Campo y comarca, hasta unos 90 km a la redonda.</p>
+      <label for="loc">Elige tu localidad</label>
+      <select id="loc">
+        <option value="">Selecciona…</option>
+        <option value="14">Rueda</option>
+        <option value="18">Nava del Rey</option>
+        <option value="22">Olmedo</option>
+        <option value="26">Tordesillas</option>
+        <option value="33">Arévalo</option>
+        <option value="45">Valladolid</option>
+        <option value="55">Toro</option>
+        <option value="80">Salamanca</option>
+        <option value="otra">Otra localidad</option>
+      </select>
+      <div class="result" id="res" aria-live="polite"><p>Distancia aproximada por carretera desde Medina del Campo.</p></div>
+    </div>
+    <figure class="reparto-photo"><img src="assets/plaza.jpg" width="1920" height="1440" loading="lazy" alt="Plaza Mayor de la Hispanidad, en el centro de Medina del Campo"></figure>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="contacto" id="contacto" aria-labelledby="h-con">
+  <div class="wrap">
+    <h2 id="h-con" class="big">Hablemos de tu pedido.</h2>
+    <p class="con-sub">Cuéntanos qué necesita tu negocio y te respondemos lo antes posible.</p>
+    <form id="f" novalidate>
+      <label class="cell"><span class="sr">Nombre</span><input name="nombre" placeholder="Nombre *" required autocomplete="name"></label>
+      <label class="cell"><span class="sr">Teléfono o correo electrónico</span><input name="contacto" placeholder="Teléfono o correo" autocomplete="email"></label>
+      <button class="btn send" type="submit">Enviar</button>
+      <label class="cell msg"><span class="sr">Mensaje</span><textarea name="mensaje" placeholder="Mensaje"></textarea></label>
+      <label class="consent"><input type="checkbox" name="ok" required> <span>Acepto que estos datos se almacenen y procesen con el fin de establecer contacto. Soy consciente de que puedo revocar mi consentimiento en cualquier momento. *</span></label>
+      <p class="status" id="st" role="status"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div><img class="foot-logo" src="assets/logo.png" width="204" height="192" alt="Distribuciones Valentín" loading="lazy"><p class="foot-name">Distribuciones Valentín</p><p>Medina del Campo, Valladolid</p></div>
+    <div><p class="foot-h">Contacto</p><p>[teléfono por añadir]</p><p>[correo por añadir]</p><p>[dirección y horario por añadir]</p></div>
+    <nav aria-label="Pie de página"><p class="foot-h">Secciones</p><a href="#catalogo">Catálogo</a><a href="#cafe">Café</a><a href="#reparto">Reparto</a><a href="#contacto">Contacto</a></nav>
+    <div><p class="foot-h">Medina del Campo</p><p>Hora local <b id="clock">--:--</b></p><p><a href="#">Aviso legal</a> · <a href="#">Política de privacidad</a></p></div>
+  </div>
+  <p class="wrap credits">Fotografías: <a href="https://commons.wikimedia.org/wiki/File:Medina_del_Campo_-_Plaza_Mayor_de_la_Hispanidad_07_(2021-05-09).jpg">Plaza Mayor de la Hispanidad</a>, Zarateman, CC0 · <a href="https://commons.wikimedia.org/wiki/File:Macro_close_up_look_of_roasted_coffee_beans.jpg">Granos de café en cuchara</a>, Jameswasswa, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Coffee_Beans_Photographed_in_Macro.jpg">Grano de café (recorte)</a>, Robert Knapp, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>. Imágenes de Pedras y de Mocay Academy: material de la web actual de Distribuciones Valentín. Imágenes de producto de Palacio de Bornos, Calvo, Campofrío, Mocay y Pascual: webs oficiales de cada marca, pendientes de autorización.</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="main.js?v=4" defer></script>
+</body>
+</html>

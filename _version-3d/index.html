@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Distribuciones Valentín · Alimentación y menaje para hostelería en Medina del Campo</title>
+<meta name="description" content="Distribución de café, bebidas, lácteos, conservas, embutidos y menaje para hostelería en Medina del Campo y hasta 90 km a la redonda.">
+<meta name="theme-color" content="#ffffff">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#almacen"><img src="assets/logo.png" width="204" height="192" alt="Distribuciones Valentín, inicio"><span>Distribuciones Valentín</span></a>
+  <nav aria-label="Principal"><a href="#catalogo">Qué distribuimos</a><a href="#nosotros">Quiénes somos</a><a href="#zona">Reparto</a></nav>
+  <a class="btn" href="#contacto">Contactar</a>
+</header>
+
+<section class="story" id="almacen" aria-label="Recorrido por el almacén">
+  <div class="story-pin">
+    <canvas id="gl" aria-hidden="true"></canvas>
+    <img class="story-fallback" src="assets/mota.jpg" width="1920" height="1280" alt="Castillo de la Mota, en Medina del Campo">
+    <div class="chaps">
+      <div class="chap c-hero" data-a="-0.2" data-b="-0.1" data-c="0.07" data-d="0.13">
+        <h1>Alimentación y menaje para hostelería</h1>
+        <p>Distribuimos desde Medina del Campo, con productos de primeras marcas y reparto en un radio de 100 km.</p>
+        <div class="actions"><a class="btn" href="#contacto">Contactar ahora</a><a class="btn alt" href="#catalogo">Ver qué distribuimos</a></div>
+        <p class="hint">Desliza para entrar al almacén</p>
+      </div>
+      <div class="chap c-left" data-a="0.14" data-b="0.17" data-c="0.2" data-d="0.24">
+        <h2>Entra en el almacén</h2>
+        <p>Café, bebidas, lácteos, conservas, embutidos, congelados y menaje, todo en un solo proveedor.</p>
+      </div>
+      <div class="chap c-right" data-a="0.28" data-b="0.31" data-c="0.42" data-d="0.46">
+        <h2>Café Mocay</h2>
+        <p>Café de primera marca para tu barra, servido en grano para hostelería.</p>
+      </div>
+      <div class="chap c-left" data-a="0.55" data-b="0.58" data-c="0.68" data-d="0.72">
+        <h2>Bebidas</h2>
+        <p>Aguas, vinos como los de Bodega Palacio de Bornos y más, para toda la carta.</p>
+      </div>
+      <div class="chap c-right" data-a="0.74" data-b="0.77" data-c="0.80" data-d="0.83">
+        <h2>Y toda la despensa</h2>
+        <ul><li>Lácteos, Grupo Leche Pascual</li><li>Aceite, conservas y salsas</li><li>Embutidos, Campofrío</li><li>Congelados y menaje</li></ul>
+      </div>
+      <div class="chap c-left" data-a="0.82" data-b="0.84" data-c="0.88" data-d="0.91">
+        <h2>Cargamos tu pedido</h2>
+        <p>Cada pedido sale cargado con atención personalizada.</p>
+      </div>
+      <div class="chap c-hero2" data-a="0.93" data-b="0.96" data-c="1.2" data-d="1.3">
+        <h2>Y llegamos a tu puerta</h2>
+        <p>Reparto en Medina del Campo y comarca, hasta 90 km alrededor.</p>
+        <div class="actions"><a class="btn" href="#zona">¿Llegamos a tu pueblo?</a></div>
+      </div>
+    </div>
+    <div class="story-prog" aria-hidden="true"><i id="storyBar"></i></div>
+  </div>
+</section>
+
+<div class="page" id="top">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-cafe" viewBox="0 0 120 120"><path d="M24 48h54v32a22 22 0 0 1-22 22H46a22 22 0 0 1-22-22z" fill="#0f0f0f"/><path d="M78 58h8a13 13 0 0 1 0 26h-8" fill="none" stroke="#0f0f0f" stroke-width="7"/><rect x="14" y="100" width="76" height="8" rx="4" fill="#d4150f"/><path d="M42 36c-6-8 6-12 0-22M62 36c-6-8 6-12 0-22" fill="none" stroke="#d4150f" stroke-width="5" stroke-linecap="round"/></symbol>
+  <symbol id="i-leche" viewBox="0 0 120 120"><path d="M36 28 60 10l24 18z" fill="#c4c4c4"/><rect x="36" y="28" width="48" height="82" rx="4" fill="#fff"/><rect x="36" y="56" width="48" height="30" fill="#d4150f"/><rect x="46" y="64" width="28" height="6" rx="3" fill="#fff"/><rect x="46" y="74" width="18" height="6" rx="3" fill="#fff"/></symbol>
+  <symbol id="i-vino" viewBox="0 0 120 120"><rect x="53" y="6" width="14" height="16" rx="4" fill="#d4150f"/><path d="M53 20h14v22c0 6 12 10 12 24v38a6 6 0 0 1-6 6H47a6 6 0 0 1-6-6V66c0-14 12-18 12-24z" fill="#0f0f0f"/><rect x="41" y="70" width="38" height="28" fill="#fff"/><rect x="48" y="78" width="24" height="5" rx="2.5" fill="#0f0f0f"/><rect x="48" y="87" width="16" height="5" rx="2.5" fill="#d4150f"/></symbol>
+  <symbol id="i-agua" viewBox="0 0 120 120"><rect x="52" y="6" width="16" height="10" rx="3" fill="#d4150f"/><path d="M54 16h12v10c0 6 18 8 18 26v52a8 8 0 0 1-8 8H44a8 8 0 0 1-8-8V52c0-18 18-20 18-26z" fill="#a9c1cf"/><rect x="36" y="64" width="48" height="26" fill="#fff"/><path d="M42 77c6-6 10 6 16 0s10 6 16 0" fill="none" stroke="#a9c1cf" stroke-width="5" stroke-linecap="round"/></symbol>
+  <symbol id="i-aove" viewBox="0 0 120 120"><rect x="48" y="6" width="24" height="12" rx="4" fill="#d4150f"/><path d="M52 18h16v26c0 4 20 8 20 24v32a8 8 0 0 1-8 8H40a8 8 0 0 1-8-8V68c0-16 20-20 20-24z" fill="#6d7d2b"/><rect x="38" y="70" width="44" height="28" rx="3" fill="#fff"/><circle cx="60" cy="84" r="8" fill="#6d7d2b"/></symbol>
+  <symbol id="i-embutido" viewBox="0 0 120 120"><path d="M20 98C20 30 100 30 100 98" fill="none" stroke="#d4150f" stroke-width="24" stroke-linecap="round"/><path d="M38 70l10-8M62 52l4-12M86 68l-10-8" stroke="#fff" stroke-width="5" stroke-linecap="round" fill="none"/><rect x="50" y="8" width="20" height="14" rx="4" fill="#0f0f0f"/><path d="M60 22v10" stroke="#0f0f0f" stroke-width="5"/></symbol>
+  <symbol id="i-congelado" viewBox="0 0 120 120"><g stroke="#6a93aa" stroke-width="7" stroke-linecap="round" fill="none"><path d="M60 12v96M18 36l84 48M18 84l84-48"/><path d="M48 18l12 10 12-10M48 102l12-10 12 10M14 52l16 2-2 16M106 52l-16 2 2 16M14 68l16-2-2-16M106 68l-16-2 2-16"/></g></symbol>
+  <symbol id="i-menaje" viewBox="0 0 120 120"><circle cx="60" cy="62" r="38" fill="#fff"/><circle cx="60" cy="62" r="38" fill="none" stroke="#0f0f0f" stroke-width="6"/><circle cx="60" cy="62" r="22" fill="none" stroke="#c4c4c4" stroke-width="5"/><path d="M10 20v30a6 6 0 0 0 6 6v50M10 20v22M20 20v22" stroke="#0f0f0f" stroke-width="5" stroke-linecap="round" fill="none"/><path d="M110 20c-8 8-8 28 0 36v48" stroke="#d4150f" stroke-width="5" stroke-linecap="round" fill="none"/></symbol>
+</svg>
+
+
+
+
+<section class="board" id="nosotros" aria-labelledby="h-nosotros">
+  <div class="t intro" data-r>
+    <h2 id="h-nosotros">Quiénes somos</h2>
+    <p class="lead">Distribuciones Valentín suministra a hosteleros y establecimientos de Medina del Campo y su comarca productos alimentarios de primeras marcas, menaje de sala y un servicio de reparto eficiente en un radio aproximado de 100 kilómetros.</p>
+    <div class="cols">
+      <p><b>Un servicio integral.</b> Distribución para hostelería y alimentación local, con productos de primeras marcas, trato cercano y atención personalizada. Un equipo con experiencia, disponible para asesorarte sobre las necesidades de suministro de tu negocio.</p>
+      <p><b>Todo en un proveedor.</b> Café, bebidas, lácteos, conservas, embutidos, refrigerados y congelados, además de menaje: vajilla, cubertería, cristalería, mantelería y auxiliar. Una amplia gama para no depender de varios repartos.</p>
+      <p><b>Cerca de ti.</b> Servimos en Medina del Campo y su comarca, hasta unos 90 km alrededor. Si tu establecimiento está en la zona, escríbenos y te confirmamos el reparto.</p>
+      <p><b>Cómo contactar.</b> Rellena el formulario de la parte inferior o utiliza los datos del pie de página. Cuéntanos qué necesitas y te responderemos lo antes posible.</p>
+    </div>
+  </div>
+</section>
+
+<section class="board" id="catalogo" aria-labelledby="h-catalogo">
+  <div class="cat-head" data-r>
+    <h2 id="h-catalogo">Lo que distribuimos</h2>
+    <p>Productos de primeras marcas para tu cocina, tu barra y tu sala, en un solo reparto.</p>
+  </div>
+  <a class="t prod" href="#contacto" data-r style="--i:1"><svg aria-hidden="true"><use href="#i-cafe"/></svg><h3>Café</h3><p>Café Mocay</p></a>
+  <a class="t prod" href="#contacto" data-r style="--i:2"><svg aria-hidden="true"><use href="#i-leche"/></svg><h3>Lácteos</h3><p>Grupo Leche Pascual</p></a>
+  <a class="t prod" href="#contacto" data-r style="--i:3"><svg aria-hidden="true"><use href="#i-vino"/></svg><h3>Vinos</h3><p>Bodega Palacio de Bornos</p></a>
+  <a class="t prod" href="#contacto" data-r style="--i:4"><svg aria-hidden="true"><use href="#i-agua"/></svg><h3>Aguas</h3><p>Aguas para hostelería</p></a>
+  <a class="t prod" href="#contacto" data-r style="--i:1"><svg aria-hidden="true"><use href="#i-aove"/></svg><h3>Aceite y conservas</h3><p>Salsas, conservas y AOVE. Conservas Calvo</p></a>
+  <a class="t prod" href="#contacto" data-r style="--i:2"><svg aria-hidden="true"><use href="#i-embutido"/></svg><h3>Embutidos</h3><p>Refrigerados y embutidos. Campofrío</p></a>
+  <a class="t prod" href="#contacto" data-r style="--i:3"><svg aria-hidden="true"><use href="#i-congelado"/></svg><h3>Congelados</h3><p>Gama de congelados</p></a>
+  <a class="t prod" href="#contacto" data-r style="--i:4"><svg aria-hidden="true"><use href="#i-menaje"/></svg><h3>Menaje</h3><p>Vajilla, cubertería, cristalería, mantelería y auxiliar</p></a>
+  <figure class="t ph shot" data-r><video autoplay muted loop playsinline preload="metadata" poster="assets/kaffe-ystad-2024-poster.jpg" width="854" height="480" aria-label="Granos de café tostado enfriándose en una tostadora"><source src="assets/kaffe-ystad-2024.webm" type="video/webm"></video></figure>
+  <figure class="t ph shot" data-r style="--i:1"><img src="assets/grabado.jpg" width="1800" height="1336" loading="lazy" alt="Grabado antiguo de una almazara: molino de piedra, prensa y barriles de aceite de oliva"></figure>
+  <figure class="t ph shot" data-r style="--i:2"><img src="assets/ferias.jpg" width="1920" height="1440" loading="lazy" alt="Fachada de ladrillo del Museo de las Ferias de Medina del Campo" style="object-position:60% 50%"></figure>
+</section>
+
+<section class="board" aria-labelledby="h-calidad">
+  <div class="t feat-l" data-r>
+    <h2 id="h-calidad"><span>Calidad</span><span>y servicio</span></h2>
+    <div class="foot">
+      <p>Distribuimos con las mejores marcas del mercado, con entrega rápida y atención personalizada al sector hostelero local.</p>
+      <a class="btn" href="#contacto">Contactar</a>
+    </div>
+  </div>
+  <div class="feat-r">
+    <article data-r style="--i:1"><h3>Amplia gama de productos</h3><p>Desde café y bebidas hasta menaje y embutidos, todo en un solo distribuidor.</p><ul><li>Café</li><li>Bebidas</li><li>Menaje</li></ul></article>
+    <article data-r style="--i:2"><h3>Marcas reconocidas</h3><p>Trabajamos con Grupo Leche Pascual, Bodega Palacio de Bornos, Campofrío, Conservas Calvo y más.</p><ul><li>Pascual</li><li>Calvo</li><li>Campofrío</li></ul></article>
+    <article data-r style="--i:3"><h3>Atención personalizada</h3><p>Servicio profesional adaptado a las necesidades específicas de cada cliente.</p><ul><li>Asesoramiento</li><li>Trato cercano</li><li>Equipo con experiencia</li></ul></article>
+    <article data-r style="--i:4"><h3>Cobertura local</h3><p>Distribución eficiente en Medina del Campo y comarca, hasta 90 km alrededor.</p><ul><li>Medina del Campo</li><li>Comarca</li><li>Hasta 90 km</li></ul></article>
+  </div>
+</section>
+
+<section class="board" aria-labelledby="h-cifras">
+  <div class="t stats-h" data-r><h2 id="h-cifras">En cifras</h2></div>
+  <figure class="t ph stat-photo" data-r><img src="assets/mota.jpg" width="1920" height="1280" loading="lazy" alt="Torre del homenaje del Castillo de la Mota"></figure>
+  <div class="t stat a" data-r style="--i:1"><b>40+</b><span>años de experiencia</span></div>
+  <div class="t stat b" data-r style="--i:2"><b>500+</b><span>clientes satisfechos</span></div>
+</section>
+
+<section class="board" aria-labelledby="h-marcas">
+  <div class="t marcas" data-r>
+    <h2 id="h-marcas">Marcas con las que trabajamos</h2>
+    <div class="run" aria-hidden="true">
+      <span>Café Mocay</span><span>Grupo Leche Pascual</span><span>Bodega Palacio de Bornos</span><span>Campofrío</span><span>Conservas Calvo</span>
+      <span>Café Mocay</span><span>Grupo Leche Pascual</span><span>Bodega Palacio de Bornos</span><span>Campofrío</span><span>Conservas Calvo</span>
+    </div>
+    <p class="sr">Café Mocay, Grupo Leche Pascual, Bodega Palacio de Bornos, Campofrío y Conservas Calvo.</p>
+  </div>
+</section>
+
+<section class="board" id="zona" aria-labelledby="h-zona">
+  <div class="t zona-l" data-r>
+    <h2 id="h-zona">¿Llegamos a tu pueblo?</h2>
+    <div>
+      <label for="loc">Elige tu localidad</label>
+      <select id="loc">
+        <option value="">Selecciona…</option>
+        <option value="14">Rueda</option>
+        <option value="18">Nava del Rey</option>
+        <option value="22">Olmedo</option>
+        <option value="26">Tordesillas</option>
+        <option value="33">Arévalo</option>
+        <option value="45">Valladolid</option>
+        <option value="55">Toro</option>
+        <option value="80">Salamanca</option>
+        <option value="otra">Otra localidad</option>
+      </select>
+    </div>
+    <div class="result" id="res" aria-live="polite">
+      <p>Repartimos en un radio de unos 90 km alrededor de Medina del Campo.</p>
+    </div>
+  </div>
+  <figure class="t ph zona-r" data-r style="--i:1"><img src="assets/plaza.jpg" width="1920" height="1440" loading="lazy" alt="Plaza Mayor de la Hispanidad, en el centro de Medina del Campo"></figure>
+</section>
+
+<section class="board" id="contacto" aria-labelledby="h-contacto">
+  <div class="t contact" data-r>
+    <div class="strip" aria-hidden="true">
+      <img src="assets/mota.jpg" alt="" width="1920" height="1280" loading="lazy" style="width:225px;object-fit:cover">
+      <img src="assets/cafe.jpg" alt="" width="1600" height="1200" loading="lazy" style="width:150px;object-fit:cover">
+      <img src="assets/grabado.jpg" alt="" width="1800" height="1336" loading="lazy" style="width:200px;object-fit:cover">
+      <img src="assets/ferias.jpg" alt="" width="1920" height="1440" loading="lazy" style="width:150px;object-fit:cover;object-position:60% 50%">
+      <img src="assets/plaza.jpg" alt="" width="1920" height="1440" loading="lazy" style="width:225px;object-fit:cover">
+      <img src="assets/mota.jpg" alt="" width="1920" height="1280" loading="lazy" style="width:150px;object-fit:cover;object-position:75% 30%">
+      <img src="assets/grabado.jpg" alt="" width="1800" height="1336" loading="lazy" style="width:225px;object-fit:cover;object-position:80% 50%">
+      <img src="assets/cafe.jpg" alt="" width="1600" height="1200" loading="lazy" style="width:150px;object-fit:cover">
+    </div>
+    <div class="cwrap">
+      <h2 id="h-contacto">Hablemos de tu pedido</h2>
+      <p class="sub">Cuéntanos qué necesita tu negocio y te respondemos lo antes posible.</p>
+      <form id="f" novalidate>
+        <label class="cell"><span class="sr">Nombre</span><input name="nombre" placeholder="Nombre *" required autocomplete="name"></label>
+        <label class="cell"><span class="sr">Teléfono o correo electrónico</span><input name="contacto" placeholder="Teléfono o correo" autocomplete="email"></label>
+        <button class="btn send" type="submit">Enviar</button>
+        <label class="cell msg"><span class="sr">Mensaje</span><textarea name="mensaje" placeholder="Mensaje"></textarea></label>
+        <label class="consent"><input type="checkbox" name="ok" required> <span>Acepto que estos datos se almacenen y procesen con el fin de establecer contacto. Soy consciente de que puedo revocar mi consentimiento en cualquier momento. *</span></label>
+        <p class="status" id="st" role="status"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="board foot-board">
+  <div class="t f-statement" data-r>
+    <p>Tu distribución de confianza en Medina del Campo.</p>
+    <small><a href="#">Aviso legal</a> · <a href="#">Política de privacidad</a></small>
+  </div>
+  <nav class="t f-nav" data-r style="--i:1" aria-label="Pie de página">
+    <ul><li><a href="#catalogo">Hostelería</a></li><li><a href="#catalogo">Menaje</a></li><li><a href="#nosotros">Quiénes somos</a></li><li><a href="#contacto">Contacto</a></li></ul>
+  </nav>
+  <div class="t f-time" data-r style="--i:2"><span>Medina del Campo</span><strong id="clock">Valladolid</strong></div>
+  <div class="t f-mail" data-r style="--i:3"><span>Teléfono</span>[teléfono por añadir]<span>Correo</span>[correo por añadir]</div>
+  <div class="t f-name" data-r><img src="assets/logo.png" width="204" height="192" alt="" loading="lazy"><span>Distribuciones Valentín</span></div>
+  <a class="t f-go" href="#contacto" data-r style="--i:1"><span>Pide información</span><svg viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="4" aria-hidden="true"><path d="M8 48 48 8M18 8h30v30"/></svg></a>
+  <p class="t credits">Fotografías: <a href="https://commons.wikimedia.org/w/index.php?curid=21046064">Castillo de la Mota</a>, Garijo, <a href="https://creativecommons.org/licenses/by-sa/3.0/es/deed.en/">CC BY-SA 3.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Medina_del_Campo_-_Plaza_Mayor_de_la_Hispanidad_07_(2021-05-09).jpg">Plaza Mayor de la Hispanidad</a> y <a href="https://commons.wikimedia.org/wiki/File:Medina_del_Campo_-_Museo_de_las_Ferias_01_(2013-11-10).jpg">Museo de las Ferias</a>, Zarateman, CC0 · <a href="https://commons.wikimedia.org/wiki/File:Roasted_coffee_beans.jpg">Granos de café</a>, MarkSweep, dominio público · <a href="https://commons.wikimedia.org/wiki/File:Kaffe_-_Ystad-2024.ogg">vídeo de una tostadora</a>, Jonn Leffmann, <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> · <a href="https://www.metmuseum.org/art/collection/search/427835">La invención de la prensa de aceite de oliva</a>, Jan Collaert I, hacia 1600, The Metropolitan Museum of Art, CC0. Vía Wikimedia Commons.</p>
+</footer>
+
+</div>
+<div class="lane" aria-hidden="true">
+  <div class="road"></div>
+  <svg class="van" id="van" viewBox="0 0 380 160" width="190" height="80">
+    <path d="M0 22a14 14 0 0 1 14-14h222a14 14 0 0 1 14 14v92a14 14 0 0 1-14 14H14a14 14 0 0 1-14-14z" fill="#fff"/>
+    <path d="M0 104h250v10a14 14 0 0 1-14 14H14A14 14 0 0 1 0 114z" fill="#d4150f"/>
+    <image href="assets/logo.png" x="72" y="14" width="106" height="100" preserveAspectRatio="xMidYMid slice"/>
+    <path d="M256 30h62c10 0 16 4 22 12l26 40c5 7 6 11 6 18v26H256z" fill="#d4150f"/>
+    <path d="M268 42h48c6 0 10 3 13 8l18 28h-79z" fill="#bcd3df"/>
+    <rect x="344" y="112" width="28" height="14" rx="3" fill="#2b2b2b"/>
+    <rect x="362" y="94" width="10" height="10" rx="3" fill="#ffe27a"/>
+    <g class="wheel"><circle cx="72" cy="132" r="26" fill="#1e1e1e"/><circle cx="72" cy="132" r="11" fill="#c4c4c4"/><rect x="69" y="110" width="6" height="12" fill="#c4c4c4"/></g>
+    <g class="wheel"><circle cx="308" cy="132" r="26" fill="#1e1e1e"/><circle cx="308" cy="132" r="11" fill="#c4c4c4"/><rect x="305" y="110" width="6" height="12" fill="#c4c4c4"/></g>
+  </svg>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+<script src="logo-data.js" defer></script>
+<script src="main3d.js" defer></script>
+<script src="main.js" defer></script>
+</body>
+</html>

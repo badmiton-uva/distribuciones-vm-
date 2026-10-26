@@ -1,0 +1,211 @@
+:root{
+  --ink:#14100d;--paper:#f3f2ef;--paper-2:#e6e5e1;--red:#d4150f;--red-deep:#a80f0a;
+  --coffee:#342116;--blue:#007cb3;--green:#679c2e;--muted:#5b5753;
+  --font:"Jost",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --ease:cubic-bezier(.23,1,.32,1);--gutter:clamp(20px,3.2vw,52px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 clamp(1rem,.95rem + .25vw,1.15rem)/1.5 var(--font);-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+button,a{-webkit-tap-highlight-color:transparent}
+:focus-visible{outline:3px solid var(--red);outline-offset:4px}
+.m-skip{position:absolute;top:-80px;left:12px;z-index:100;background:#fff;padding:12px 18px}
+.m-skip:focus{top:10px}
+.m-top{position:fixed;z-index:50;inset:0 0 auto;min-height:74px;padding:10px var(--gutter);display:flex;align-items:center;gap:24px;background:rgba(243,242,239,.94);backdrop-filter:blur(16px);border-bottom:1px solid rgba(20,16,13,.1)}
+.m-brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-size:1rem;font-weight:500;white-space:nowrap;margin-right:auto}
+.m-brand img{width:45px;height:45px;object-fit:cover;border-radius:50%}
+.m-top nav{display:flex;align-items:center;gap:clamp(18px,2.4vw,36px)}
+.m-top nav a{font-size:.95rem;font-weight:500;text-decoration:none;white-space:nowrap}
+.m-top nav a[aria-current]{color:var(--red)}
+.m-top-cta{text-decoration:none;font-size:.95rem;font-weight:500;background:var(--red);color:white;padding:12px 20px;border-radius:999px;white-space:nowrap}
+.m-top-cta span{margin-left:8px}
+
+.m-eyebrow{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;line-height:1.35}
+.m-eyebrow span{padding:0 7px;color:var(--red)}
+.m-button{display:inline-flex;align-items:center;justify-content:space-between;gap:30px;min-height:56px;padding:0 26px;border-radius:999px;background:var(--red);color:#fff;text-decoration:none;font-size:1rem;font-weight:500;transition:transform .2s var(--ease),background .2s var(--ease)}
+.m-button:hover{background:var(--red-deep);transform:translateY(-3px)}
+.m-button:active{transform:scale(.98)}
+.m-dot{color:var(--red)}
+
+.m-hero{position:relative;min-height:100svh;padding:clamp(116px,17vh,170px) var(--gutter) 88px;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);align-items:center;overflow:hidden;isolation:isolate}
+.m-hero::before{content:"";position:absolute;z-index:-2;inset:0;background:radial-gradient(circle at 70% 43%,#fffdf6 0%,var(--paper) 44%,#e8e5df 100%)}
+.m-hero-grain{position:absolute;inset:0;z-index:-1;opacity:.11;background-image:url('assets/macro-close-up-look-of-roasted-coffee.jpg');background-size:cover;background-position:center;mix-blend-mode:multiply;mask-image:linear-gradient(90deg,transparent 36%,black 100%)}
+.m-hero-copy{position:relative;z-index:3;max-width:720px}
+.m-hero-copy .m-eyebrow{margin:0 0 8px}
+.m-wordmark{width:200px;height:200px;max-width:none;object-fit:contain;margin:-45px 0 -43px -53px}
+.m-hero h1{font-size:clamp(4rem,1.7rem + 7.6vw,9.6rem);line-height:.89;font-weight:500;letter-spacing:-.065em;margin:0 0 32px;white-space:nowrap}
+.m-hero h1 em{font-style:normal;color:var(--red)}
+.m-lead{font-size:clamp(1.18rem,1rem + .75vw,1.65rem);line-height:1.25;max-width:33ch;margin:0 0 32px;letter-spacing:-.015em}
+.m-hero-stage{position:relative;min-height:580px;display:grid;place-items:center;perspective:1000px}
+.m-halo{position:absolute;width:min(90%,640px);aspect-ratio:1;border:1px solid rgba(20,16,13,.15);border-radius:50%;transform:rotate(-18deg) scaleX(.82)}
+.m-halo::before,.m-halo::after{content:"";position:absolute;inset:11%;border:1px solid rgba(20,16,13,.1);border-radius:50%}
+.m-halo::after{inset:23%}
+.m-stage-word{position:absolute;font-size:clamp(7rem,15vw,18rem);font-weight:700;letter-spacing:-.09em;color:rgba(20,16,13,.045);line-height:1;margin:0;transform:rotate(-90deg);white-space:nowrap}
+.m-pack{margin:0;position:relative;z-index:2;filter:drop-shadow(24px 35px 24px rgba(20,16,13,.17))}
+.m-pack-crop{position:relative;display:block;width:clamp(180px,19vw,285px);aspect-ratio:148/388;overflow:hidden;mix-blend-mode:multiply}
+.m-pack-crop img{position:absolute;max-width:none;width:348%;height:auto;left:-99.3%;top:-20.1%;clip-path:polygon(35% 16%,56.5% 16%,62% 91%,60% 95%,28% 96%,27.5% 88%,30% 39%,34% 20%)}
+.m-hero-pack{transform:rotate(-5deg)}
+.m-hero-pack figcaption{text-align:center;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;margin-top:14px}
+.m-stage-no{position:absolute;right:2%;bottom:12%;font-size:.9rem;font-weight:500;letter-spacing:.1em}
+.m-scroll{position:absolute;bottom:24px;left:var(--gutter);font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;text-decoration:none}
+.m-scroll span{margin-left:20px}
+
+.m-intro{padding:clamp(100px,14vw,210px) var(--gutter);display:grid;grid-template-columns:minmax(180px,.3fr) 1.1fr .6fr;gap:clamp(25px,4vw,80px);align-items:start;background:var(--ink);color:var(--paper)}
+.m-intro .m-eyebrow{margin:14px 0 0;color:#c6bdb4}
+.m-intro h2{font-size:clamp(3.5rem,1.8rem + 5.5vw,8rem);font-weight:500;letter-spacing:-.055em;line-height:.92;margin:0;max-width:10ch}
+.m-intro>p:last-child{font-size:clamp(1.2rem,1rem + .65vw,1.7rem);line-height:1.3;margin:14px 0 0;max-width:20ch}
+
+.m-journey{position:relative;display:grid;grid-template-columns:48% 52%;background:var(--paper)}
+.m-journey-stage{position:sticky;top:74px;align-self:start;height:calc(100svh - 74px);min-height:560px;display:grid;place-items:center;overflow:hidden;isolation:isolate;background:#e7e4de;transition:background-color .5s var(--ease)}
+.m-journey-stage::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 45%,rgba(255,255,255,.68) 0%,transparent 72%);z-index:-2}
+.m-journey[data-active="maestro"] .m-journey-stage{background:#e2ecf0}
+.m-journey[data-active="barista"] .m-journey-stage{background:#e6ecdb}
+.m-journey[data-active="descafeinado"] .m-journey-stage{background:#f0e3df}
+.m-journey[data-active="infusiones"] .m-journey-stage{background:#e8efe9}
+.m-journey[data-active="complementos"] .m-journey-stage{background:#d2cac0}
+.m-orbit{position:absolute;width:67%;aspect-ratio:1;border:1px solid rgba(20,16,13,.15);border-radius:50%;transform:rotate(-24deg) scaleX(.8)}
+.m-orbit-two{width:95%;border-color:rgba(20,16,13,.09);transform:rotate(20deg) scaleX(.75)}
+.m-stage-media{position:absolute;inset:0;display:grid;place-items:center;opacity:0;visibility:hidden;transform:translate3d(0,70px,0) scale(.91);pointer-events:none}
+.m-stage-media.is-active{opacity:1;visibility:visible;transform:translate3d(0,0,0) scale(1)}
+.m-sprite{position:absolute;margin:0;filter:drop-shadow(12px 20px 15px rgba(20,16,13,.14))}
+.m-sprite>img{width:100%;height:auto;max-width:none}
+.m-stage-media-real .m-pack-crop{width:clamp(150px,14vw,205px);filter:drop-shadow(14px 22px 15px rgba(20,16,13,.15))}
+.m-maestro-eco{width:clamp(105px,10vw,145px);left:8%;top:28%}
+.m-maestro-main{left:34%;top:18%}
+.m-maestro-natural{width:clamp(100px,10vw,145px);right:8%;top:31%}
+.m-barista-b1{width:clamp(130px,13vw,180px);left:36%;top:22%;z-index:3}
+.m-barista-b2{width:clamp(105px,10vw,140px);left:7%;top:36%;z-index:2}
+.m-barista-b3{width:clamp(100px,9vw,135px);right:8%;top:26%;z-index:2}
+.m-barista-italiano{width:clamp(90px,8vw,120px);right:16%;top:56%;z-index:1}
+.m-decaf-prof{width:clamp(130px,12vw,180px);left:38%;top:17%;z-index:2}
+.m-decaf-barista{width:clamp(105px,9vw,135px);left:11%;top:29%;z-index:1}
+.m-capsulas{width:min(60%,420px);left:20%;bottom:8%;z-index:3;filter:drop-shadow(10px 18px 12px rgba(20,16,13,.1))}
+.m-te-frutas{width:clamp(115px,11vw,160px);left:39%;top:32%;z-index:3}
+.m-te-rojo{width:clamp(100px,9vw,135px);left:19%;top:38%;z-index:2}
+.m-te-blanco{width:clamp(100px,9vw,135px);right:18%;top:38%;z-index:2}
+.m-te-manzanilla{width:clamp(85px,8vw,120px);left:8%;top:57%;z-index:1}
+.m-te-menta{width:clamp(85px,8vw,120px);right:7%;top:57%;z-index:1}
+.m-tazas{width:min(80%,560px);left:10%;top:39%;filter:drop-shadow(12px 22px 14px rgba(20,16,13,.1))}
+.m-media-caption{display:none}
+.m-stage-media-type{align-content:center;gap:16px;text-align:center;padding:8vw}
+.m-stage-media-type strong{font-size:clamp(3.3rem,6.3vw,7.4rem);font-weight:500;letter-spacing:-.065em;line-height:.88;max-width:8ch;overflow-wrap:anywhere}
+.m-stage-media-type span{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--muted)}
+[data-media="barista"] strong{color:var(--green)}
+[data-media="descafeinado"] strong{color:var(--red)}
+[data-media="infusiones"] strong{color:#397857}
+[data-media="complementos"] strong{color:var(--coffee)}
+.m-stage-index{position:absolute;right:var(--gutter);top:clamp(30px,6vh,70px);font-size:clamp(2.5rem,5vw,5rem);font-weight:500;letter-spacing:-.06em;line-height:1}
+.m-stage-index span{font-size:.8rem;letter-spacing:.1em;vertical-align:top}
+.m-journey-copy{min-width:0}
+.m-chapter{min-height:100svh;padding:clamp(126px,16vh,190px) clamp(30px,5.5vw,110px) clamp(100px,15vh,180px);display:flex;flex-direction:column;justify-content:center;border-bottom:1px solid rgba(20,16,13,.12)}
+.m-chapter .m-eyebrow{margin:0 0 25px;color:var(--red)}
+.m-chapter h2{font-size:clamp(4rem,2rem + 6vw,9rem);font-weight:500;line-height:.88;letter-spacing:-.065em;margin:0 0 34px;max-width:9ch}
+.m-chapter>p:not(.m-eyebrow){font-size:clamp(1.25rem,1rem + .75vw,1.7rem);line-height:1.27;max-width:28ch;margin:0 0 36px}
+.m-product-list{list-style:none;margin:0;padding:0;border-top:1px solid rgba(20,16,13,.35);max-width:550px}
+.m-product-list li{padding:13px 0;border-bottom:1px solid rgba(20,16,13,.2);font-size:clamp(1rem,.88rem + .45vw,1.25rem);font-weight:500;letter-spacing:-.01em}
+.m-product-list li::before{content:"↗";display:inline-block;margin-right:18px;color:var(--red);font-size:.82rem}
+.m-chapter small{font-size:.72rem;line-height:1.4;color:var(--muted);margin-top:18px;max-width:45ch}
+
+.m-service{min-height:100svh;background:var(--coffee);color:var(--paper);display:grid;grid-template-columns:1fr 1fr}
+.m-service-image{position:relative;min-height:700px;overflow:hidden}
+.m-service-image img{width:100%;height:100%;object-fit:cover;filter:saturate(.78) contrast(1.1)}
+.m-service-image::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 70%,rgba(52,33,22,.2))}
+.m-service-copy{padding:clamp(110px,12vw,190px) clamp(36px,7vw,130px);display:flex;flex-direction:column;justify-content:center}
+.m-service-copy .m-eyebrow{margin:0 0 25px;color:#e8c7b3}
+.m-service h2{font-size:clamp(4rem,2.5rem + 5vw,8rem);font-weight:500;letter-spacing:-.06em;line-height:.9;margin:0 0 28px}
+.m-service-copy>p:not(.m-eyebrow){font-size:clamp(1.15rem,1rem + .55vw,1.5rem);line-height:1.3;max-width:26ch;margin:0 0 36px}
+.m-service-list{list-style:none;margin:0;padding:0;max-width:520px}
+.m-service-list li{border-top:1px solid rgba(255,255,255,.24);padding:13px 0;font-size:1.04rem}
+.m-service-list li:last-child{border-bottom:1px solid rgba(255,255,255,.24)}
+
+.m-end{min-height:75svh;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:clamp(110px,12vw,180px) var(--gutter);background:var(--red);color:#fff}
+.m-end .m-eyebrow{margin:0 0 30px}
+.m-end h2{max-width:11ch;font-size:clamp(4rem,2rem + 7vw,10rem);font-weight:500;line-height:.9;letter-spacing:-.06em;margin:0 0 36px}
+.m-end h2 span{color:var(--ink)}
+.m-end>p:not(.m-eyebrow){font-size:clamp(1.25rem,1rem + .6vw,1.7rem);max-width:32ch;line-height:1.25;margin:0 0 38px}
+.m-button-light{background:#fff;color:var(--ink)}
+.m-button-light:hover{background:var(--paper);color:var(--ink)}
+.m-footer{min-height:120px;background:var(--ink);color:var(--paper);padding:30px var(--gutter);display:flex;align-items:center;justify-content:space-between;gap:20px;font-size:.9rem}
+.m-footer a{text-decoration:none}
+.m-footer a:hover{text-decoration:underline}
+
+@keyframes m-reveal{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes m-pack-arrive{from{opacity:0;transform:translate(60px,60px) rotate(1deg) scale(.9)}to{opacity:1;transform:rotate(-5deg) scale(1)}}
+.m-no-gsap .m-hero-copy>*{animation:m-reveal .9s var(--ease) backwards}
+.m-no-gsap .m-hero-copy>*:nth-child(2){animation-delay:.08s}
+.m-no-gsap .m-hero-copy>*:nth-child(3){animation-delay:.16s}
+.m-no-gsap .m-hero-copy>*:nth-child(4){animation-delay:.24s}
+.m-no-gsap .m-hero-copy>*:nth-child(5){animation-delay:.32s}
+.m-no-gsap .m-hero-pack{animation:m-pack-arrive 1.3s var(--ease) .2s backwards}
+
+@media(max-width:1000px){
+  .m-top nav{display:none}
+  .m-hero{grid-template-columns:1fr 1fr}
+  .m-hero-stage{min-height:510px}
+  .m-hero h1{font-size:clamp(3.9rem,7vw,6rem)}
+  .m-intro{grid-template-columns:1fr 2fr}
+  .m-intro>p:last-child{grid-column:2}
+  .m-journey{grid-template-columns:44% 56%}
+  .m-chapter{padding-left:5vw;padding-right:5vw}
+  .m-chapter h2{font-size:clamp(3.4rem,6vw,6rem)}
+}
+@media(max-width:700px){
+  .m-top{min-height:64px;padding-block:8px}
+  .m-brand img{width:40px;height:40px}
+  .m-brand span{font-size:.88rem;max-width:140px;line-height:1.1;white-space:normal}
+  .m-top-cta{padding:9px 13px;font-size:.85rem}
+  .m-hero{display:flex;flex-direction:column;justify-content:flex-start;align-items:stretch;min-height:100svh;padding-top:94px;padding-bottom:65px}
+  .m-wordmark{width:155px;height:155px;margin:-38px 0 -34px -40px}
+  .m-hero-copy{order:1}
+  .m-hero h1{font-size:clamp(3.5rem,12.2vw,6rem);margin-bottom:20px}
+  .m-lead{font-size:1.1rem;max-width:36ch;margin-bottom:22px}
+  .m-hero-stage{order:2;flex:1;min-height:330px;max-height:460px;margin-top:22px}
+  .m-hero-stage .m-pack-crop{width:clamp(120px,30vw,180px)}
+  .m-stage-word{font-size:25vw}
+  .m-scroll{display:none}
+  .m-intro{display:block;padding:110px var(--gutter)}
+  .m-intro .m-eyebrow{margin:0 0 26px}
+  .m-intro h2{font-size:clamp(3.4rem,13vw,6rem)}
+  .m-intro>p:last-child{margin-top:35px}
+  .m-journey{display:block}
+  .m-journey-stage{top:64px;height:42svh;min-height:300px;z-index:2}
+  .m-stage-media-real .m-pack-crop{width:clamp(105px,29vw,130px)}
+  .m-maestro-eco{width:70px;left:9%;top:27%}
+  .m-maestro-main{left:35%;top:11%}
+  .m-maestro-natural{width:75px;right:8%;top:29%}
+  .m-barista-b1{width:95px;left:36%;top:19%}
+  .m-barista-b2{width:70px;left:5%;top:30%}
+  .m-barista-b3{width:70px;right:4%;top:24%}
+  .m-barista-italiano{width:62px;right:16%;top:56%}
+  .m-decaf-prof{width:102px;left:39%;top:13%}
+  .m-decaf-barista{width:73px;left:10%;top:24%}
+  .m-capsulas{width:68%;left:16%;bottom:4%}
+  .m-te-frutas{width:89px;left:39%;top:28%}
+  .m-te-rojo{width:72px;left:18%;top:35%}
+  .m-te-blanco{width:72px;right:17%;top:35%}
+  .m-te-manzanilla{width:65px;left:4%;top:58%}
+  .m-te-menta{width:65px;right:4%;top:58%}
+  .m-tazas{width:94%;left:3%;top:40%}
+  .m-stage-media-type strong{font-size:clamp(2.6rem,10vw,4.5rem)}
+  .m-media-caption{display:none}
+  .m-stage-index{top:18px;right:20px;font-size:2.3rem}
+  .m-chapter{min-height:58svh;padding:55px var(--gutter) 75px;justify-content:flex-start}
+  .m-chapter h2{font-size:clamp(3.6rem,13vw,6rem)}
+  .m-chapter>p:not(.m-eyebrow){font-size:1.18rem;margin-bottom:25px}
+  .m-product-list li{padding:10px 0;font-size:1rem}
+  .m-service{display:block}
+  .m-service-image{min-height:0;height:50svh}
+  .m-service-copy{padding:80px var(--gutter) 100px}
+  .m-service h2{font-size:clamp(3.8rem,12vw,6rem)}
+  .m-end{min-height:70svh;padding-block:100px}
+  .m-end h2{font-size:clamp(3.9rem,12vw,6rem)}
+  .m-footer{display:flex;flex-direction:column;align-items:flex-start;min-height:0}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .m-button{transition:none}
+  .m-stage-media{transition:none!important}
+  .m-no-gsap .m-hero-copy>*,.m-no-gsap .m-hero-pack{animation:none}
+}
