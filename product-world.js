@@ -38,10 +38,9 @@
       return `<section class="pw-scene pw-e${n>8?' is-long':''}${n>14?' is-scroll':''}${dark(item)}" style="--n:${n};--scene:${esc(item.color)};--ink:${esc(item.ink)}" aria-labelledby="pw-scene-${index}">
         <div class="pw-sticky"><div class="pw-scene-inner">${label(item,index)}
           <div class="pw-e-grid">
+            <div class="pw-e-head"><p class="pw-overline">${esc(item.eyebrow)}</p><h2 id="pw-scene-${index}">${esc(item.title)}</h2></div>
             <div class="pw-e-art"><span class="pw-e-disc" aria-hidden="true"></span>${multi ? item.variants.map((v,i) => v.image ? img(v,`pw-e-image pw-e-multi${i===0?' is-current':''}`,i<2) : `<span class="pw-e-image pw-e-multi pw-e-pending${i===0?' is-current':''}" role="img" aria-label="Imagen pendiente">Imagen pendiente</span>`).join('') : item.product ? img(item.product,'pw-e-image',true) : '<span class="pw-e-image pw-e-pending is-current" role="img" aria-label="Imagen pendiente">Imagen pendiente</span>'}<p class="pw-e-note">${esc(item.note || '')}</p></div>
-            <div class="pw-e-copy"><p class="pw-overline">${esc(item.eyebrow)}</p><h2 id="pw-scene-${index}">${esc(item.title)}</h2>
               <ol class="pw-e-list">${item.variants.map((v,i) => `<li${i===0?' class="is-current"':''}><span class="pw-e-num">${number(i)}</span><b>${esc(v.name)}</b><small>${esc(v.description)}</small>${multi && v.image ? `<img class="pw-e-thumb" src="${esc(v.image)}" alt="${esc(v.alt || v.name)}" width="${Number(v.width) || 300}" height="${Number(v.height) || 300}" loading="lazy">` : ''}</li>`).join('')}</ol>
-            </div>
           </div>
         </div></div></section>`;
     },
@@ -65,8 +64,60 @@
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
     const mobile = window.matchMedia('(max-width: 760px)');
     let triggers = [];
+
+    /* móvil: aparición progresiva, paralaje suave del producto y, en las gamas con lista, imagen fija que cambia con la variedad activa */
+    let mobileOff = null;
+    function teardownMobile() {
+      if (mobileOff) { mobileOff(); mobileOff = null; }
+      document.body.classList.remove('pw-mobile-anim');
+      mount.querySelectorAll('.is-in').forEach(el => el.classList.remove('is-in'));
+      mount.querySelectorAll('.pw-scene').forEach(sc => sc.style.removeProperty('--mp'));
+    }
+    function setupMobile() {
+      document.body.classList.add('pw-mobile-anim');
+      const io = new IntersectionObserver(entries => entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+      }), { rootMargin: '0px 0px -10% 0px', threshold: 0.1 });
+      mount.querySelectorAll('.pw-a-copy,.pw-a-art,.pw-b-head,.pw-b-panel,.pw-c-title,.pw-c-item,.pw-d-head,.pw-d-frame,.pw-e-head,.pw-e-list li').forEach(el => io.observe(el));
+      const lineups = [...mount.querySelectorAll('.pw-e')].map(scene => ({
+        scene, art: scene.querySelector('.pw-e-art'), cur: 0,
+        rows: [...scene.querySelectorAll('.pw-e-list li')],
+        multi: [...scene.querySelectorAll('.pw-e-multi')]
+      }));
+      const heroes = [...mount.querySelectorAll('.pw-a')];
+      const header = document.querySelector('.site-header');
+      let ticking = false;
+      const update = () => {
+        ticking = false;
+        const vh = window.innerHeight;
+        if (header) document.documentElement.style.setProperty('--sh-h', header.offsetHeight + 'px');
+        heroes.forEach(sc => {
+          const r = sc.getBoundingClientRect();
+          if (r.bottom < -100 || r.top > vh + 100) return;
+          sc.style.setProperty('--mp', Math.max(0, Math.min(1, (vh - r.top) / (vh + r.height))).toFixed(3));
+        });
+        lineups.forEach(L => {
+          const r = L.scene.getBoundingClientRect();
+          if (r.bottom < 0 || r.top > vh) return;
+          const focus = L.art.getBoundingClientRect().bottom + 72;
+          let a = 0;
+          L.rows.forEach((li, i) => { if (li.getBoundingClientRect().top <= focus) a = i; });
+          if (a !== L.cur) {
+            L.cur = a;
+            L.rows.forEach((li, i) => li.classList.toggle('is-current', i === a));
+            L.multi.forEach((m, i) => m.classList.toggle('is-current', i === a));
+          }
+        });
+      };
+      const on = () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } };
+      window.addEventListener('scroll', on, { passive: true });
+      window.addEventListener('resize', on);
+      update();
+      mobileOff = () => { io.disconnect(); window.removeEventListener('scroll', on); window.removeEventListener('resize', on); };
+    }
     function reset() {
       triggers.forEach(t => t.kill()); triggers = [];
+      teardownMobile();
       mount.querySelectorAll('.pw-scene').forEach(scene => {
         scene.style.removeProperty('--progress');
         scene.querySelector('.pw-b-track')?.style.removeProperty('transform');
@@ -78,6 +129,7 @@
       });
       const staticMode = reduce.matches || mobile.matches || !window.gsap || !window.ScrollTrigger;
       document.body.classList.toggle('pw-static', staticMode && !mobile.matches);
+      if (mobile.matches && !reduce.matches && 'IntersectionObserver' in window) setupMobile();
       if (staticMode) return;
       gsap.registerPlugin(ScrollTrigger);
       mount.querySelectorAll('.pw-scene').forEach(scene => {

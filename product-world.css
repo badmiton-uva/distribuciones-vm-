@@ -55,7 +55,7 @@
 .pw-e-disc{position:absolute;width:min(40vw,540px);aspect-ratio:1;border-radius:50%;background:rgba(255,255,255,.55);transform:scale(calc(.78 + var(--progress,0) * .22))}
 .pw-e-image{position:relative;z-index:1;max-width:min(30vw,420px);max-height:66%;width:auto;height:auto;object-fit:contain;filter:drop-shadow(22px 30px 20px rgba(60,20,25,.18));transform:translate3d(0,calc((.5 - var(--progress,0)) * 40px),0) rotate(calc((var(--progress,0) - .5) * -6deg)) scale(calc(.92 + var(--progress,0) * .1));will-change:transform}
 .pw-e-note{position:absolute;z-index:1;bottom:2%;left:0;right:0;margin:0;text-align:center;font-size:.72rem;text-transform:uppercase;letter-spacing:.13em;opacity:.75}
-.pw-e-copy h2{font-size:clamp(2.7rem,5vw,6rem);margin:12px 0 22px}
+.pw-e-head h2{font-size:clamp(2.7rem,5vw,6rem);margin:12px 0 22px}
 .pw-e-list{list-style:none;margin:0;padding:0;max-width:620px;counter-reset:none}
 .pw-e-list li{display:grid;grid-template-columns:2.6rem 1fr;align-items:baseline;padding:7px 0;border-top:1px solid rgba(0,0,0,.14);opacity:.4;transition:opacity .3s ease}
 .pw-e-list li:last-child{border-bottom:1px solid rgba(0,0,0,.14)}
@@ -74,7 +74,7 @@
   .pw-e-image{max-width:60%;max-height:300px;transform:none;will-change:auto}
   .pw-e-note{position:static;margin-top:10px}
   .pw-e-art{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:6px}
-  .pw-e-copy h2{font-size:clamp(2.7rem,11vw,4.2rem)}
+  .pw-e-head h2{font-size:clamp(2.7rem,11vw,4.2rem)}
   .pw-e-list li{opacity:1}
   .pw-e-list small{max-height:none;opacity:1;margin-top:4px}
 }
@@ -87,11 +87,11 @@
 .pw-static .pw-e-list small{max-height:none;opacity:1;margin-top:4px}
 @media(prefers-reduced-motion:reduce){.pw-e{height:auto}.pw-e .pw-sticky{position:relative;top:auto;height:auto}.pw-e-grid{height:auto}.pw-e-art{min-height:420px}.pw-e-image,.pw-e-disc{transform:none}.pw-e-list li{opacity:1}.pw-e-list small{max-height:none;opacity:1;margin-top:4px}}
 
-.pw-e.is-long .pw-e-copy h2{font-size:clamp(2.4rem,4vw,4.6rem);margin:8px 0 14px}
+.pw-e.is-long .pw-e-head h2{font-size:clamp(2.4rem,4vw,4.6rem);margin:8px 0 14px}
 .pw-e.is-long .pw-e-list li{padding:4px 0}
 .pw-e.is-long .pw-e-list b{font-size:clamp(.95rem,1.15vw,1.2rem)}
 .pw-e.is-long .pw-e-list small{font-size:.92rem}
-@media(max-height:780px) and (min-width:761px){.pw-e-copy h2{font-size:clamp(2.2rem,3.6vw,3.8rem);margin:6px 0 12px}.pw-e-list li{padding:3px 0}.pw-e-list b{font-size:1rem}.pw-e-list small{font-size:.9rem}}
+@media(max-height:780px) and (min-width:761px){.pw-e-head h2{font-size:clamp(2.2rem,3.6vw,3.8rem);margin:6px 0 12px}.pw-e-list li{padding:3px 0}.pw-e-list b{font-size:1rem}.pw-e-list small{font-size:.9rem}}
 
 /* lineup con una imagen por variedad: se cruzan con el scroll; sin imagen, un marcador identificado */
 .pw-e-art:has(.pw-e-multi){grid-template-columns:1fr;grid-template-rows:1fr}
@@ -126,3 +126,39 @@
 
 /* cabecera común de las páginas de producto: con tantas secciones el menú pasa a una segunda fila en pantallas medianas */
 @media(max-width:1350px){.pw-header{flex-wrap:wrap;gap:4px 15px}.pw-header nav{order:3;width:100%;justify-content:center;overflow:auto;padding:8px 0}.pw-sticky{top:111px;height:calc(100svh - 111px)}}
+
+/* lineup: tres bloques (título, imagen, lista) colocados en rejilla en escritorio */
+.pw-e-grid{grid-template-columns:.9fr 1.1fr;grid-template-rows:1fr auto auto 1fr;align-items:start;align-content:stretch}
+.pw-e-art{grid-column:1;grid-row:1 / 5;align-self:stretch}
+.pw-e-head{grid-column:2;grid-row:2;align-self:end}
+.pw-e-list{grid-column:2;grid-row:3;align-self:start}
+
+/* ===== móvil: transiciones ligadas al scroll ===== */
+@media(max-width:760px){
+  .pw-e-grid{display:block}
+  .pw-mobile-anim .pw-a-copy,.pw-mobile-anim .pw-a-art,.pw-mobile-anim .pw-b-head,.pw-mobile-anim .pw-b-panel,.pw-mobile-anim .pw-c-title,.pw-mobile-anim .pw-c-item,.pw-mobile-anim .pw-d-head,.pw-mobile-anim .pw-d-frame,.pw-mobile-anim .pw-e-head,.pw-mobile-anim .pw-e-list li{opacity:0;transform:translate3d(0,28px,0);transition:opacity .7s ease,transform .8s cubic-bezier(.23,1,.32,1)}
+  .pw-mobile-anim .is-in{opacity:1;transform:none}
+  .pw-mobile-anim .pw-e-list li.is-in{opacity:.5}
+  .pw-mobile-anim .pw-e-list li.is-in.is-current{opacity:1}
+  .pw-mobile-anim .pw-a-product{transform:translate3d(0,calc((.5 - var(--mp,.5)) * 80px),0) rotate(calc((var(--mp,.5) - .5) * -5deg)) scale(calc(.93 + var(--mp,.5) * .1));will-change:transform}
+  .pw-mobile-anim .pw-a.is-wide .pw-a-product{transform:translate3d(0,calc((.5 - var(--mp,.5)) * 30px),0)}
+  .pw-mobile-anim .pw-a-ring{transform:scale(calc(.8 + var(--mp,.5) * .35))}
+  .pw-mobile-anim .pw-d-frame{background:var(--frame-color)}
+  /* gamas con lista: la imagen queda fija bajo la cabecera y cambia con la variedad que se lee */
+  .pw-mobile-anim .pw-e-art,.pw-mobile-anim .pw-e-art:has(.pw-e-multi){position:sticky;top:calc(var(--sh-h,92px) - 1px);z-index:6;display:grid;place-items:center;height:42svh;min-height:250px;margin:14px -22px 6px;padding:14px 22px 26px;background:var(--scene);opacity:1;transform:none;box-shadow:0 14px 16px -14px rgba(0,0,0,.22)}
+  .pw-mobile-anim .pw-e-art .pw-e-disc{display:block;width:min(60vw,260px);transform:none}
+  .pw-mobile-anim .pw-e-art:has(.pw-e-multi) .pw-e-disc{display:none}
+  .pw-mobile-anim .pw-e-image{max-width:72%;max-height:100%;transform:none}
+  .pw-mobile-anim .pw-e-multi{grid-area:1/1;max-width:72%;max-height:100%}
+  .pw-mobile-anim .pw-e-pending{width:min(44vw,190px)}
+  .pw-mobile-anim .pw-e-note{position:absolute;left:0;right:0;bottom:6px;margin:0;font-size:.62rem}
+  .pw-mobile-anim .pw-e-thumb{display:none}
+  .pw-mobile-anim .pw-e-list li:has(.pw-e-thumb){grid-template-columns:2.6rem 1fr}
+  .pw-mobile-anim .pw-e-list li{padding:11px 0;transition:opacity .35s ease,transform .8s cubic-bezier(.23,1,.32,1)}
+  .pw-mobile-anim .pw-e-list b{font-size:1.02rem}
+  .pw-mobile-anim .pw-e-list small{font-size:.9rem}
+  .pw-mobile-anim .pw-e.is-scroll .pw-e-list{overflow:visible}
+}
+@media(max-width:760px) and (prefers-reduced-motion:reduce){
+  .pw-mobile-anim *{transition:none!important}
+}
