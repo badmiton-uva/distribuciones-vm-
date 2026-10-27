@@ -53,3 +53,9 @@ Datos y fuentes de imagen de Despensa:
 - `despensa-products.js`: Calvo, Prima, Carbonell y Koipe (capturas aportadas), Carmencita (imágenes ilustrativas de la especia, no el envase), La Ballena (una caja), Luengo (fichas de distribuidores; la mayoría de referencias sin imagen), Borges (catálogo oficial; formato comercial, distinto del de hostelería).
 
 Todas estas imágenes proceden de webs de marcas o distribuidores. Sus derechos de uso están pendientes de confirmar (ver `RECURSOS-PENDIENTES.md`).
+
+## Refrigerados (Panamar)
+
+`refrigerados.html` + `refrigerados-products.js` + `refrigerados.css`: 64 productos en 5 escenas `lineup` (panes y barras, croissants, bollería dulce, snacks salados y pastelería). Los textos son los facilitados por el cliente.
+
+**Imágenes pendientes.** El catálogo oficial (panamarbakery.com / panamar.es) está detrás de una verificación anti-bots y redirige las descargas automáticas, así que no se han podido descargar sus fotografías. Cada variedad muestra «Imagen pendiente». Para añadirlas: guardar los archivos en `assets/refrigerados/` y, en `refrigerados-products.js`, añadir a cada variedad `image`, `width`, `height` y `alt` (por ejemplo `image:'assets/refrigerados/barra-larga-285.webp', width:600, height:600, alt:'Barra Larga 285 g'`). La imagen de la gama y el pie se ajustan solos.
