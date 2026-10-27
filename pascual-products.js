@@ -11,11 +11,12 @@ window.ProductWorld.init({
     },
     {
       template: 'range', family: 'Vivesoy Barista', color: '#e9eacb', ink: '#214b32',
-      eyebrow: 'Dos variedades, una misma barra', title: 'Vegetal, en movimiento.',
-      description: 'Dos bebidas vegetales Vivesoy Barista para descubrir en la barra.',
+      eyebrow: 'Tres variedades, una misma barra', title: 'Vegetal, en movimiento.',
+      description: 'Tres bebidas vegetales Vivesoy Barista para descubrir en la barra.',
       products: [
-        {name:'Barista Soja', description:'Bebida de soja Vivesoy Barista.', image:'assets/pascual/vivesoy-soja.webp', width:260, height:710, alt:'Envase original Vivesoy Barista Soja de 1 litro'},
-        {name:'Barista Avena', description:'Bebida de avena Vivesoy Barista.', image:'assets/pascual/vivesoy-avena.webp', width:245, height:710, alt:'Envase original Vivesoy Barista Avena de 1 litro'}
+        {name:'Barista Soja', description:'Bebida de soja Vivesoy Barista.', image:'assets/pascual/vivesoy-barista-soja.webp', width:154, height:428, alt:'Envase original Vivesoy Barista Soja de 1 litro'},
+        {name:'Barista Avena', description:'Bebida de avena Vivesoy Barista.', image:'assets/pascual/vivesoy-barista-avena.webp', width:154, height:428, alt:'Envase original Vivesoy Barista Avena de 1 litro'},
+        {name:'Barista Almendras', description:'Bebida de almendras sin azúcar Vivesoy Barista.', image:'assets/pascual/vivesoy-barista-almendras.webp', width:151, height:422, alt:'Envase original Vivesoy Barista Almendras sin azúcar de 1 litro'}
       ]
     },
     {
