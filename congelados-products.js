@@ -1,10 +1,10 @@
-/* Refrigerados (Panamar). Generado con _herramientas/refrigerados/build.py */
+/* Congelados (Panamar). Generado con _herramientas/congelados/build.py */
 window.ProductWorld.init({
   mount: '#familias',
   sections: [
  {
   "template": "lineup",
-  "family": "Refrigerados · Panes y barras",
+  "family": "Congelados · Panes y barras",
   "color": "#f6e7d0",
   "ink": "#5a3112",
   "eyebrow": "Pan precocido",
@@ -119,7 +119,7 @@ window.ProductWorld.init({
  },
  {
   "template": "lineup",
-  "family": "Refrigerados · Croissants",
+  "family": "Congelados · Croissants",
   "color": "#fbe8c4",
   "ink": "#6a3d0a",
   "eyebrow": "Croissants y hojaldre",
@@ -166,7 +166,7 @@ window.ProductWorld.init({
  },
  {
   "template": "lineup",
-  "family": "Refrigerados · Bollería dulce",
+  "family": "Congelados · Bollería dulce",
   "color": "#f7dfd5",
   "ink": "#6b2a18",
   "eyebrow": "Napolitanas, berlinas y más",
@@ -249,7 +249,7 @@ window.ProductWorld.init({
  },
  {
   "template": "lineup",
-  "family": "Refrigerados · Snacks salados",
+  "family": "Congelados · Snacks salados",
   "color": "#efe6d2",
   "ink": "#4a3a14",
   "eyebrow": "Empanadas, bocapizzas y paninis",
@@ -296,7 +296,7 @@ window.ProductWorld.init({
  },
  {
   "template": "lineup",
-  "family": "Refrigerados · Pastelería",
+  "family": "Congelados · Pastelería",
   "color": "#f3e1e3",
   "ink": "#6a1f2e",
   "eyebrow": "Hojaldre y tartas",

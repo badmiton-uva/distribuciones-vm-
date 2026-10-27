@@ -1,12 +1,12 @@
-"""Genera refrigerados-products.js a partir de tabla.txt y mapa.json.
+"""Genera congelados-products.js a partir de tabla.txt y mapa.json.
 
 Uso (desde la raíz del repositorio):
-    python3 -I _herramientas/refrigerados/build.py [carpeta_con_las_imagenes_del_catalogo]
+    python3 -I _herramientas/congelados/build.py [carpeta_con_las_imagenes_del_catalogo]
 
 La carpeta es la «…_files» que guarda el navegador al descargar el catálogo de Panamar
 («Guardar página como…»). Si no se indica, o falta alguna imagen, esa variedad muestra
 «Imagen pendiente». Las imágenes se recortan al contenido y se convierten a WebP en
-assets/refrigerados/.
+assets/congelados/.
 """
 import json
 import os
@@ -19,7 +19,7 @@ from PIL import Image
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, '..', '..'))
 FILES = sys.argv[1] if len(sys.argv) > 1 else None
-OUT_IMG = os.path.join(ROOT, 'assets', 'refrigerados')
+OUT_IMG = os.path.join(ROOT, 'assets', 'congelados')
 
 groups = [
     ('A', 'Panes y barras', 'Pan precocido', 'El pan de cada servicio.', '#f6e7d0', '#5a3112'),
@@ -73,7 +73,7 @@ def prepare(m):
     im.thumbnail((620, 620), Image.LANCZOS)
     fn = f"{m['ref']}-{slug(m['catalogo'])}.webp"
     im.save(os.path.join(OUT_IMG, fn), 'WEBP', quality=86, method=6)
-    done[key] = (f'assets/refrigerados/{fn}', im.width, im.height)
+    done[key] = (f'assets/congelados/{fn}', im.width, im.height)
     return done[key]
 
 
@@ -90,14 +90,14 @@ for code, family, eyebrow, title, color, ink in groups:
         else:
             pendientes.append(name)
         vs.append(v)
-    sections.append({'template': 'lineup', 'family': f'Refrigerados · {family}', 'color': color, 'ink': ink,
+    sections.append({'template': 'lineup', 'family': f'Congelados · {family}', 'color': color, 'ink': ink,
                      'eyebrow': eyebrow, 'title': title,
                      'note': 'Imagen del catálogo oficial de Panamar' if FILES else 'Imagen pendiente · catálogo oficial de Panamar',
                      'variants': vs})
 
-js = '/* Refrigerados (Panamar). Generado con _herramientas/refrigerados/build.py */\n'
+js = '/* Congelados (Panamar). Generado con _herramientas/congelados/build.py */\n'
 js += "window.ProductWorld.init({\n  mount: '#familias',\n  sections: " + json.dumps(sections, ensure_ascii=False, indent=1) + '\n});\n'
-open(os.path.join(ROOT, 'refrigerados-products.js'), 'w', encoding='utf-8').write(js)
+open(os.path.join(ROOT, 'congelados-products.js'), 'w', encoding='utf-8').write(js)
 print('productos:', sum(len(s['variants']) for s in sections), '· sin imagen:', len(pendientes))
 for p in pendientes[:80]:
     print('  pendiente:', p)

@@ -54,8 +54,8 @@ Datos y fuentes de imagen de Despensa:
 
 Todas estas imágenes proceden de webs de marcas o distribuidores. Sus derechos de uso están pendientes de confirmar (ver `RECURSOS-PENDIENTES.md`).
 
-## Refrigerados (Panamar)
+## Congelados (Panamar)
 
-`refrigerados.html` + `refrigerados-products.js` + `refrigerados.css`: 64 productos en 5 escenas `lineup` (panes y barras, croissants, bollería dulce, snacks salados y pastelería). Los textos son los facilitados por el cliente.
+`congelados.html` + `congelados-products.js` + `congelados.css`: 64 productos en 5 escenas `lineup` (panes y barras, croissants, bollería dulce, snacks salados y pastelería). Los textos son los facilitados por el cliente.
 
-**Imágenes pendientes.** El catálogo oficial (panamarbakery.com / panamar.es) está detrás de una verificación anti-bots y redirige las descargas automáticas, así que no se han podido descargar sus fotografías. Cada variedad muestra «Imagen pendiente». Para añadirlas: guardar los archivos en `assets/refrigerados/` y, en `refrigerados-products.js`, añadir a cada variedad `image`, `width`, `height` y `alt` (por ejemplo `image:'assets/refrigerados/barra-larga-285.webp', width:600, height:600, alt:'Barra Larga 285 g'`). La imagen de la gama y el pie se ajustan solos.
+**Imágenes pendientes.** El catálogo oficial (panamarbakery.com / panamar.es) está detrás de una verificación anti-bots y redirige las descargas automáticas, así que no se han podido descargar sus fotografías. Cada variedad muestra «Imagen pendiente». Para añadirlas: guardar los archivos en `assets/congelados/` y, en `congelados-products.js`, añadir a cada variedad `image`, `width`, `height` y `alt` (por ejemplo `image:'assets/congelados/barra-larga-285.webp', width:600, height:600, alt:'Barra Larga 285 g'`). La imagen de la gama y el pie se ajustan solos.
