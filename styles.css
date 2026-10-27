@@ -247,3 +247,23 @@ form{margin-top:48px;display:grid;gap:10px;grid-template-columns:1fr 1fr 1fr}
 }
 
 .js:not(.gsap) .cafe-logo{display:block}
+
+/* reparto: buscador de localidades */
+#loc{width:100%;min-height:64px;padding:0 20px;border:0;border-radius:var(--r);background:var(--ink-2);color:var(--cream);font:500 1.125rem var(--font)}
+#loc::placeholder{color:rgba(249,245,237,.55)}
+#loc:focus-visible{outline:2px solid var(--cream);outline-offset:2px}
+.result .coinciden{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.result .coinciden li{padding:7px 12px;border-radius:999px;background:rgba(255,255,255,.18);font-size:.9375rem}
+.result .coinciden span,.zonas li span{opacity:.7;font-size:.85em;margin-left:4px}
+.result.yes strong{font-size:clamp(3rem,2rem + 3.5vw,5.5rem)}
+.zonas{margin-top:20px;border-radius:var(--r);background:var(--ink-2)}
+.zonas summary{cursor:pointer;padding:20px 24px;font-weight:500;list-style:none}
+.zonas summary::-webkit-details-marker{display:none}
+.zonas summary:after{content:"+";float:right;font-size:1.4rem;line-height:1}
+.zonas[open] summary:after{content:"–"}
+.zonas-grupo{padding:0 24px 18px}
+.zonas-grupo h3{font-size:1rem;margin:10px 0 8px;letter-spacing:.04em;text-transform:uppercase}
+.zonas-grupo h3 span{opacity:.6;font-weight:400}
+.zonas ul{list-style:none;margin:0;padding:0;columns:2;column-gap:20px;font-size:.9375rem;line-height:1.7}
+.zonas li{break-inside:avoid}
+@media(max-width:560px){.zonas ul{columns:1}}

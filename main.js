@@ -14,16 +14,30 @@
 
   var sel = document.getElementById('loc'), res = document.getElementById('res');
   if (sel && res) {
-    sel.addEventListener('change', function () {
-      var v = sel.value, name = sel.options[sel.selectedIndex].text;
-      res.className = 'result';
-      if (!v) res.innerHTML = '<p>Distancia aproximada por carretera desde Medina del Campo.</p>';
-      else if (v === 'otra') res.innerHTML = '<p>Escríbenos con el nombre de tu localidad y te confirmamos si llegamos.</p>';
-      else {
-        res.className = 'result yes';
-        res.innerHTML = '<strong>' + v + ' km</strong><p>' + name + ' está dentro de la zona de reparto.</p><small>Distancia aproximada por carretera. Confirma los días de reparto en el formulario.</small>';
-      }
+    var norm = function (t) { return t.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9 ]+/g, ' ').replace(/\s+/g, ' ').trim(); };
+    var zonas = Array.prototype.map.call(document.querySelectorAll('.zonas li'), function (li) {
+      var cp = li.getAttribute('data-cp'), name = li.childNodes[0].textContent.trim();
+      return { name: name, cp: cp, key: norm(name) };
     });
+    var esc = function (t) { return t.replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+    var show = function (q) {
+      res.className = 'result';
+      var n = norm(q);
+      if (!n) { res.innerHTML = '<p>Te decimos al momento si llegamos a tu localidad.</p>'; return; }
+      var hits = zonas.filter(function (z) { return z.key.indexOf(n) !== -1 || z.cp.indexOf(n.replace(/ /g, '')) === 0; });
+      var exact = hits.filter(function (z) { return z.key === n || z.cp === n.replace(/ /g, ''); });
+      if (exact.length) hits = exact;
+      if (hits.length === 1) {
+        res.className = 'result yes';
+        res.innerHTML = '<strong>Sí</strong><p>Repartimos en ' + esc(hits[0].name) + ' (' + hits[0].cp + ').</p><small>Confirma los días de reparto en el formulario de contacto.</small>';
+      } else if (hits.length > 1) {
+        res.className = 'result yes';
+        res.innerHTML = '<strong>Sí</strong><p>Varias localidades coinciden:</p><ul class="coinciden">' + hits.slice(0, 8).map(function (z) { return '<li>' + esc(z.name) + ' <span>' + z.cp + '</span></li>'; }).join('') + '</ul>' + (hits.length > 8 ? '<small>Y ' + (hits.length - 8) + ' más. Escribe algo más para afinar.</small>' : '');
+      } else {
+        res.innerHTML = '<p>No encontramos esa localidad en nuestra lista.</p><small>Escríbenos con el nombre de tu pueblo o su código postal y te confirmamos si llegamos.</small>';
+      }
+    };
+    sel.addEventListener('input', function () { show(sel.value); });
   }
 
   var f = document.getElementById('f'), st = document.getElementById('st');

@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=12">
+<link rel="stylesheet" href="styles.css?v=13">
 <script>document.documentElement.classList.add('js')</script>
 <script src="motion-pref.js"></script>
 <link rel="icon" type="image/png" href="assets/logo.png">
@@ -154,21 +154,116 @@
   <div class="wrap reparto-grid">
     <div class="reparto-copy">
       <h2 id="h-rep" class="big">¿Llegamos a tu pueblo?</h2>
-      <p>Repartimos en Medina del Campo y comarca, hasta unos 90 km a la redonda.</p>
-      <label for="loc">Elige tu localidad</label>
-      <select id="loc">
-        <option value="">Selecciona…</option>
-        <option value="14">Rueda</option>
-        <option value="18">Nava del Rey</option>
-        <option value="22">Olmedo</option>
-        <option value="26">Tordesillas</option>
-        <option value="33">Arévalo</option>
-        <option value="45">Valladolid</option>
-        <option value="55">Toro</option>
-        <option value="80">Salamanca</option>
-        <option value="otra">Otra localidad</option>
-      </select>
-      <div class="result" id="res" aria-live="polite"><p>Distancia aproximada por carretera desde Medina del Campo.</p></div>
+      <p>Repartimos en Medina del Campo y comarca, y en las provincias vecinas de Valladolid, Salamanca, Ávila, Segovia y Soria.</p>
+      <label for="loc">Escribe tu pueblo o código postal</label>
+      <input id="loc" type="search" inputmode="search" autocomplete="off" placeholder="Por ejemplo, Rueda o 47400" aria-controls="res">
+      <div class="result" id="res" aria-live="polite"><p>Te decimos al momento si llegamos a tu localidad.</p></div>
+      <details class="zonas">
+        <summary>Ver las 93 localidades de reparto</summary>
+        <div class="zonas-grupo"><h3>Valladolid <span>61</span></h3><ul>
+          <li data-cp="47410">Alaejos <span>47410</span></li>
+          <li data-cp="47238">Alcazarén <span>47238</span></li>
+          <li data-cp="47160">Aldea de San Miguel <span>47160</span></li>
+          <li data-cp="47162">Aldeamayor de San Martín <span>47162</span></li>
+          <li data-cp="47210">Ataquines <span>47210</span></li>
+          <li data-cp="47462">Bobadilla del Campo <span>47462</span></li>
+          <li data-cp="47470">Carpio <span>47470</span></li>
+          <li data-cp="47512">Castrejón <span>47512</span></li>
+          <li data-cp="47329">Castrillo de Tejeriego <span>47329</span></li>
+          <li data-cp="47171">Castronuevo de Esgueva <span>47171</span></li>
+          <li data-cp="47520">Castronuño <span>47520</span></li>
+          <li data-cp="47182">Castroverde de Cerrato <span>47182</span></li>
+          <li data-cp="47316">Curiel de Duero <span>47316</span></li>
+          <li data-cp="47186">Encinas de Esgueva <span>47186</span></li>
+          <li data-cp="47176">Esguevillas de Esgueva <span>47176</span></li>
+          <li data-cp="47184">Fombellida <span>47184</span></li>
+          <li data-cp="47480">Fresno el Viejo <span>47480</span></li>
+          <li data-cp="47494">Fuente el Sol <span>47494</span></li>
+          <li data-cp="47196">La Pedraja de Portillo <span>47196</span></li>
+          <li data-cp="47491">La Seca <span>47491</span></li>
+          <li data-cp="47230">Matapozuelos <span>47230</span></li>
+          <li data-cp="47400">Medina del Campo <span>47400</span></li>
+          <li data-cp="47250">Mojados <span>47250</span></li>
+          <li data-cp="47320">Montemayor de Pililla <span>47320</span></li>
+          <li data-cp="47120">Mota del Marqués <span>47120</span></li>
+          <li data-cp="47318">Mélida-Peñafiel <span>47318</span></li>
+          <li data-cp="47500">Nava del Rey <span>47500</span></li>
+          <li data-cp="47464">Nueva Villa <span>47464</span></li>
+          <li data-cp="47490">Nueva Villa de las Torres <span>47490</span></li>
+          <li data-cp="47359">Olivares de Duero <span>47359</span></li>
+          <li data-cp="47314">Padilla de Duero <span>47314</span></li>
+          <li data-cp="47430">Pedrajas de San Esteban <span>47430</span></li>
+          <li data-cp="47315">Pesquera de Duero <span>47315</span></li>
+          <li data-cp="47300">Peñafiel <span>47300</span></li>
+          <li data-cp="47175">Piña de Esgueva <span>47175</span></li>
+          <li data-cp="47116">Pollos <span>47116</span></li>
+          <li data-cp="47450">Pozal de Gallinas <span>47450</span></li>
+          <li data-cp="47220">Pozaldez <span>47220</span></li>
+          <li data-cp="47350">Quintanilla de Onésimo <span>47350</span></li>
+          <li data-cp="47419">Rueda <span>47419</span></li>
+          <li data-cp="47851">San Pedro de Latarce <span>47851</span></li>
+          <li data-cp="47493">San Vicente del Palacio <span>47493</span></li>
+          <li data-cp="47340">Sardón de Duero <span>47340</span></li>
+          <li data-cp="47239">Serrada <span>47239</span></li>
+          <li data-cp="47511">Siete Iglesias de Trabancos <span>47511</span></li>
+          <li data-cp="47870">Tiedra <span>47870</span></li>
+          <li data-cp="47830">Tordehumos <span>47830</span></li>
+          <li data-cp="47100">Tordesillas <span>47100</span></li>
+          <li data-cp="47134">Torrelobatón <span>47134</span></li>
+          <li data-cp="47330">Traspinedo <span>47330</span></li>
+          <li data-cp="47862">Urueña <span>47862</span></li>
+          <li data-cp="47240">Valdestillas <span>47240</span></li>
+          <li data-cp="47004">Valladolid <span>47004</span></li>
+          <li data-cp="47463">Velascálvaro <span>47463</span></li>
+          <li data-cp="47150">Viana de Cega <span>47150</span></li>
+          <li data-cp="47529">Villafranca de Duero <span>47529</span></li>
+          <li data-cp="47180">Villafuerte <span>47180</span></li>
+          <li data-cp="47132">Villamarciel <span>47132</span></li>
+          <li data-cp="47860">Villardefrades <span>47860</span></li>
+          <li data-cp="47465">Villaverde de Medina <span>47465</span></li>
+          <li data-cp="47420">Íscar <span>47420</span></li>
+        </ul></div>
+        <div class="zonas-grupo"><h3>Salamanca <span>21</span></h3><ul>
+          <li data-cp="37212">Alaraz <span>37212</span></li>
+          <li data-cp="37800">Alba de Tormes <span>37800</span></li>
+          <li data-cp="37340">Aldearrubia <span>37340</span></li>
+          <li data-cp="37865">Anaya de Alba <span>37865</span></li>
+          <li data-cp="37418">Arabayona <span>37418</span></li>
+          <li data-cp="37330">Babilafuente <span>37330</span></li>
+          <li data-cp="37181">Calvarrasa de Abajo <span>37181</span></li>
+          <li data-cp="37797">Calzada de Valdunciel <span>37797</span></li>
+          <li data-cp="37400">Cantalapiedra <span>37400</span></li>
+          <li data-cp="37405">Cantalpino <span>37405</span></li>
+          <li data-cp="37893">Encinas de Abajo <span>37893</span></li>
+          <li data-cp="37420">Gomecello <span>37420</span></li>
+          <li data-cp="37180">Machacón <span>37180</span></li>
+          <li data-cp="37310">Macotera <span>37310</span></li>
+          <li data-cp="37315">Mancera de Abajo <span>37315</span></li>
+          <li data-cp="37798">Monterrubio de Armuña <span>37798</span></li>
+          <li data-cp="37406">Palaciosrubios <span>37406</span></li>
+          <li data-cp="37318">Paradinas de San Juan <span>37318</span></li>
+          <li data-cp="37300">Peñaranda de Bracamonte <span>37300</span></li>
+          <li data-cp="37339">Villoria <span>37339</span></li>
+          <li data-cp="37338">Villoruela <span>37338</span></li>
+        </ul></div>
+        <div class="zonas-grupo"><h3>Ávila <span>7</span></h3><ul>
+          <li data-cp="05296">Adanero <span>05296</span></li>
+          <li data-cp="05200">Arévalo <span>05200</span></li>
+          <li data-cp="05229">Castellanos de Zapardiel <span>05229</span></li>
+          <li data-cp="05280">Mingorría <span>05280</span></li>
+          <li data-cp="05297">Palacios de Goda <span>05297</span></li>
+          <li data-cp="05165">Tiñosillos <span>05165</span></li>
+          <li data-cp="05166">Villanueva de Gómez <span>05166</span></li>
+        </ul></div>
+        <div class="zonas-grupo"><h3>Segovia <span>3</span></h3><ul>
+          <li data-cp="40463">Codorniz <span>40463</span></li>
+          <li data-cp="40146">Labajos <span>40146</span></li>
+          <li data-cp="40446">Martín Muñoz de las Posadas <span>40446</span></li>
+        </ul></div>
+        <div class="zonas-grupo"><h3>Soria <span>1</span></h3><ul>
+          <li data-cp="42004">Soria <span>42004</span></li>
+        </ul></div>
+      </details>
     </div>
     <figure class="reparto-photo"><img src="assets/plaza.jpg" width="1920" height="1440" loading="lazy" alt="Plaza Mayor de la Hispanidad, en el centro de Medina del Campo"></figure>
   </div>
@@ -209,6 +304,6 @@
 
 <script src="assets/vendor/gsap.min.js" defer></script>
 <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
-<script src="main.js?v=8" defer></script>
+<script src="main.js?v=9" defer></script>
 </body>
 </html>
