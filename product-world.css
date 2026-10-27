@@ -169,3 +169,16 @@
   .pw-mobile-anim .pw-e.is-long .pw-e-list li{padding:9px 0}
   .pw-mobile-anim .pw-e.is-long .pw-e-list b{font-size:.98rem}
 }
+
+/* móvil: las fotos de botella/envase caben siempre enteras en su marco (la fila de la rejilla se ajusta al marco, no a la imagen) */
+@media(max-width:760px){
+  .pw-b-image,.pw-c-photo,.pw-d-image{grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr)}
+  .pw-b-image img{max-width:100%;max-height:100%;height:auto;width:auto;object-fit:contain}
+  .pw-c-photo img{max-width:86%;max-height:84%;min-height:0}
+  .pw-d-image img{max-width:100%;max-height:100%;min-height:0}
+}
+
+/* móvil: la caja de cada escena crece con su contenido (las reglas de cabecera a 1350/1050 px fijaban la altura de pantalla y cortaban el producto) */
+@media(max-width:760px){
+  .pw-scene .pw-sticky{position:relative;top:auto;height:auto;min-height:0;overflow:visible}
+}
