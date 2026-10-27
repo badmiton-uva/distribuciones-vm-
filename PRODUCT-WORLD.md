@@ -41,3 +41,15 @@ Un envase de la gama a la izquierda y la lista de variedades a la derecha; el sc
 Se usa en `pascual.html` para Yogikids, Yogures (13 variedades) y Natillas; el flan usa `hero`.
 
 Las imágenes de `assets/pascual/yogikids-fresa.webp`, `yogur-vaso.webp`, `flan-huevo.webp` y `natillas.webp` proceden de calidadpascual.com (PNG con fondo transparente, hasta 545 px de alto, recortadas al contenido). Cada imagen muestra un único sabor y se usa como imagen de la gama; el pie lo indica. Derechos de uso pendientes de confirmar (ver `RECURSOS-PENDIENTES.md`).
+
+## `lineup` con una imagen por variedad (Despensa)
+
+Si una variedad lleva `image`, `width`, `height` y `alt`, la imagen se cruza con el scroll en el lateral; si no la lleva, se muestra un marcador «Imagen pendiente» claramente identificado. En móvil y sin animaciones cada variedad muestra su miniatura en la lista. Con más de 14 variedades la lista se convierte en una ventana que sigue a la variedad activa.
+
+Datos y fuentes de imagen de Despensa:
+
+- `helios-products.js` (96 productos, 9 escenas): fotos del catálogo público de la tienda oficial de Helios (`tienda.helios.es/products.json`). Quedan 11 productos sin imagen porque no figuran en ese catálogo (Torti-Ya sin cebolla, patata entera, maíz dulce, tomate frito 3 kg, kétchup Selección, formatos mini de kétchup, mostaza y mayonesa, miel de 28 g, confitura de ciruela de 28 g, cerezas verdes).
+- `villacampo-products.js` (22 productos, 4 escenas): foto de la ficha de cada producto en vegagelconservas.com. El maíz de ½ kg no tiene ficha propia y queda pendiente.
+- `despensa-products.js`: Calvo, Prima, Carbonell y Koipe (capturas aportadas), Carmencita (imágenes ilustrativas de la especia, no el envase), La Ballena (una caja), Luengo (fichas de distribuidores; la mayoría de referencias sin imagen), Borges (catálogo oficial; formato comercial, distinto del de hostelería).
+
+Todas estas imágenes proceden de webs de marcas o distribuidores. Sus derechos de uso están pendientes de confirmar (ver `RECURSOS-PENDIENTES.md`).

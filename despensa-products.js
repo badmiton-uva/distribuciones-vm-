@@ -48,6 +48,7 @@ window.ProductWorld.init({
       ]
     },
     ...(window.HELIOS_SECTIONS || []),
+    ...(window.VILLACAMPO_SECTIONS || []),
     {
       template: 'hero', family: 'Prima', color: '#cf0122', ink: '#ffffff', dark: true,
       eyebrow: 'Salsas Prima', title: 'Salseo del bueno.',
