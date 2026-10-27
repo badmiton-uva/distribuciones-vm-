@@ -85,7 +85,7 @@ window.ProductWorld.init({
         {name:'Comino en grano · 390 g', description:'Comino entero para condimentar guisos, salsas, escabeches y recetas tradicionales.', image:D+'carmencita-comino.webp', width:640, height:640, alt:'Comino, imagen ilustrativa de Carmencita'},
         {name:'Comino molido · 440 g', description:'Comino molido para incorporar fácilmente a guisos, salsas y otros platos.', image:D+'carmencita-comino.webp', width:640, height:640, alt:'Comino, imagen ilustrativa de Carmencita'},
         {name:'Pimienta negra en grano · 500 g', description:'Granos de pimienta negra para moler o añadir a caldos, guisos y marinados.', image:D+'carmencita-pimienta-negra.webp', width:640, height:640, alt:'Pimienta negra, imagen ilustrativa de Carmencita'},
-        {name:'Bicarbonato · 1 kg', description:'Bicarbonato sódico para usos culinarios, como repostería y preparación de masas.'},
+        {name:'Bicarbonato · 1 kg', description:'Bicarbonato sódico para usos culinarios, como repostería y preparación de masas.', image:'assets/despensa/extra/carmencita_bicarbonato-1kg.webp', width:381, height:381, alt:'Carmencita Bicarbonato 1 kg'},
         {name:'Clavo en grano · 550 g', description:'Clavos enteros para aromatizar platos dulces, guisos, caldos y marinados.', image:D+'carmencita-clavo.webp', width:640, height:640, alt:'Clavo, imagen ilustrativa de Carmencita'},
         {name:'Canela en rama · 170 g', description:'Canela en rama para aromatizar postres, bebidas y preparaciones de cocina.', image:D+'carmencita-canela.webp', width:640, height:640, alt:'Canela, imagen ilustrativa de Carmencita'},
         {name:'Canela molida · 410 g', description:'Canela molida para repostería, postres, bebidas y otras recetas.', image:D+'carmencita-canela.webp', width:640, height:640, alt:'Canela, imagen ilustrativa de Carmencita'}
@@ -110,16 +110,16 @@ window.ProductWorld.init({
       variants: [
         {name:'Alubia blanca · 5 kg', description:'Alubia blanca seca, de grano alargado, en formato de 5 kg.', image:D+'luengo-alubia-blanca-5kg.webp', width:458, height:458, alt:'Alubia blanca larga Luengo de 5 kg'},
         {name:'Alubia blanca cocida · frasco de 570 g', description:'Alubias blancas cocidas en conserva, listas para consumir.', image:D+'luengo-alubia-blanca-cocida.webp', width:600, height:600, alt:'Frasco de alubia blanca cocida Luengo'},
-        {name:'Alubia de granja cocida · frasco de 570 g', description:'Alubias de granja cocidas en conserva.'},
-        {name:'Alubia roja cocida · frasco de 570 g', description:'Alubias rojas cocidas en conserva.'},
-        {name:'Alubia blanca cocida · lata de 3 kg', description:'Alubias blancas cocidas en formato de hostelería.'},
-        {name:'Garbanzo castellano · 5 kg', description:'Garbanzo seco en formato de 5 kg.'},
-        {name:'Garbanzo pedrosillano · 5 kg', description:'Garbanzo pedrosillano seco en formato de 5 kg.'},
+        {name:'Alubia de granja cocida · frasco de 570 g', description:'Alubias de granja cocidas en conserva.', image:'assets/despensa/extra/luengo_alubia-de-granja-cocida-frasco-570g.webp', width:720, height:720, alt:'Luengo Alubia de granja cocida frasco 570 g'},
+        {name:'Alubia roja cocida · frasco de 570 g', description:'Alubias rojas cocidas en conserva.', image:'assets/despensa/extra/luengo_alubia-roja-cocida-frasco-570g.webp', width:720, height:720, alt:'Luengo Alubia roja cocida frasco 570 g'},
+        {name:'Alubia blanca cocida · lata de 3 kg', description:'Alubias blancas cocidas en formato de hostelería.', image:'assets/despensa/extra/luengo_alubia-blanca-cocida-lata-3kg.webp', width:720, height:720, alt:'Luengo Alubia blanca cocida lata 3 kg'},
+        {name:'Garbanzo castellano · 5 kg', description:'Garbanzo seco en formato de 5 kg.', image:'assets/despensa/extra/luengo_garbanzo-castellano-5kg.webp', width:720, height:720, alt:'Luengo Garbanzo castellano 5 kg'},
+        {name:'Garbanzo pedrosillano · 5 kg', description:'Garbanzo pedrosillano seco en formato de 5 kg.', image:'assets/despensa/extra/luengo_garbanzo-pedrosillano-5kg.webp', width:720, height:720, alt:'Luengo Garbanzo pedrosillano 5 kg'},
         {name:'Garbanzos cocidos · frasco de 570 g', description:'Garbanzos cocidos en conserva, listos para añadir a guisos o ensaladas.', image:D+'luengo-garbanzo-cocido.webp', width:600, height:600, alt:'Frasco de garbanzos cocidos Luengo'},
-        {name:'Garbanzos cocidos · lata de 3 kg', description:'Garbanzos cocidos en formato de hostelería.'},
-        {name:'Lenteja castellana · 5 kg', description:'Lenteja castellana seca, de grano grande, en formato de 5 kg.'},
+        {name:'Garbanzos cocidos · lata de 3 kg', description:'Garbanzos cocidos en formato de hostelería.', image:'assets/despensa/extra/luengo_garbanzos-cocidos-lata-3kg.webp', width:719, height:719, alt:'Luengo Garbanzos cocidos lata 3 kg'},
+        {name:'Lenteja castellana · 5 kg', description:'Lenteja castellana seca, de grano grande, en formato de 5 kg.', image:'assets/despensa/extra/luengo_lenteja-castellana-5kg.webp', width:720, height:720, alt:'Luengo Lenteja castellana 5 kg'},
         {name:'Lenteja pardina · 5 kg', description:'Lenteja pardina seca, de grano pequeño y piel fina, en formato de 5 kg.', image:D+'luengo-lenteja-pardina.webp', width:600, height:600, alt:'Lentejas pardina Luengo'},
-        {name:'Lentejas cocidas · frasco de 570 g', description:'Lentejas cocidas en conserva, listas para consumir.'}
+        {name:'Lentejas cocidas · frasco de 570 g', description:'Lentejas cocidas en conserva, listas para consumir.', image:'assets/despensa/extra/luengo_lentejas-cocidas-frasco-570g.webp', width:636, height:636, alt:'Luengo Lentejas cocidas frasco 570 g'}
       ]
     },
     {
@@ -127,15 +127,15 @@ window.ProductWorld.init({
       eyebrow: 'Frutos secos y aperitivos', title: 'Borges, para la barra y la cocina.',
       note: 'Imagen de la gama en formato comercial · puede diferir del formato de hostelería',
       variants: [
-        {name:'Cóctel barbacoa · 1 kg', description:'Mezcla de frutos secos con sabor barbacoa, en formato de 1 kg.'},
+        {name:'Cóctel barbacoa · 1 kg', description:'Mezcla de frutos secos con sabor barbacoa, en formato de 1 kg.', image:'assets/despensa/extra/borges_coctel-barbacoa-1kg.webp', width:540, height:540, alt:'Borges Cóctel barbacoa 1 kg'},
         {name:'Mix frito · cubo de 2 kg', description:'Mezcla de frutos secos fritos para servir como aperitivo, en cubo de 2 kg.', image:D+'borges-mezcla.webp', width:316, height:396, alt:'Bolsa Borges Selección de mezcla de frutos secos, imagen de la gama'},
         {name:'Cacahuetes · cubo de 2,5 kg', description:'Cacahuetes en formato grande para hostelería y servicio de aperitivos.', image:D+'borges-cacahuetes.webp', width:319, height:400, alt:'Bolsa Borges Selección de cacahuetes fritos y salados, imagen de la gama'},
-        {name:'Mix barbacoa · cubo de 1,75 kg', description:'Mezcla de aperitivo con sabor barbacoa, en cubo de 1,75 kg.'},
-        {name:'Almendra tostada · 1 kg', description:'Almendras tostadas en formato de 1 kg para cocina y hostelería.'},
+        {name:'Mix barbacoa · cubo de 1,75 kg', description:'Mezcla de aperitivo con sabor barbacoa, en cubo de 1,75 kg.', image:'assets/despensa/extra/borges_mix-barbacoa-cubo-1-75kg.webp', width:717, height:717, alt:'Borges Mix barbacoa cubo 1,75 kg'},
+        {name:'Almendra tostada · 1 kg', description:'Almendras tostadas en formato de 1 kg para cocina y hostelería.', image:'assets/despensa/extra/borges_almendra-tostada-1kg.webp', width:540, height:540, alt:'Borges Almendra tostada 1 kg'},
         {name:'Cacahuete frito · 1 kg', description:'Cacahuetes fritos en formato de 1 kg para aperitivos y hostelería.', image:D+'borges-cacahuetes.webp', width:319, height:400, alt:'Bolsa Borges Selección de cacahuetes fritos y salados, imagen de la gama'},
         {name:'Nuez en grano · 1 kg', description:'Nueces sin cáscara en formato de 1 kg, listas para utilizar en cocina y repostería.', image:D+'borges-nueces.webp', width:309, height:395, alt:'Bolsa Borges Selección de nueces de California en grano, imagen de la gama'},
-        {name:'Pasas sultanas · 1 kg', description:'Pasas sultanas en formato de 1 kg, apropiadas para recetas, ensaladas y repostería.'},
-        {name:'Cóctel para ensaladas · 1 kg', description:'Mezcla de frutos secos para añadir a ensaladas, en formato de 1 kg.'},
+        {name:'Pasas sultanas · 1 kg', description:'Pasas sultanas en formato de 1 kg, apropiadas para recetas, ensaladas y repostería.', image:'assets/despensa/extra/borges_pasas-sultanas-1kg.webp', width:540, height:540, alt:'Borges Pasas sultanas 1 kg'},
+        {name:'Cóctel para ensaladas · 1 kg', description:'Mezcla de frutos secos para añadir a ensaladas, en formato de 1 kg.', image:'assets/despensa/extra/borges_coctel-para-ensaladas-1kg.webp', width:540, height:540, alt:'Borges Cóctel para ensaladas 1 kg'},
         {name:'Granillo de almendra · 1 kg', description:'Almendra troceada en granillo, indicada para repostería, pastelería y decoración.', image:D+'borges-granillo-almendra.webp', width:823, height:510, alt:'Almendra en granillo Borges'}
       ]
     },
@@ -161,7 +161,7 @@ window.ProductWorld.init({
         {name:'Sirope de chocolate · 1 kg', description:'Sirope de chocolate para acompañar y decorar postres y helados.', image:D+'borges-sirope-chocolate.webp', width:178, height:510, alt:'Botella de sirope de chocolate Borges Exquizito'},
         {name:'Sirope de frutos rojos · 1 kg', description:'Sirope de frutos rojos para dar sabor y decorar postres y helados.', image:D+'borges-sirope-frutos-rojos.webp', width:179, height:510, alt:'Botella de sirope de frutos rojos Borges Exquizito'},
         {name:'Sirope de moka · 1 kg', description:'Sirope de moka para acompañar y decorar postres, helados y bebidas.', image:D+'borges-sirope-moka.webp', width:178, height:510, alt:'Botella de sirope de moka Borges Exquizito'},
-        {name:'Sirope de galleta caramelizada · 1 kg', description:'Sirope de galleta caramelizada, también conocido como sabor speculoos, para postres y helados.'},
+        {name:'Sirope de galleta caramelizada · 1 kg', description:'Sirope de galleta caramelizada, también conocido como sabor speculoos, para postres y helados.', image:'assets/despensa/extra/borges_sirope-de-galleta-caramelizada-1kg.webp', width:720, height:720, alt:'Borges Sirope de galleta caramelizada 1 kg'},
         {name:'Sirope de caramelo y mantequilla salada · 1 kg', description:'Sirope de caramelo con mantequilla salada para decorar postres y helados.', image:D+'borges-sirope-caramelo-mantequilla.webp', width:178, height:510, alt:'Botella de sirope de caramelo y mantequilla salada Borges Exquizito'}
       ]
     }

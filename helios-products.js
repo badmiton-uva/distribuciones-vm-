@@ -305,7 +305,11 @@ window.HELIOS_SECTIONS = [
    },
    {
     "name": "Confitura de ciruela · 28 g",
-    "description": "Confitura de ciruela en formato individual."
+    "description": "Confitura de ciruela en formato individual.",
+    "image": "assets/despensa/extra/helios_confitura-de-ciruela-28g.webp",
+    "width": 720,
+    "height": 720,
+    "alt": "Helios Confitura de ciruela 28 g"
    },
    {
     "name": "Confitura de naranja · 28 g",
@@ -333,7 +337,11 @@ window.HELIOS_SECTIONS = [
    },
    {
     "name": "Miel · 28 g",
-    "description": "Miel en frasco individual."
+    "description": "Miel en frasco individual.",
+    "image": "assets/despensa/extra/helios_miel-28g.webp",
+    "width": 720,
+    "height": 720,
+    "alt": "Helios Miel 28 g"
    },
    {
     "name": "Tumaca · 45 porciones de 20 g",
@@ -345,15 +353,27 @@ window.HELIOS_SECTIONS = [
    },
    {
     "name": "Kétchup · 30 g",
-    "description": "Kétchup en frasco individual de 30 g."
+    "description": "Kétchup en frasco individual de 30 g.",
+    "image": "assets/despensa/extra/helios_ketchup-30g.webp",
+    "width": 666,
+    "height": 666,
+    "alt": "Helios Kétchup 30 g"
    },
    {
     "name": "Mostaza · 30 g",
-    "description": "Mostaza en frasco individual de 30 g."
+    "description": "Mostaza en frasco individual de 30 g.",
+    "image": "assets/despensa/extra/helios_mostaza-30g.webp",
+    "width": 663,
+    "height": 663,
+    "alt": "Helios Mostaza 30 g"
    },
    {
     "name": "Mayonesa · 25 g",
-    "description": "Mayonesa en frasco individual de 25 g."
+    "description": "Mayonesa en frasco individual de 25 g.",
+    "image": "assets/despensa/extra/helios_mayonesa-25g.webp",
+    "width": 645,
+    "height": 645,
+    "alt": "Helios Mayonesa 25 g"
    }
   ]
  },
@@ -467,7 +487,11 @@ window.HELIOS_SECTIONS = [
    },
    {
     "name": "Tomate frito · 3 kg",
-    "description": "Tomate frito en formato grande para hostelería."
+    "description": "Tomate frito en formato grande para hostelería.",
+    "image": "assets/despensa/extra/helios_tomate-frito-3kg.webp",
+    "width": 720,
+    "height": 720,
+    "alt": "Helios Tomate frito 3 kg"
    },
    {
     "name": "Tomate para untar · pack 2 × 140 g",
@@ -527,7 +551,11 @@ window.HELIOS_SECTIONS = [
    },
    {
     "name": "Kétchup Selección · 330 g",
-    "description": "Kétchup Helios en botella de vidrio."
+    "description": "Kétchup Helios en botella de vidrio.",
+    "image": "assets/despensa/extra/helios_ketchup-seleccion-330g.webp",
+    "width": 500,
+    "height": 500,
+    "alt": "Helios Kétchup Selección 330 g"
    },
    {
     "name": "Pisto casero · 570 g",
@@ -570,7 +598,11 @@ window.HELIOS_SECTIONS = [
    },
    {
     "name": "Maíz dulce · 340 g",
-    "description": "Maíz dulce en conserva para ensaladas y otras recetas."
+    "description": "Maíz dulce en conserva para ensaladas y otras recetas.",
+    "image": "assets/despensa/extra/helios_maiz-dulce-340g.webp",
+    "width": 530,
+    "height": 530,
+    "alt": "Helios Maíz dulce 340 g"
    },
    {
     "name": "Guisantes extrafinos · 340 g",
@@ -582,7 +614,11 @@ window.HELIOS_SECTIONS = [
    },
    {
     "name": "Torti-Ya sin cebolla",
-    "description": "Preparado de patata para elaborar tortilla sin cebolla."
+    "description": "Preparado de patata para elaborar tortilla sin cebolla.",
+    "image": "assets/despensa/extra/helios_torti-ya-sin-cebolla.webp",
+    "width": 720,
+    "height": 720,
+    "alt": "Helios Torti-Ya sin cebolla"
    },
    {
     "name": "Torti-Ya con cebolla · 550 g",
@@ -787,7 +823,11 @@ window.HELIOS_SECTIONS = [
    },
    {
     "name": "Cerezas verdes · 160 g",
-    "description": "Cerezas verdes en frasco pequeño."
+    "description": "Cerezas verdes en frasco pequeño.",
+    "image": "assets/despensa/extra/helios_cerezas-verdes-160g.webp",
+    "width": 720,
+    "height": 720,
+    "alt": "Helios Cerezas verdes 160 g"
    },
    {
     "name": "Melocotón en almíbar · lata de 840 g",

@@ -19,7 +19,11 @@ window.VILLACAMPO_SECTIONS = [
    },
    {
     "name": "Maíz dulce · ½ kg",
-    "description": "Maíz dulce en conserva, en formato de media lata."
+    "description": "Maíz dulce en conserva, en formato de media lata.",
+    "image": "assets/despensa/extra/villa-campo_maiz-dulce-medio-kg.webp",
+    "width": 244,
+    "height": 244,
+    "alt": "Villa Campo Maíz dulce ½ kg"
    },
    {
     "name": "Zanahoria rallada · 3 kg",
