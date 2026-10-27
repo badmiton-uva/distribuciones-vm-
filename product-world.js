@@ -34,12 +34,13 @@
     },
     lineup(item, index) {
       const n = item.variants.length;
-      return `<section class="pw-scene pw-e${n>8?' is-long':''}${dark(item)}" style="--n:${n};--scene:${esc(item.color)};--ink:${esc(item.ink)}" aria-labelledby="pw-scene-${index}">
+      const multi = item.variants.some(v => v.image);
+      return `<section class="pw-scene pw-e${n>8?' is-long':''}${n>14?' is-scroll':''}${dark(item)}" style="--n:${n};--scene:${esc(item.color)};--ink:${esc(item.ink)}" aria-labelledby="pw-scene-${index}">
         <div class="pw-sticky"><div class="pw-scene-inner">${label(item,index)}
           <div class="pw-e-grid">
-            <div class="pw-e-art"><span class="pw-e-disc" aria-hidden="true"></span>${img(item.product,'pw-e-image',true)}<p class="pw-e-note">${esc(item.note || '')}</p></div>
+            <div class="pw-e-art"><span class="pw-e-disc" aria-hidden="true"></span>${multi ? item.variants.map((v,i) => v.image ? img(v,`pw-e-image pw-e-multi${i===0?' is-current':''}`,i<2) : `<span class="pw-e-image pw-e-multi pw-e-pending${i===0?' is-current':''}" role="img" aria-label="Imagen pendiente">Imagen pendiente</span>`).join('') : img(item.product,'pw-e-image',true)}<p class="pw-e-note">${esc(item.note || '')}</p></div>
             <div class="pw-e-copy"><p class="pw-overline">${esc(item.eyebrow)}</p><h2 id="pw-scene-${index}">${esc(item.title)}</h2>
-              <ol class="pw-e-list">${item.variants.map((v,i) => `<li${i===0?' class="is-current"':''}><span class="pw-e-num">${number(i)}</span><b>${esc(v.name)}</b><small>${esc(v.description)}</small></li>`).join('')}</ol>
+              <ol class="pw-e-list">${item.variants.map((v,i) => `<li${i===0?' class="is-current"':''}><span class="pw-e-num">${number(i)}</span><b>${esc(v.name)}</b><small>${esc(v.description)}</small>${multi && v.image ? `<img class="pw-e-thumb" src="${esc(v.image)}" alt="${esc(v.alt || v.name)}" width="${Number(v.width) || 300}" height="${Number(v.height) || 300}" loading="lazy">` : ''}</li>`).join('')}</ol>
             </div>
           </div>
         </div></div></section>`;
@@ -71,6 +72,8 @@
         scene.querySelector('.pw-b-track')?.style.removeProperty('transform');
         scene.querySelectorAll('.pw-d-frame').forEach((f,i) => f.classList.toggle('is-current',i===0));
         scene.querySelectorAll('.pw-e-list li').forEach((r,i) => r.classList.toggle('is-current',i===0));
+        scene.querySelectorAll('.pw-e-multi').forEach((m,i) => m.classList.toggle('is-current',i===0));
+        const eList = scene.querySelector('.pw-e-list'); if (eList) eList.scrollTop = 0;
         if (scene.classList.contains('pw-d')) scene.style.setProperty('--scene',scene.querySelector('.pw-d-frame')?.style.getPropertyValue('--frame-color') || '');
       });
       const staticMode = reduce.matches || mobile.matches || !window.gsap || !window.ScrollTrigger;
@@ -95,6 +98,9 @@
             const rows=[...scene.querySelectorAll('.pw-e-list li')];
             const active=Math.min(rows.length-1,Math.floor(Math.min(.9999,p)*rows.length));
             rows.forEach((r,i)=>r.classList.toggle('is-current',i===active));
+            scene.querySelectorAll('.pw-e-multi').forEach((m,i)=>m.classList.toggle('is-current',i===active));
+            const list=scene.querySelector('.pw-e-list');
+            if (scene.classList.contains('is-scroll') && list) list.scrollTop=rows[active].offsetTop-list.clientHeight*.38;
           }
           if (scene.classList.contains('pw-d')) {
             const frames=[...scene.querySelectorAll('.pw-d-frame')];
