@@ -52,10 +52,6 @@
     });
   }
 
-  var top = document.querySelector('.top');
-  function solid() { top.classList.toggle('solid', window.scrollY > window.innerHeight * 0.8); }
-  window.addEventListener('scroll', solid, { passive: true });
-  solid();
 
 
 
@@ -215,7 +211,7 @@
           });
         });
         var dr = (/[?&]reco=([0-9.]+)/.exec(dbg) || [])[1];
-        if (dr) { var sr = document.createElement('style'); sr.textContent = 'main>section:not(#recorrido),.top,.foot{display:none!important}'; document.head.appendChild(sr); var st = ScrollTrigger.getAll().filter(function (x) { return x.trigger === reco; })[0]; if (st) { var an = st.animation; st.kill(true); an.progress(parseFloat(dr)); } }
+        if (dr) { var sr = document.createElement('style'); sr.textContent = 'main>section:not(#recorrido),.site-header,.foot{display:none!important}'; document.head.appendChild(sr); var st = ScrollTrigger.getAll().filter(function (x) { return x.trigger === reco; })[0]; if (st) { var an = st.animation; st.kill(true); an.progress(parseFloat(dr)); } }
         ScrollTrigger.refresh();
       }
       imgs.forEach(function (im) {
@@ -255,7 +251,7 @@
         tlV.fromTo(vf, { filter: 'blur(0px)' }, { filter: 'blur(6px)', duration: 2.4, ease: 'power2.in', immediateRender: false }, 11.4);
         tlV.to(vf, { x: function () { return -vw() * 1.2; }, duration: 3.2, ease: 'power2.in' }, 11.4);
         var dv = (/[?&]van=([0-9.]+)/.exec(dbg) || [])[1];
-        if (dv) { var st3 = document.createElement('style'); st3.textContent = 'main>section:not(.van-world),.top,.foot{display:none!important}'; document.head.appendChild(st3); tlV.scrollTrigger.kill(true); tlV.progress(parseFloat(dv)); }
+        if (dv) { var st3 = document.createElement('style'); st3.textContent = 'main>section:not(.van-world),.site-header,.foot{display:none!important}'; document.head.appendChild(st3); tlV.scrollTrigger.kill(true); tlV.progress(parseFloat(dv)); }
       });
     }
 
@@ -267,7 +263,7 @@
     // las imágenes diferidas cambian la altura de la página
     window.addEventListener('load', function () { ScrollTrigger.refresh(); });
     var only = (/[?&]only=([a-z-]+)/.exec(dbg) || [])[1];
-    if (only) { var so = document.createElement('style'); so.textContent = 'main>section:not(#' + only + '),.top,.foot{display:none!important}'; document.head.appendChild(so); setTimeout(function () { ScrollTrigger.refresh(); window.scrollTo(0, 1500); ScrollTrigger.update(); gsap.utils.toArray('.ad-products img').forEach(function (i) { gsap.set(i, { y: 0 }); }); }, 800); }
+    if (only) { var so = document.createElement('style'); so.textContent = 'main>section:not(#' + only + '),.site-header,.foot{display:none!important}'; document.head.appendChild(so); setTimeout(function () { ScrollTrigger.refresh(); window.scrollTo(0, 1500); ScrollTrigger.update(); gsap.utils.toArray('.ad-products img').forEach(function (i) { gsap.set(i, { y: 0 }); }); }, 800); }
     var dy = (/[?&]y=([0-9]+)/.exec(dbg) || [])[1];
     if (dy) setTimeout(function () { window.scrollTo(0, +dy); ScrollTrigger.update(); }, 600);
   }
