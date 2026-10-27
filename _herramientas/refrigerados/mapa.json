@@ -1,0 +1,514 @@
+[
+ {
+  "name": "Baguette R · 250 g",
+  "ref": "12286",
+  "catalogo": "Baguette R 250g",
+  "url": "https://www.panamarbakery.com/baguette-r250g",
+  "imagen": "12286_baguette_r_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Baguettina Express · 120 g",
+  "ref": "8506",
+  "catalogo": "Baguettina Clásica 120g",
+  "url": "https://www.panamarbakery.com/baguettina-clasica-120g",
+  "imagen": "161555307912596-8506_1baguettina-clsica-120g_top_Normal.png",
+  "aproximado": true
+ },
+ {
+  "name": "Barra Gourmet Ficelle · 280 g",
+  "ref": "130747",
+  "catalogo": "Barra Gourmet 280g",
+  "url": "https://www.panamarbakery.com/barra-gourmet-280g1",
+  "imagen": "130747_barra_gourmet280_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Barra Larga · 285 g",
+  "ref": "13962",
+  "catalogo": "Barra Larga 285g",
+  "url": "https://www.panamarbakery.com/barra-larga-285g",
+  "imagen": "161547470813962normal_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Barra Larga Croustillante Tradición · 260 g",
+  "ref": "13383",
+  "catalogo": "Barra Larga Croustillante Tradición 260g",
+  "url": "https://www.panamarbakery.com/barra-larga-croustillante-tradicion-260g",
+  "imagen": "161546648013383normal_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Barra Riquiña · 270 g",
+  "ref": "8282",
+  "catalogo": "Barra Riquiña 270g",
+  "url": "https://www.panamarbakery.com/barra-meiga-270g",
+  "imagen": "16154721488282normal_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Súper Barra Rústica Mediterránea · 380 g",
+  "ref": "13956",
+  "catalogo": "Súper Barra Rústica Mediterránea 380g",
+  "url": "https://www.panamarbakery.com/super-barra-rustica-mediterranea-380g",
+  "imagen": "161546777813956normal_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Barra de Cuarto · 260 g",
+  "ref": "13973",
+  "catalogo": "Barra de Cuarto 260g",
+  "url": "https://www.panamarbakery.com/barra-de-cuarto-260g",
+  "imagen": "13973_1barradecuarto260gcopia_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Barra Verité · 250 g",
+  "ref": "131167",
+  "catalogo": "Barra Verité 290g",
+  "url": "https://www.panamarbakery.com/barra-verite-290g",
+  "imagen": "131167_barra_verite290_Normal.png",
+  "aproximado": true
+ },
+ {
+  "name": "Bocadillo de Agua · 140 g",
+  "ref": "130257",
+  "catalogo": "Bocadillo de Agua 140g",
+  "url": "https://www.panamarbakery.com/bocadillo-de-agua-140g",
+  "imagen": "130257_2-bocadillo-agua-140g_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Bocatín Rústico Express · 75 g",
+  "ref": "13468",
+  "catalogo": "Bocatín Rústico Express 75g",
+  "url": "https://www.panamarbakery.com/bocatin-rustico-express-75g",
+  "imagen": "161546741713468normal_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Chapata Gourmet · 90 g",
+  "ref": "13673",
+  "catalogo": "Chapata Gourmet 90g",
+  "url": "https://www.panamarbakery.com/chapata-gourmet-90g",
+  "imagen": "13673_chapata_gourmet90_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Flauta Súper · 140 g",
+  "ref": "PRECUI89",
+  "catalogo": "Flauta Súper 140g",
+  "url": "https://www.panamarbakery.com/flauta-super-140g",
+  "imagen": "precui89_1_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Mini Flauta Express · 50 g",
+  "ref": "130646",
+  "catalogo": "Mini Flauta Express 50g",
+  "url": "https://www.panamarbakery.com/mini-flauta-50g",
+  "imagen": "130646_mediaflauta50g_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Mollete Andaluz · 70 g",
+  "ref": "12649",
+  "catalogo": "Mollete Andaluz DyL 70g",
+  "url": "https://www.panamarbakery.com/mollete-andaluz-70g",
+  "imagen": "12649_mollete_andaluz_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Mini Cuadrados de Pan Candeal · 80 g",
+  "ref": "13696",
+  "catalogo": "Pan Candeal Minicuadrados 80g",
+  "url": "https://www.panamarbakery.com/pan-candeal-minicuadrados-80g",
+  "imagen": "161546635213696normal_Normal.png",
+  "aproximado": true
+ },
+ {
+  "name": "Pan Castilla Redondo · 450 g",
+  "ref": "308",
+  "catalogo": "Pan Castilla Redondo 450g",
+  "url": "https://www.panamarbakery.com/pan-castilla-redondo-450g",
+  "imagen": "308_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Pan Castilla Redondo · 450 g · caja de 20",
+  "ref": "308",
+  "catalogo": "Pan Castilla Redondo 450g",
+  "url": "https://www.panamarbakery.com/pan-castilla-redondo-450g",
+  "imagen": "308_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Pan de Molde · 800 g",
+  "ref": "131370",
+  "catalogo": "Pan de Molde DyL 800g",
+  "url": "https://www.panamarbakery.com/pan-de-molde-800g",
+  "imagen": "161547608612166normal_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Pan Labriego · 300 g",
+  "ref": "131150",
+  "catalogo": "Pan Labriego 300g",
+  "url": "https://www.panamarbakery.com/pan-labriego-300g",
+  "imagen": "131150_barra_labriega_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Panecillo sin Gluten para Hostelería · 66 g",
+  "ref": "13390",
+  "catalogo": "Panecillo Hostelería Sin Gluten DyL 66g",
+  "url": "https://www.panamarbakery.com/panecillo-hosteleria-sin-gluten-66g",
+  "imagen": "161546620413390normal_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Pan de Payés Rebanado · 800 g",
+  "ref": "13542",
+  "catalogo": "Pan de Payés Rebanado DyL 800g",
+  "url": "https://www.panamarbakery.com/rebanada-payes-800g",
+  "imagen": "13542_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Rebanada de Pan de Payés · 63 g",
+  "ref": "12123",
+  "catalogo": "Rebanada Pan Payés DyL 63g",
+  "url": "https://www.panamarbakery.com/rebanada-de-pan-payes-63g",
+  "imagen": "161547122312123normal_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Surtido de Panecillos Redondos · 40 g",
+  "ref": "13471",
+  "catalogo": "Surtido Panecillos Redondos DyL 40g",
+  "url": "https://www.panamarbakery.com/surtido-panecillos-redondos-express-40g2",
+  "imagen": "13471_surtido_panecillos40_redondos_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Urban Brioche · 550 g",
+  "ref": "131417",
+  "catalogo": "Urban Brioche DyL 550g",
+  "url": "https://www.panamarbakery.com/urban-brioche-dyl-550g",
+  "imagen": "brioche_lingote_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Rustic Cristal Burger · 110 g",
+  "ref": "13799",
+  "catalogo": "Rustic Cristal Burger 12cm DyL 110g",
+  "url": "https://www.panamarbakery.com/rustic-burger-cristal-12-cm-110g",
+  "imagen": "13799-rusticcristalburger100g_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Croissant de Margarina · 120 g",
+  "ref": "13112",
+  "catalogo": "Croissant Artesano Margarina 120g",
+  "url": "https://www.panamarbakery.com/croissant-artesano-margarina-120g2",
+  "imagen": "_0007_13112_1-croissant-artesano-margcopia_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Croissant de Margarina Fermentado · 120 g",
+  "ref": "12309",
+  "catalogo": "Croissant Artesano Margarina Ferm.  120g",
+  "url": "https://www.panamarbakery.com/croissant-artesano-margarina-120g",
+  "imagen": "_0012_12309_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Mini Croissant Recto · 22 g",
+  "ref": "1261",
+  "catalogo": "Mini Croissant Recto Margarina 22g",
+  "url": "https://www.panamarbakery.com/mini-croissant-22g2",
+  "imagen": "_0001_1261_mini_croissant_recto_marga22_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Mini Croissant de Mantequilla 100% · 25 g",
+  "ref": "12177",
+  "catalogo": "Mini Croissant Clásico Mantequilla 25g",
+  "url": "https://www.panamarbakery.com/mini-croissant-clasico-tradicion-mantequilla-25g",
+  "imagen": "_0009_12177__Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Croissant Recto de Mantequilla · 70 g",
+  "ref": "13308",
+  "catalogo": "Croissant Recto Mantequilla 20% Ferm. 70g",
+  "url": "https://www.panamarbakery.com/croissant-mantequilla-70g3",
+  "imagen": "_0024_13308_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Croissant Art Supreme de Mantequilla · 80 g",
+  "ref": "13279",
+  "catalogo": "Croissant Artesano Suprême Ferm. 80g",
+  "url": "https://www.panamarbakery.com/croissant-artesano-tradicion-mantequilla-80g",
+  "imagen": "_0006_13279_Normal.png",
+  "aproximado": true
+ },
+ {
+  "name": "Croissant Recto Supreme de Mantequilla · 60 g",
+  "ref": "13934",
+  "catalogo": "Croissant Recto Suprême Mantequilla Ferm. 60g",
+  "url": "https://www.panamarbakery.com/croissant-mantequilla-60g",
+  "imagen": "_0018_13934_croissant_recto_supreme60_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Croissant Recto de Margarina con Crema de Chocolate · 52 g",
+  "ref": "130686",
+  "catalogo": "Croissant Recto Margarina Crema Choco 52g",
+  "url": "https://www.panamarbakery.com/croissant-margarina-relleno-de-crema-de-chocolate-52g",
+  "imagen": "_0012_130686croissantrellenocacao52g_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Palmera Croissant · 160 g",
+  "ref": "131042",
+  "catalogo": "Palmera Croissant 160g",
+  "url": "https://www.panamarbakery.com/producto8",
+  "imagen": "_0002_131042_palmera_soft160_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Napolitana Súper de Chocolate · 135 g",
+  "ref": "12151",
+  "catalogo": "Súper Napolitana Chocolate 135g",
+  "url": "https://www.panamarbakery.com/super-napolitana-chocolate-135g2",
+  "imagen": "12151_supernapolit_choco135_2967_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Napolitana de Crema Fermentada · 115 g",
+  "ref": "21176",
+  "catalogo": "Napolitana de Crema Ferm. 115g",
+  "url": "https://www.panamarbakery.com/napolitana-de-crema-115g",
+  "imagen": "21176_napolitana_crema_ferm115_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Napolitana de Chocolate Fermentada · 115 g",
+  "ref": "21178",
+  "catalogo": "Napolitana de Chocolate Ferm. 115g",
+  "url": "https://www.panamarbakery.com/napolitana-de-chocolate-115g",
+  "imagen": "21178_napolitana_choco115_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Napolitana Decorada de Crema · 118 g",
+  "ref": "131216",
+  "catalogo": "Napolitana de Crema Decorada Ferm. 120g",
+  "url": "https://www.panamarbakery.com/napolitana-crema-decorada",
+  "imagen": "_0001_130572_napolitana_crema_decor120_vista_Normal.png",
+  "aproximado": true
+ },
+ {
+  "name": "Napolitana Decorada de Chocolate · 118 g",
+  "ref": "131002",
+  "catalogo": "Napolitana Crema de Chocolate Decorada 118g",
+  "url": "https://www.panamarbakery.com/napolitana-chocolate-decorada",
+  "imagen": "_0000_130578_napol_choco_decor120_vista_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Napolitana Mixta · 140 g",
+  "ref": "131020",
+  "catalogo": "Napolitana Mixta 140g",
+  "url": "https://www.panamarbakery.com/napolitana-mixta-york-y-queso-140g2",
+  "imagen": "13339napolitana_jamonyqueso_0179copia_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Berlina Blanca Rayada · 115 g",
+  "ref": "130577",
+  "catalogo": "Berliblanca Rayada 115g",
+  "url": "https://www.panamarbakery.com/berliblanca-rayada-115g",
+  "imagen": "_0007_130577_berliblanca_rayada115_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Berlina Súper Choco · 90 g",
+  "ref": "130949",
+  "catalogo": "Berlina Super Choco 90g",
+  "url": "https://www.panamarbakery.com/berlina-super-choco-90g",
+  "imagen": "_0000_130949_berlina_super_choco_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Bretzel de Crema · 125 g",
+  "ref": "130970",
+  "catalogo": "Bretzel Crema  125g",
+  "url": "https://www.panamarbakery.com/bretzel-de-crema-125g",
+  "imagen": "161547828712340normal_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Cookie Doble Chocolate · 80 g",
+  "ref": "131059",
+  "catalogo": "Cookie Doble Chocolate 80g",
+  "url": "https://www.panamarbakery.com/cookie-doble-chocolate-80g",
+  "imagen": "1698923171130787_cookie-doble-chocolate_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Ensaimada Grande · 95 g",
+  "ref": "12585",
+  "catalogo": "Ensaimada Grande Hojaldrada 95g",
+  "url": "https://www.panamarbakery.com/ensaimada-grande-hojaldrada-95g",
+  "imagen": "_0013_12585-ensaimada-grande-hojaldrada-95g_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Herradura de Chocolate · 170 g",
+  "ref": "6007",
+  "catalogo": "Herradura Crema de Chocolate 170g",
+  "url": "https://www.panamarbakery.com/herradura-de-chocolate-170g",
+  "imagen": "16154813346007normal_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Hoops Relleno de Caramelo · 82 g",
+  "ref": "131044",
+  "catalogo": "Hoops Caramel 82g",
+  "url": "https://www.panamarbakery.com/hoop-caramel",
+  "imagen": "_0018_131044_hoop_caramel82_Normal.png",
+  "aproximado": true
+ },
+ {
+  "name": "Maxi Hoops Bombón · 80 g",
+  "ref": "130399",
+  "catalogo": "Maxi Hoops Bombón 80g",
+  "url": "https://www.panamarbakery.com/maxi-hoops-bombon-80g",
+  "imagen": "_0016_12317_1-maxi-hoops-bombon_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Maxi Hoops Glaseados · 70 g",
+  "ref": "130398",
+  "catalogo": "Maxi Hoops Glaseados 70g",
+  "url": "https://www.panamarbakery.com/maxi-hoops-glaseados-70g",
+  "imagen": "_0013_130398_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Pepito de Chocolate Azucarado · 110 g",
+  "ref": "13325",
+  "catalogo": "Pepito Choco Azucarado 110g",
+  "url": "https://www.panamarbakery.com/pepito-choco-azucarado-110g",
+  "imagen": "_0004_13325_1-pepito-choco-azucarado-capas_Normal.png",
+  "aproximado": true
+ },
+ {
+  "name": "Pepito de Crema Azucarado · 110 g",
+  "ref": "13324",
+  "catalogo": "Pepito Crema Azucarado 110g",
+  "url": "https://www.panamarbakery.com/pepito-crema-azucarado-110g",
+  "imagen": "_0003_13324_1-pepito-crema-azucarado_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Trenza Maple · 95 g",
+  "ref": "13001",
+  "catalogo": "Trenza Maple 95g",
+  "url": "https://www.panamarbakery.com/trenza-maple-95g",
+  "imagen": "161548082513001normal_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Empanadilla Selecta de Pisto · 125 g",
+  "ref": "130866",
+  "catalogo": "Empanadilla Selecta de Pisto 125g",
+  "url": "https://www.panamarbakery.com/empanadilla-selecta-de-pisto-125g1",
+  "imagen": "130866_empanadilla_pisto125_int_duo_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Empanadilla de Tomate y Atún · 125 g",
+  "ref": "130868",
+  "catalogo": "Empanadilla Selecta de Atún y Tomate 125g",
+  "url": "https://www.panamarbakery.com/empanadilla-selecta-de-atun-y-tomate-125g1",
+  "imagen": "1710158611130868_empanadilla_tomateatun125_int_duo_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Empanada Gallega de Atún · 150 g",
+  "ref": "12699",
+  "catalogo": "Empanada Bocata Atún Gallega 150g",
+  "url": "https://www.panamarbakery.com/empanada-bocata-atun-gallega-150g",
+  "imagen": "161548409412699normal_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Bocapizza de Bacon y Queso · 150 g",
+  "ref": "12451",
+  "catalogo": "Bocapizza Bacon y Queso 150g",
+  "url": "https://www.panamarbakery.com/bocapizza-bacon-y-queso-150g",
+  "imagen": "12451_bocapizza_bacon_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Bocapizza de Atún y Queso · 150 g",
+  "ref": "12463",
+  "catalogo": "Bocapizza Atún y Queso 150g",
+  "url": "https://www.panamarbakery.com/bocapizza-atun-y-queso-150g",
+  "imagen": "161548348412463normal_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Bocapizza de York y Queso · 150 g",
+  "ref": "12698",
+  "catalogo": "Bocapizza York y Queso 150g",
+  "url": "https://www.panamarbakery.com/bocapizza-york-y-queso-150g",
+  "imagen": "161548346112698normal_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Panini de Barbacoa · 175 g",
+  "ref": "130754",
+  "catalogo": "Panini Barbacoa 175g",
+  "url": "https://www.panamarbakery.com/panini-barbacoa-175g",
+  "imagen": "130754_paninibarbacoa175g_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Panini Kebab · 175 g",
+  "ref": "131232",
+  "catalogo": "Panini Kebab 175g",
+  "url": "https://www.panamarbakery.com/panini-kebab-175g",
+  "imagen": "131232_panini_kebab175_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Panini de Verduras · 175 g",
+  "ref": "130451",
+  "catalogo": "Panini de Verduras 175g",
+  "url": "https://www.panamarbakery.com/panini-de-verduras-175-g",
+  "imagen": "130421-paninideverdurasvegano_7354_Normal.png",
+  "aproximado": false
+ },
+ {
+  "name": "Lámina de Hojaldre · 60 × 40 cm",
+  "ref": "12171",
+  "catalogo": "Lámina de Hojaldre 55x38,5 900g",
+  "url": "https://www.panamarbakery.com/lamina-de-hojaldre-60x40-900g",
+  "imagen": "161548040312171normal_Normal.png",
+  "aproximado": true
+ },
+ {
+  "name": "Tarta Red Velvet · 1,2 kg",
+  "ref": "131109",
+  "catalogo": "Tarta Red Velvet 1200g",
+  "url": "https://www.panamarbakery.com/tarta-red-velvet-precortada-1200g",
+  "imagen": "131109_tarta_red_velvet_1200g_Normal.png",
+  "aproximado": true
+ }
+]

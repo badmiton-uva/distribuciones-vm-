@@ -1,4 +1,4 @@
-/* Refrigerados (Panamar). Añade a cada variedad image, width, height y alt para mostrar su fotografía. */
+/* Refrigerados (Panamar). Generado con _herramientas/refrigerados/build.py */
 window.ProductWorld.init({
   mount: '#familias',
   sections: [
