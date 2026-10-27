@@ -119,5 +119,17 @@
     window.addEventListener('load',()=>window.ScrollTrigger?.refresh(),{once:true});
   }
 
+  /* en pantallas estrechas el menú se desliza: se centra en la sección actual para ver también las vecinas */
+  function centerNav() {
+    const nav = document.querySelector('.pw-header nav');
+    const cur = nav && nav.querySelector('[aria-current]');
+    if (!cur || nav.scrollWidth <= nav.clientWidth) return;
+    const offset = cur.getBoundingClientRect().left - nav.getBoundingClientRect().left + nav.scrollLeft;
+    nav.scrollLeft = offset - (nav.clientWidth - cur.offsetWidth) / 2;
+  }
+  centerNav();
+  window.addEventListener('load', centerNav);
+  window.addEventListener('resize', centerNav);
+
   window.ProductWorld = {init, templates: Object.keys(templates)};
 })();
