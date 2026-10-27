@@ -1,0 +1,106 @@
+window.ProductWorld.init({
+  mount:'#familias',
+  sections:[
+    {
+      template:'hero', family:'Reny Picot', color:'#dbeae4', ink:'#153b3c',
+      eyebrow:'01 · Quesos y untables', title:'Frescura que suma posibilidades.',
+      description:'Quesos frescos, rallados y cremas para cocina y sala. Formatos de uso diario y opciones profesionales para preparar más.',
+      backword:'FRESCO', bottom:'Imagen: queso crema Reny Picot de 2 kg',
+      product:{name:'Queso crema natural · 2 kg',image:'assets/refrigerados/reny-crema-2kg.jpg',width:1000,height:1000,alt:'Cubo de queso crema natural Reny Picot de 2 kg'},
+      cta:{label:'Ver las referencias',href:'#referencias'}
+    },
+    {
+      template:'range', family:'Pascual', color:'#edece3', ink:'#2b3d45',
+      eyebrow:'02 · Mantequilla y nata', title:'Dos básicos, muchos servicios.',
+      description:'Porciones, bloques y briks para dar respuesta a desayunos, cocina y repostería.',
+      products:[
+        {name:'Mantequilla 5 kg',description:'Bloque Pascual para una cocina de mayor volumen.',image:'assets/refrigerados/pascual-mantequilla-5kg.jpg',width:240,height:168,alt:'Envase de mantequilla Pascual en bloque de 5 kg'},
+        {name:'Nata para montar 1 l',description:'Brik Pascual de nata líquida al 38 % de materia grasa.',image:'assets/refrigerados/pascual-nata-38.jpg',width:225,height:225,alt:'Brik de nata Pascual para montar de 1 litro al 38 por ciento'}
+      ]
+    },
+    {
+      template:'story', family:'Charcutería', color:'#e7dcd5', ink:'#432c2a',
+      eyebrow:'03 · Fiambres y embutidos', title:'Listos para formar parte de tu carta.',
+      frames:[
+        {name:'Jamón cocido',description:'Una de las referencias de Campofrío para sándwiches, bocadillos y platos preparados.',image:'assets/marcas/campofrio-jamon-cocido.png',width:624,height:414,alt:'Envase de jamón cocido Campofrío',color:'#e7dcd5'},
+        {name:'Chorizo',description:'Embutidos para raciones, tablas y elaboraciones de cocina.',image:'assets/marcas/campofrio-chorizo.png',width:600,height:384,alt:'Envase de chorizo Campofrío',color:'#e3e4d6'},
+        {name:'Salchichón',description:'Otra opción para completar la selección de fiambres y embutidos.',image:'assets/marcas/campofrio-salchichon.png',width:600,height:384,alt:'Envase de salchichón Campofrío',color:'#e9e0d9'}
+      ]
+    }
+  ]
+});
+
+(() => {
+  'use strict';
+  const pas = 'https://clientes.pascualprofesional.com/';
+  const ren = 'https://www.renypicot.es/';
+  const coe = 'https://coenyco.com/file/Productos_Coenyco.pdf';
+  const products = [
+    {group:'Preparados',brand:'Rogusa',name:'Callos a la madrileña · 2,5 kg',desc:'Callos cocinados y envasados en formato profesional.',url:'https://www.aecoctrade.es/es/producto/fvfK8VleZxmABCimApEReM',source:'Ficha exacta',image:'assets/refrigerados/rogusa-callos.jpg',imageAlt:'Envase Rogusa de callos preparados de 2,5 kg',imageCaption:'Fotografía del envase de 2,5 kg'},
+    {group:'Preparados',brand:'Coenyco',name:'Oreja de cerdo cocida · 1 kg',desc:'Oreja cocida y troceada, envasada al vacío.',url:coe,source:'Catálogo de gama'},
+    {group:'Preparados',brand:'Coenyco',name:'Oreja de cerdo cocida · 500 g',desc:'Formato de medio kilo para cocina y raciones.',url:'https://soysuper.com/p/orejas-de-cerdo-cocidas-envase-500-gr-coenyco-envase-500-gr',source:'Ficha de producto'},
+    {group:'Preparados',brand:'Coenyco',name:'Morro de cerdo cocido · 500 g',desc:'Morro cocido y troceado, envasado al vacío.',url:'https://soysuper.com/p/morros-de-cerdo-cocidos-envase-500-gr-coenyco-envase-500-gr',source:'Ficha de producto'},
+    {group:'Preparados',brand:'Coenyco',name:'Rabo de cerdo cocido · 500 g',desc:'Referencia de casquería cocida. Confirma el formato al pedirla.',url:coe,source:'Catálogo de gama'},
+    {group:'Preparados',brand:'Alvalle',name:'Gazpacho Original · 1 l',desc:'Sopa fría lista para servir.',url:'https://www.alvalle.com/',source:'Web de marca'},
+    {group:'Preparados',brand:'Alvalle',name:'Salmorejo Original · 1 l',desc:'Salmorejo listo para incorporar a la carta.',url:'https://www.alvalle.com/',source:'Web de marca'},
+    {group:'Preparados',brand:'Buitoni',name:'Empanadillas y masa gruesa',desc:'Referencias de 160 g y 350 g facilitadas para consulta; formatos por confirmar.',url:'https://www.buitoni.es/',source:'Web de marca'},
+    {group:'Preparados',brand:'Campofrío',name:'Tortilla de patata con cebolla · 500 g',desc:'Tortilla preparada; confirma presentación y disponibilidad.',url:'https://www.campofrio.es/marcas/campofrio',source:'Catálogo de marca'},
+    {group:'Pascual',brand:'Pascual',name:'Mantequilla · microtarrinas de 10 g',desc:'Caja de 280 porciones individuales para desayunos y servicio.',url:pas+'L%C3%A1cteos-y-Bebidas-Vegetales/Mantequilla-y-Untables/c/MantequillayUntable',source:'Gama',note:'La página enlazada no identifica este envase.'},
+    {group:'Pascual',brand:'Pascual',name:'Mantequilla · bloque de 5 kg',desc:'Formato para cocina y hostelería. Conservar refrigerada.',url:pas+'calidadpascual/es/L%C3%A1cteos-y-Bebidas-Vegetales/Mantequilla-y-Untables//p/30000371-8410128000554',source:'Ficha exacta',image:'assets/refrigerados/pascual-mantequilla-5kg.jpg',imageAlt:'Mantequilla Pascual en bloque de 5 kg',imageCaption:'Fotografía del bloque de 5 kg'},
+    {group:'Pascual',brand:'Pascual',name:'Mantequilla · pastilla de 500 g',desc:'Mantequilla natural en formato pastilla.',url:pas+'calidadpascual/es/L%C3%A1cteos-y-Bebidas-Vegetales/Mantequilla-y-Untables//p/30000378-8410128000547',source:'Ficha exacta'},
+    {group:'Pascual',brand:'Pascual',name:'Mantequilla · pastilla de 250 g',desc:'Formato compacto de mantequilla natural.',url:pas+'calidadpascual/es/L%C3%A1cteos-y-Bebidas-Vegetales/Mantequilla-y-Untables//p/30013663-8410128000875',source:'Ficha exacta'},
+    {group:'Pascual',brand:'Pascual',name:'Mantequilla Original · tarrina de 250 g',desc:'Tarrina para untar o cocinar.',url:pas+'calidadpascual/es/L%C3%A1cteos-y-Bebidas-Vegetales/Mantequilla-y-Untables/MANTEQ-PASC-TARR-250g-C12/p/30013627-8410128000578',source:'Ficha exacta'},
+    {group:'Pascual',brand:'Pascual',name:'Nata montada en spray · 250 g',desc:'Aerosol para decorar postres y bebidas.',url:pas+'calidadpascual/es/L%C3%A1cteos-y-Bebidas-Vegetales/Nata//p/30012845-8410128050269',source:'Ficha exacta'},
+    {group:'Pascual',brand:'Pascual',name:'Nata en spray · 500 g',desc:'La ficha lo presenta como bote de 500 g, aunque el dato de cantidad indica 4 × 125 g. Confirma la presentación al pedirla.',url:pas+'calidadpascual/es/L%C3%A1cteos-y-Bebidas-Vegetales/Nata//p/30010726-8410128050191',source:'Ficha con datos distintos'},
+    {group:'Pascual',brand:'Pascual',name:'Nata ligera 18 % · 500 ml',desc:'Para cocinar salsas y cremas.',url:pas+'calidadpascual/es/L%C3%A1cteos-y-Bebidas-Vegetales/Nata/NATA-PASC-EDGE-500ML-18%25-MG-LIGERA-ND-C6/p/30014293-8410128055394',source:'Ficha exacta'},
+    {group:'Pascual',brand:'Pascual',name:'Nata para montar · 1 l',desc:'Incluye referencias de nata líquida y 38 % M.G.; confirma la variante al pedir.',url:pas+'calidadpascual/es/L%C3%A1cteos-y-Bebidas-Vegetales/Nata/c/nata',source:'Gama',image:'assets/refrigerados/pascual-nata-38.jpg',imageAlt:'Nata Pascual de un litro al 38 por ciento',imageCaption:'Fotografía de la variante 38 % M.G.'},
+    {group:'Pascual',brand:'Pascual',name:'Nata para montar · 500 ml',desc:'Nata líquida con 35 % de materia grasa.',url:pas+'calidadpascual/es/L%C3%A1cteos-y-Bebidas-Vegetales/Nata//p/30013558-8410128055318',source:'Ficha exacta'},
+    {group:'Pascual',brand:'Pascual',name:'Nata ligera para cocinar · 1 l',desc:'Para salsas, cremas y otras elaboraciones.',url:pas+'calidadpascual/es/L%C3%A1cteos-y-Bebidas-Vegetales/Nata/c/nata',source:'Gama'},
+    {group:'Pascual',brand:'Pascual',name:'Nata ligera para cocinar · 200 ml',desc:'Formato pequeño para preparaciones de cocina.',url:pas+'calidadpascual/es/L%C3%A1cteos-y-Bebidas-Vegetales/Nata/NATA-PASC-PR200-ML-18%25-MG-LIGERA-C18/p/30013881-8410128055356',source:'Ficha exacta'},
+    {group:'Pascual',brand:'Pascual',name:'Huevo cocido · cubo de 70 unidades',desc:'Huevos cocidos listos para consumir o incorporar a recetas.',url:pas+'calidadpascual/es/4%C2%AA-Gama%2C-Ingredientes-y-Conservas/Huevo/c/huevo',source:'Gama'},
+    {group:'Pascual',brand:'Pascual',name:'Clara líquida pasteurizada',desc:'Referencias de 1 kg y 10 kg; la ficha enlazada corresponde a 1 kg.',url:pas+'calidadpascual/es/4%C2%AA-Gama%2C-Ingredientes-y-Conservas/Huevo/L%C3%ADquido/Clara-L%C3%ADquida-Pasteurizada-Pascual-1-Kg/p/30015689-8410128712020',source:'Ficha de 1 kg'},
+    {group:'Pascual',brand:'Pascual',name:'Huevo líquido · 1 kg',desc:'Huevo pasteurizado líquido para cocina profesional.',url:pas+'calidadpascual/es/4%C2%AA-Gama%2C-Ingredientes-y-Conservas/Huevo/L%C3%ADquido/c/huevoLiquido',source:'Gama'},
+    {group:'Pascual',brand:'Pascual',name:'Yema líquida',desc:'Referencia facilitada de 1 l; formato por confirmar.',url:pas+'calidadpascual/es/4%C2%AA-Gama%2C-Ingredientes-y-Conservas/Huevo/L%C3%ADquido/c/huevoLiquido',source:'Gama'},
+    {group:'Reny Picot',brand:'Reny Picot',name:'Queso fresco de Burgos',desc:'Referencias de 4 × 62,5 g y brik de 1 kg. La fotografía muestra un envase de 500 g.',url:ren+'producto/queso-burgos-500g/',source:'Ficha de 500 g',image:'assets/refrigerados/reny-burgos-500.jpg',imageAlt:'Queso fresco de Burgos Reny Picot, envase de 500 g',imageCaption:'Fotografía de un formato de 500 g'},
+    {group:'Reny Picot',brand:'Reny Picot',name:'Mozzarella · 150 g',desc:'Queso mozzarella para pizzas y otras preparaciones.',url:ren+'queso-mozzarella-reny-picot-pizza/',source:'Referencia de gama'},
+    {group:'Reny Picot',brand:'Reny Picot',name:'Quesos rallados',desc:'Emmental, polvo, hilo y fundido; formatos de 60 g, 100 g y 1 kg para consulta.',url:ren+'lista-actualizada-productos-sin-gluten/',source:'Relación de gama'},
+    {group:'Reny Picot',brand:'Reny Picot',name:'Queso crema para untar',desc:'Formatos profesionales de 2 kg y 5 kg.',url:ren+'producto/queso-crema-natural-2kg/',source:'Ficha de 2 kg',image:'assets/refrigerados/reny-crema-2kg.jpg',imageAlt:'Cubo de queso crema Reny Picot de 2 kg',imageCaption:'Fotografía del cubo de 2 kg'},
+    {group:'Reny Picot',brand:'Reny Picot',name:'Mantequilla',desc:'Bloque de 1 kg y porciones; confirma el formato de 10,4 g.',url:ren,source:'Web de marca'},
+    {group:'Reny Picot',brand:'Reny Picot',name:'Nata para montar · 200 ml',desc:'Referencia de nata líquida; presentación por confirmar.',url:ren,source:'Web de marca'},
+    {group:'Reny Picot',brand:'Reny Picot',name:'Queso de oveja Eminencia',desc:'Referencia de media pieza; ficha individual pendiente de confirmar.',url:ren,source:'Web de marca'},
+    {group:'Reny Picot',brand:'Reny Picot',name:'Queso en lonchas',desc:'Referencia de 8 unidades; formato por confirmar.',url:ren,source:'Web de marca'},
+    {group:'Charcutería',brand:'ElPozo',name:'Bacon, paleta, taquitos y salchichas',desc:'Gama refrigerada en distintos formatos de cocina y servicio.',url:'https://www.elpozo.com/',source:'Web de marca'},
+    {group:'Charcutería',brand:'Navidul',name:'Jamones, chorizos, salchichones y lotes',desc:'Familia de curados; referencias y formatos a concretar.',url:'https://www.campofrio.es/',source:'Web corporativa'},
+    {group:'Charcutería',brand:'Campofrío',name:'Fiambres, bacon, pavo, quesos y ensaladilla',desc:'Gama refrigerada para bocadillos, raciones y cocina.',url:'https://www.campofrio.es/marcas/campofrio',source:'Catálogo de marca',image:'assets/marcas/campofrio-jamon-cocido.png',imageAlt:'Envase de jamón cocido Campofrío',imageCaption:'Fotografía de jamón cocido'},
+    {group:'Charcutería',brand:'Revilla',name:'Salchichón, chorizo, torreznos y salami',desc:'Embutidos y aperitivos cárnicos; formatos por confirmar.',url:'https://www.campofrio.es/',source:'Web corporativa'},
+    {group:'Charcutería',brand:'Oscar Mayer',name:'Salchichas Jumbo y bacon en lonchas',desc:'Referencias refrigeradas de salchichas y bacon.',url:'https://www.campofrio.es/',source:'Web corporativa'},
+    {group:'Otros',brand:'Holland',name:'Margarina vegetal · 1 kg',desc:'Referencia facilitada para consulta; ficha e imagen pendientes de verificar.',source:'Consultar'},
+    {group:'Otros',brand:'Sin marca confirmada',name:'Queso fundido en lonchas · 131 g',desc:'Referencia de siete lonchas; marca por confirmar.',source:'Consultar'}
+  ];
+
+  const esc = v => String(v ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const groups = ['Todos','Preparados','Pascual','Reny Picot','Charcutería','Otros'];
+  const filters = document.querySelector('.cold-filters');
+  const search = document.querySelector('#cold-search');
+  const grid = document.querySelector('#cold-grid');
+  const count = document.querySelector('#cold-count');
+  let active = 'Todos';
+
+  filters.innerHTML = groups.map(g => `<button type="button" data-group="${esc(g)}" aria-pressed="${g==='Todos'}">${esc(g)}</button>`).join('');
+  const card = p => `<article class="cold-item"><div class="cold-item-head"><span class="cold-brand">${esc(p.brand)}</span><span class="cold-category">${esc(p.group)}</span></div>${p.image ? `<div class="cold-item-image"><img src="${esc(p.image)}" alt="${esc(p.imageAlt)}" loading="lazy"></div><p class="cold-image-caption">${esc(p.imageCaption)}</p>` : ''}<h3>${esc(p.name)}</h3><p>${esc(p.desc)}</p>${p.note ? `<p>${esc(p.note)}</p>` : ''}<div class="cold-item-footer">${p.url ? `<a href="${esc(p.url)}" target="_blank" rel="noopener noreferrer">Ver ${p.source.toLowerCase()} ↗</a>` : '<span>Consultar disponibilidad</span>'}<span>${['Ficha exacta','Ficha de producto','Ficha de 2 kg'].includes(p.source)?'Formato documentado':'Formato por confirmar'}</span></div></article>`;
+  function render(){
+    const q=search.value.trim().toLocaleLowerCase('es');
+    const matches=products.filter(p=>(active==='Todos'||p.group===active)&&(!q||`${p.brand} ${p.name} ${p.desc}`.toLocaleLowerCase('es').includes(q)));
+    grid.innerHTML=matches.map(card).join('')||'<p>No hay referencias con ese filtro. Prueba otra búsqueda.</p>';
+    count.textContent=`${matches.length} ${matches.length===1?'referencia':'referencias'}`;
+  }
+  filters.addEventListener('click',event=>{
+    const button=event.target.closest('button[data-group]');
+    if(!button)return;
+    active=button.dataset.group;
+    filters.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
+    render();
+  });
+  search.addEventListener('input',render);
+  render();
+})();
