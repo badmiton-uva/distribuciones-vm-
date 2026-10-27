@@ -32,6 +32,18 @@
         <div class="pw-c-title"><p class="pw-overline">${esc(item.eyebrow)}</p><h2 id="pw-scene-${index}">${esc(item.title)}</h2><p>${esc(item.description)}</p></div>
         <div class="pw-c-grid">${item.products.map((p,i) => `<article class="pw-c-item"><div class="pw-c-photo${p.cover?' is-cover':''}"${p.cover?` style="--ar:${Number(p.width)||4}/${Number(p.height)||3}"`:''}>${img(p)}</div><div class="pw-c-caption"><span>${number(i)}</span><div><h3>${esc(p.name)}</h3><p>${esc(p.description)}</p></div></div></article>`).join('')}</div>${button(item)}</div></section>`;
     },
+    lineup(item, index) {
+      const n = item.variants.length;
+      return `<section class="pw-scene pw-e${n>8?' is-long':''}${dark(item)}" style="--n:${n};--scene:${esc(item.color)};--ink:${esc(item.ink)}" aria-labelledby="pw-scene-${index}">
+        <div class="pw-sticky"><div class="pw-scene-inner">${label(item,index)}
+          <div class="pw-e-grid">
+            <div class="pw-e-art"><span class="pw-e-disc" aria-hidden="true"></span>${img(item.product,'pw-e-image',true)}<p class="pw-e-note">${esc(item.note || '')}</p></div>
+            <div class="pw-e-copy"><p class="pw-overline">${esc(item.eyebrow)}</p><h2 id="pw-scene-${index}">${esc(item.title)}</h2>
+              <ol class="pw-e-list">${item.variants.map((v,i) => `<li${i===0?' class="is-current"':''}><span class="pw-e-num">${number(i)}</span><b>${esc(v.name)}</b><small>${esc(v.description)}</small></li>`).join('')}</ol>
+            </div>
+          </div>
+        </div></div></section>`;
+    },
     story(item, index) {
       return `<section class="pw-scene pw-d${dark(item)}" style="--scene:${esc(item.color)};--ink:${esc(item.ink)}" aria-labelledby="pw-scene-${index}"><div class="pw-sticky"><div class="pw-scene-inner">${label(item,index)}
         <div class="pw-d-head"><p class="pw-overline">${esc(item.eyebrow)}</p><h2 id="pw-scene-${index}">${esc(item.title)}</h2></div>
@@ -58,6 +70,7 @@
         scene.style.removeProperty('--progress');
         scene.querySelector('.pw-b-track')?.style.removeProperty('transform');
         scene.querySelectorAll('.pw-d-frame').forEach((f,i) => f.classList.toggle('is-current',i===0));
+        scene.querySelectorAll('.pw-e-list li').forEach((r,i) => r.classList.toggle('is-current',i===0));
         if (scene.classList.contains('pw-d')) scene.style.setProperty('--scene',scene.querySelector('.pw-d-frame')?.style.getPropertyValue('--frame-color') || '');
       });
       const staticMode = reduce.matches || mobile.matches || !window.gsap || !window.ScrollTrigger;
@@ -77,6 +90,11 @@
             const windowEl=scene.querySelector('.pw-b-window');
             const travel=Math.max(0,track.scrollWidth-windowEl.clientWidth);
             track.style.transform=`translate3d(${-travel*p}px,0,0)`;
+          }
+          if (scene.classList.contains('pw-e')) {
+            const rows=[...scene.querySelectorAll('.pw-e-list li')];
+            const active=Math.min(rows.length-1,Math.floor(Math.min(.9999,p)*rows.length));
+            rows.forEach((r,i)=>r.classList.toggle('is-current',i===active));
           }
           if (scene.classList.contains('pw-d')) {
             const frames=[...scene.querySelectorAll('.pw-d-frame')];

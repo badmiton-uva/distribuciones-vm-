@@ -33,3 +33,11 @@ Opciones nuevas del motor, compatibles con las páginas anteriores:
 - La altura del recorrido horizontal (`range`) crece con el número de productos.
 
 Resolución limitada: las bolsas de hostelería de Calvo (~170 px de ancho), los aceites Koipe/Carbonell profesional (~105 px) y Helios (~420 px) salen de capturas pequeñas; conviene sustituirlas por fotografías originales. Las bolsas conservan restos de borde de la captura. Derechos de uso de imágenes y marcas: pendiente (ver `RECURSOS-PENDIENTES.md`).
+
+## Plantilla `lineup` (gama con variedades)
+
+Un envase de la gama a la izquierda y la lista de variedades a la derecha; el scroll va activando cada variedad y desplegando su descripción (reversible). Sirve cuando hay muchas referencias y una sola imagen de gama. Campos: `family`, `color`, `ink`, `eyebrow`, `title`, `note` (pie de la imagen), `product` (imagen de la gama) y `variants: [{name, description}]`. Con más de 8 variedades se compacta sola. En móvil, con `prefers-reduced-motion` y sin GSAP se muestra la lista completa con todas las descripciones.
+
+Se usa en `pascual.html` para Yogikids, Yogures (13 variedades) y Natillas; el flan usa `hero`.
+
+Las imágenes de `assets/pascual/yogikids-fresa.webp`, `yogur-vaso.webp`, `flan-huevo.webp` y `natillas.webp` proceden de calidadpascual.com (PNG con fondo transparente, hasta 545 px de alto, recortadas al contenido). Cada imagen muestra un único sabor y se usa como imagen de la gama; el pie lo indica. Derechos de uso pendientes de confirmar (ver `RECURSOS-PENDIENTES.md`).

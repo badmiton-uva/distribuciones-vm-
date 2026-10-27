@@ -47,3 +47,48 @@
 .pw-a.is-wide .pw-a-art{position:relative;inset:auto;height:auto;display:grid;gap:26px}.pw-a.is-wide .pw-a-logo{position:static;width:170px;order:-1}.pw-a.is-wide .pw-a-product{position:static;width:100%;transform:none}.pw-a.is-wide .pw-a-copy{width:100%;margin:60px 0 15px}}
 @media(prefers-reduced-motion:reduce){.pw-b{height:auto}}
 .pw-static .pw-b{height:auto}
+
+/* Plantilla E · lineup: un envase de la gama y la lista de variedades que se activan con el scroll */
+.pw-e{height:calc(110vh + var(--n,2) * 36vh)}
+.pw-e-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(24px,5vw,90px);height:calc(100% - 50px);align-items:center}
+.pw-e-art{position:relative;height:100%;display:grid;place-items:center}
+.pw-e-disc{position:absolute;width:min(40vw,540px);aspect-ratio:1;border-radius:50%;background:rgba(255,255,255,.55);transform:scale(calc(.78 + var(--progress,0) * .22))}
+.pw-e-image{position:relative;z-index:1;max-width:min(30vw,420px);max-height:66%;width:auto;height:auto;object-fit:contain;filter:drop-shadow(22px 30px 20px rgba(60,20,25,.18));transform:translate3d(0,calc((.5 - var(--progress,0)) * 40px),0) rotate(calc((var(--progress,0) - .5) * -6deg)) scale(calc(.92 + var(--progress,0) * .1));will-change:transform}
+.pw-e-note{position:absolute;z-index:1;bottom:2%;left:0;right:0;margin:0;text-align:center;font-size:.72rem;text-transform:uppercase;letter-spacing:.13em;opacity:.75}
+.pw-e-copy h2{font-size:clamp(2.7rem,5vw,6rem);margin:12px 0 22px}
+.pw-e-list{list-style:none;margin:0;padding:0;max-width:620px;counter-reset:none}
+.pw-e-list li{display:grid;grid-template-columns:2.6rem 1fr;align-items:baseline;padding:7px 0;border-top:1px solid rgba(0,0,0,.14);opacity:.4;transition:opacity .3s ease}
+.pw-e-list li:last-child{border-bottom:1px solid rgba(0,0,0,.14)}
+.pw-e-list li.is-current{opacity:1}
+.pw-e-num{font-size:.72rem;font-weight:700;letter-spacing:.12em}
+.pw-e-list b{font-weight:600;font-size:clamp(1rem,1.35vw,1.4rem);letter-spacing:-.02em;line-height:1.2}
+.pw-e-list small{grid-column:2;display:block;max-height:0;overflow:hidden;opacity:0;font-size:1rem;line-height:1.4;transition:max-height .35s ease,opacity .35s ease,margin .35s ease}
+.pw-e-list li.is-current small{max-height:4.6em;opacity:1;margin-top:5px}
+@media(max-width:1050px){.pw-e-image{max-width:min(36vw,360px)}}
+@media(max-width:760px){
+  .pw-e{height:auto!important}
+  .pw-e .pw-sticky{position:relative;top:auto;height:auto;min-height:0;overflow:visible}
+  .pw-e-grid{display:block;height:auto}
+  .pw-e-art{height:360px;margin:40px 0 10px}
+  .pw-e-disc{width:min(72vw,340px);transform:none}
+  .pw-e-image{max-width:60%;max-height:300px;transform:none;will-change:auto}
+  .pw-e-note{position:static;margin-top:10px}
+  .pw-e-art{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:6px}
+  .pw-e-copy h2{font-size:clamp(2.7rem,11vw,4.2rem)}
+  .pw-e-list li{opacity:1}
+  .pw-e-list small{max-height:none;opacity:1;margin-top:4px}
+}
+.pw-static .pw-e{height:auto}
+.pw-static .pw-e .pw-sticky{position:relative;top:auto;height:auto}
+.pw-static .pw-e-grid{height:auto}
+.pw-static .pw-e-art{min-height:420px}
+.pw-static .pw-e-image,.pw-static .pw-e-disc{transform:none}
+.pw-static .pw-e-list li{opacity:1}
+.pw-static .pw-e-list small{max-height:none;opacity:1;margin-top:4px}
+@media(prefers-reduced-motion:reduce){.pw-e{height:auto}.pw-e .pw-sticky{position:relative;top:auto;height:auto}.pw-e-grid{height:auto}.pw-e-art{min-height:420px}.pw-e-image,.pw-e-disc{transform:none}.pw-e-list li{opacity:1}.pw-e-list small{max-height:none;opacity:1;margin-top:4px}}
+
+.pw-e.is-long .pw-e-copy h2{font-size:clamp(2.4rem,4vw,4.6rem);margin:8px 0 14px}
+.pw-e.is-long .pw-e-list li{padding:4px 0}
+.pw-e.is-long .pw-e-list b{font-size:clamp(.95rem,1.15vw,1.2rem)}
+.pw-e.is-long .pw-e-list small{font-size:.92rem}
+@media(max-height:780px) and (min-width:761px){.pw-e-copy h2{font-size:clamp(2.2rem,3.6vw,3.8rem);margin:6px 0 12px}.pw-e-list li{padding:3px 0}.pw-e-list b{font-size:1rem}.pw-e-list small{font-size:.9rem}}
