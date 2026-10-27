@@ -267,3 +267,6 @@ form{margin-top:48px;display:grid;gap:10px;grid-template-columns:1fr 1fr 1fr}
 .zonas ul{list-style:none;margin:0;padding:0;columns:2;column-gap:20px;font-size:.9375rem;line-height:1.7}
 .zonas li{break-inside:avoid}
 @media(max-width:560px){.zonas ul{columns:1}}
+/* Catálogo ampliado: navegación accesible también en pantallas medianas. */
+@media (max-width:1450px){.top{flex-wrap:wrap;gap:7px 16px;padding-block:10px}.top nav{order:3;flex:0 0 100%;display:flex;justify-content:flex-start;gap:clamp(16px,3vw,28px);overflow-x:auto;white-space:nowrap;padding:6px 0 2px;scrollbar-width:none}.top nav::-webkit-scrollbar{display:none}}
+@media (max-width:1000px){.top nav{justify-content:flex-start}}
