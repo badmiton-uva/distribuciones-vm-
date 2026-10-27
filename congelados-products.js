@@ -9,7 +9,7 @@ window.ProductWorld.init({
   "ink": "#5a3112",
   "eyebrow": "Pan precocido",
   "title": "El pan de cada servicio.",
-  "note": "Imagen pendiente · catálogo oficial de Panamar",
+  "note": "Imagen del catálogo oficial de Panamar",
   "variants": [
    {
     "name": "Baguette R · 250 g",
@@ -17,11 +17,19 @@ window.ProductWorld.init({
    },
    {
     "name": "Baguettina Express · 120 g",
-    "description": "Baguettina de formato individual, pensada para hornear rápidamente."
+    "description": "Baguettina de formato individual, pensada para hornear rápidamente.",
+    "image": "assets/congelados/8506-baguettina-clasica-120g.webp",
+    "width": 352,
+    "height": 159,
+    "alt": "Baguettina Express · 120 g, Panamar"
    },
    {
     "name": "Barra Gourmet Ficelle · 280 g",
-    "description": "Barra de pan tipo ficelle, de formato alargado y textura crujiente."
+    "description": "Barra de pan tipo ficelle, de formato alargado y textura crujiente.",
+    "image": "assets/congelados/130747-barra-gourmet-280g.webp",
+    "width": 386,
+    "height": 106,
+    "alt": "Barra Gourmet Ficelle · 280 g, Panamar"
    },
    {
     "name": "Barra Larga · 285 g",
@@ -41,15 +49,27 @@ window.ProductWorld.init({
    },
    {
     "name": "Barra de Cuarto · 260 g",
-    "description": "Barra de pan de formato cuarto, en caja de 30 unidades."
+    "description": "Barra de pan de formato cuarto, en caja de 30 unidades.",
+    "image": "assets/congelados/13973-barra-de-cuarto-260g.webp",
+    "width": 383,
+    "height": 137,
+    "alt": "Barra de Cuarto · 260 g, Panamar"
    },
    {
     "name": "Barra Verité · 250 g",
-    "description": "Barra de pan rústica de 250 g, en caja de 28 unidades."
+    "description": "Barra de pan rústica de 250 g, en caja de 28 unidades.",
+    "image": "assets/congelados/131167-barra-verite-290g.webp",
+    "width": 376,
+    "height": 134,
+    "alt": "Barra Verité · 250 g, Panamar"
    },
    {
     "name": "Bocadillo de Agua · 140 g",
-    "description": "Pan individual de miga ligera, adecuado para bocadillos."
+    "description": "Pan individual de miga ligera, adecuado para bocadillos.",
+    "image": "assets/congelados/130257-bocadillo-de-agua-140g.webp",
+    "width": 277,
+    "height": 158,
+    "alt": "Bocadillo de Agua · 140 g, Panamar"
    },
    {
     "name": "Bocatín Rústico Express · 75 g",
@@ -57,7 +77,11 @@ window.ProductWorld.init({
    },
    {
     "name": "Chapata Gourmet · 90 g",
-    "description": "Panecillo de estilo chapata, de formato individual."
+    "description": "Panecillo de estilo chapata, de formato individual.",
+    "image": "assets/congelados/13673-chapata-gourmet-90g.webp",
+    "width": 332,
+    "height": 213,
+    "alt": "Chapata Gourmet · 90 g, Panamar"
    },
    {
     "name": "Flauta Súper · 140 g",
@@ -65,11 +89,19 @@ window.ProductWorld.init({
    },
    {
     "name": "Mini Flauta Express · 50 g",
-    "description": "Panecillo alargado de pequeño formato, pensado para horneado rápido."
+    "description": "Panecillo alargado de pequeño formato, pensado para horneado rápido.",
+    "image": "assets/congelados/130646-mini-flauta-express-50g.webp",
+    "width": 402,
+    "height": 270,
+    "alt": "Mini Flauta Express · 50 g, Panamar"
    },
    {
     "name": "Mollete Andaluz · 70 g",
-    "description": "Panecillo tierno de estilo andaluz, ideal para desayunos y bocadillos."
+    "description": "Panecillo tierno de estilo andaluz, ideal para desayunos y bocadillos.",
+    "image": "assets/congelados/12649-mollete-andaluz-dyl-70g.webp",
+    "width": 329,
+    "height": 208,
+    "alt": "Mollete Andaluz · 70 g, Panamar"
    },
    {
     "name": "Mini Cuadrados de Pan Candeal · 80 g",
@@ -89,7 +121,11 @@ window.ProductWorld.init({
    },
    {
     "name": "Pan Labriego · 300 g",
-    "description": "Pan rústico de 300 g, en caja de 20 unidades."
+    "description": "Pan rústico de 300 g, en caja de 20 unidades.",
+    "image": "assets/congelados/131150-pan-labriego-300g.webp",
+    "width": 409,
+    "height": 158,
+    "alt": "Pan Labriego · 300 g, Panamar"
    },
    {
     "name": "Panecillo sin Gluten para Hostelería · 66 g",
@@ -97,7 +133,11 @@ window.ProductWorld.init({
    },
    {
     "name": "Pan de Payés Rebanado · 800 g",
-    "description": "Pan de payés cortado en rebanadas, en formato de 800 g."
+    "description": "Pan de payés cortado en rebanadas, en formato de 800 g.",
+    "image": "assets/congelados/13542-pan-de-payes-rebanado-dyl-800g.webp",
+    "width": 284,
+    "height": 222,
+    "alt": "Pan de Payés Rebanado · 800 g, Panamar"
    },
    {
     "name": "Rebanada de Pan de Payés · 63 g",
@@ -105,7 +145,11 @@ window.ProductWorld.init({
    },
    {
     "name": "Surtido de Panecillos Redondos · 40 g",
-    "description": "Surtido de panecillos redondos listos para descongelar y servir."
+    "description": "Surtido de panecillos redondos listos para descongelar y servir.",
+    "image": "assets/congelados/13471-surtido-panecillos-redondos-dyl-40g.webp",
+    "width": 353,
+    "height": 196,
+    "alt": "Surtido de Panecillos Redondos · 40 g, Panamar"
    },
    {
     "name": "Urban Brioche · 550 g",
@@ -113,7 +157,11 @@ window.ProductWorld.init({
    },
    {
     "name": "Rustic Cristal Burger · 110 g",
-    "description": "Panecillo tipo burger de estilo rústico, listo para descongelar y servir."
+    "description": "Panecillo tipo burger de estilo rústico, listo para descongelar y servir.",
+    "image": "assets/congelados/13799-rustic-cristal-burger-12cm-dyl-110g.webp",
+    "width": 321,
+    "height": 229,
+    "alt": "Rustic Cristal Burger · 110 g, Panamar"
    }
   ]
  },
@@ -124,7 +172,7 @@ window.ProductWorld.init({
   "ink": "#6a3d0a",
   "eyebrow": "Croissants y hojaldre",
   "title": "Hojaldre dorado, listo para hornear.",
-  "note": "Imagen pendiente · catálogo oficial de Panamar",
+  "note": "Imagen del catálogo oficial de Panamar",
   "variants": [
    {
     "name": "Croissant de Margarina · 120 g",
@@ -171,7 +219,7 @@ window.ProductWorld.init({
   "ink": "#6b2a18",
   "eyebrow": "Napolitanas, berlinas y más",
   "title": "Para el desayuno y la merienda.",
-  "note": "Imagen pendiente · catálogo oficial de Panamar",
+  "note": "Imagen del catálogo oficial de Panamar",
   "variants": [
    {
     "name": "Napolitana Súper de Chocolate · 135 g",
@@ -179,11 +227,19 @@ window.ProductWorld.init({
    },
    {
     "name": "Napolitana de Crema Fermentada · 115 g",
-    "description": "Napolitana rellena de crema, lista para fermentar y hornear."
+    "description": "Napolitana rellena de crema, lista para fermentar y hornear.",
+    "image": "assets/congelados/21176-napolitana-de-crema-ferm-115g.webp",
+    "width": 353,
+    "height": 194,
+    "alt": "Napolitana de Crema Fermentada · 115 g, Panamar"
    },
    {
     "name": "Napolitana de Chocolate Fermentada · 115 g",
-    "description": "Napolitana rellena de chocolate, lista para fermentar y hornear."
+    "description": "Napolitana rellena de chocolate, lista para fermentar y hornear.",
+    "image": "assets/congelados/21178-napolitana-de-chocolate-ferm-115g.webp",
+    "width": 358,
+    "height": 178,
+    "alt": "Napolitana de Chocolate Fermentada · 115 g, Panamar"
    },
    {
     "name": "Napolitana Decorada de Crema · 118 g",
@@ -254,11 +310,15 @@ window.ProductWorld.init({
   "ink": "#4a3a14",
   "eyebrow": "Empanadas, bocapizzas y paninis",
   "title": "Un bocado salado en minutos.",
-  "note": "Imagen pendiente · catálogo oficial de Panamar",
+  "note": "Imagen del catálogo oficial de Panamar",
   "variants": [
    {
     "name": "Empanadilla Selecta de Pisto · 125 g",
-    "description": "Empanadilla rellena de pisto, en caja de 44 unidades."
+    "description": "Empanadilla rellena de pisto, en caja de 44 unidades.",
+    "image": "assets/congelados/130866-empanadilla-selecta-de-pisto-125g.webp",
+    "width": 413,
+    "height": 110,
+    "alt": "Empanadilla Selecta de Pisto · 125 g, Panamar"
    },
    {
     "name": "Empanadilla de Tomate y Atún · 125 g",
@@ -270,7 +330,11 @@ window.ProductWorld.init({
    },
    {
     "name": "Bocapizza de Bacon y Queso · 150 g",
-    "description": "Bocapizza rellena de bacon y queso, en caja de 20 unidades."
+    "description": "Bocapizza rellena de bacon y queso, en caja de 20 unidades.",
+    "image": "assets/congelados/12451-bocapizza-bacon-y-queso-150g.webp",
+    "width": 395,
+    "height": 257,
+    "alt": "Bocapizza de Bacon y Queso · 150 g, Panamar"
    },
    {
     "name": "Bocapizza de Atún y Queso · 150 g",
@@ -282,11 +346,19 @@ window.ProductWorld.init({
    },
    {
     "name": "Panini de Barbacoa · 175 g",
-    "description": "Panini relleno de barbacoa, en caja de 22 unidades."
+    "description": "Panini relleno de barbacoa, en caja de 22 unidades.",
+    "image": "assets/congelados/130754-panini-barbacoa-175g.webp",
+    "width": 406,
+    "height": 153,
+    "alt": "Panini de Barbacoa · 175 g, Panamar"
    },
    {
     "name": "Panini Kebab · 175 g",
-    "description": "Panini con relleno estilo kebab, en caja de 22 unidades."
+    "description": "Panini con relleno estilo kebab, en caja de 22 unidades.",
+    "image": "assets/congelados/131232-panini-kebab-175g.webp",
+    "width": 354,
+    "height": 102,
+    "alt": "Panini Kebab · 175 g, Panamar"
    },
    {
     "name": "Panini de Verduras · 175 g",
@@ -301,7 +373,7 @@ window.ProductWorld.init({
   "ink": "#6a1f2e",
   "eyebrow": "Hojaldre y tartas",
   "title": "Para elaborar y para servir.",
-  "note": "Imagen pendiente · catálogo oficial de Panamar",
+  "note": "Imagen del catálogo oficial de Panamar",
   "variants": [
    {
     "name": "Lámina de Hojaldre · 60 × 40 cm",
@@ -309,7 +381,11 @@ window.ProductWorld.init({
    },
    {
     "name": "Tarta Red Velvet · 1,2 kg",
-    "description": "Tarta Red Velvet de formato grande, ideal para compartir o servir por porciones."
+    "description": "Tarta Red Velvet de formato grande, ideal para compartir o servir por porciones.",
+    "image": "assets/congelados/131109-tarta-red-velvet-1200g.webp",
+    "width": 421,
+    "height": 302,
+    "alt": "Tarta Red Velvet · 1,2 kg, Panamar"
    }
   ]
  }
