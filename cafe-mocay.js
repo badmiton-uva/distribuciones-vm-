@@ -92,10 +92,10 @@
     var count = mob ? 14 : 30, beans = [], maxEnd = 0;
     for (var i = 0; i < count; i++) {
       var depth = rnd();
-      var size = (mob ? 38 : 46) + depth * (mob ? 90 : 150);
+      var size = ((mob ? 38 : 46) + depth * (mob ? 90 : 150)) * 0.8;
       var img = document.createElement('img');
-      img.src = 'assets/grano-recortado.png'; img.alt = ''; img.className = 'm-bean';
-      img.width = 438; img.height = 398;
+      img.src = 'assets/grano-cafe.webp'; img.alt = ''; img.className = 'm-bean';
+      img.width = 201; img.height = 280;
       img.style.width = size + 'px'; img.style.height = 'auto';
       var blur = depth > 0.82 ? (depth - 0.82) * 30 : (depth < 0.25 ? (0.25 - depth) * 12 : 0);
       img.style.filter = 'drop-shadow(0 ' + (8 + depth * 18) + 'px ' + (6 + depth * 12) + 'px rgba(20,16,13,.32)) blur(' + blur.toFixed(1) + 'px)';
