@@ -162,3 +162,10 @@
 @media(max-width:760px) and (prefers-reduced-motion:reduce){
   .pw-mobile-anim *{transition:none!important}
 }
+
+/* móvil: en las listas largas solo la variedad activa muestra su descripción (la página mide mucho menos) */
+@media(max-width:760px){
+  .pw-mobile-anim .pw-e.is-long .pw-e-list li:not(.is-current) small{display:none}
+  .pw-mobile-anim .pw-e.is-long .pw-e-list li{padding:9px 0}
+  .pw-mobile-anim .pw-e.is-long .pw-e-list b{font-size:.98rem}
+}
