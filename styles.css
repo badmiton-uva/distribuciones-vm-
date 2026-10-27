@@ -33,7 +33,7 @@ section{position:relative}
 .top{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px var(--m);color:#fff;transition:background-color 300ms var(--ease),color 300ms var(--ease),padding 300ms var(--ease)}
 .top.solid{background:var(--paper);color:var(--ink);padding-block:10px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:500;font-size:1.125rem;letter-spacing:-.01em;min-width:0}
-.brand img{width:46px;height:46px;border-radius:50%;object-fit:cover;flex:none}
+.brand img{width:46px;height:46px;border-radius:9px;object-fit:contain;flex:none}
 .brand span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .top nav{display:flex;gap:34px;font-weight:500}
 .top nav a{text-decoration:none;opacity:.9}
@@ -186,7 +186,7 @@ form{margin-top:48px;display:grid;gap:10px;grid-template-columns:1fr 1fr 1fr}
 /* pie */
 .foot{background:var(--ink);color:var(--cream);padding:clamp(56px,8vw,110px) 0 28px}
 .foot-grid{display:grid;grid-template-columns:1.2fr 1.2fr 1fr 1fr;gap:32px}
-.foot-logo{width:86px;height:86px;border-radius:50%;object-fit:cover;margin-bottom:18px}
+.foot-logo{width:86px;height:86px;border-radius:14px;object-fit:contain;margin-bottom:18px}
 .foot-name{font-size:var(--f-lead);letter-spacing:-.02em;line-height:1.1;margin-bottom:8px}
 .foot-h{font-weight:500;margin-bottom:12px}
 .foot p{margin-bottom:6px;font-size:1.0625rem;opacity:.9}

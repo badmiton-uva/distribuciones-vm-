@@ -15,7 +15,7 @@ button,a{-webkit-tap-highlight-color:transparent}
 .m-skip:focus{top:10px}
 .m-top{position:fixed;z-index:50;inset:0 0 auto;min-height:74px;padding:10px var(--gutter);display:flex;align-items:center;gap:24px;background:rgba(243,242,239,.94);backdrop-filter:blur(16px);border-bottom:1px solid rgba(20,16,13,.1)}
 .m-brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-size:1rem;font-weight:500;white-space:nowrap;margin-right:auto}
-.m-brand img{width:45px;height:45px;object-fit:cover;border-radius:50%}
+.m-brand img{width:45px;height:45px;object-fit:contain;border-radius:9px}
 .m-top nav{display:flex;align-items:center;gap:clamp(18px,2.4vw,36px)}
 .m-top nav a{font-size:.95rem;font-weight:500;text-decoration:none;white-space:nowrap}
 .m-top nav a[aria-current]{color:var(--red)}

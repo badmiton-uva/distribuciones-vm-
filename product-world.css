@@ -121,3 +121,5 @@
 @media(prefers-reduced-motion:reduce){.pw-e.is-scroll{height:auto}.pw-e.is-scroll .pw-e-list{max-height:none;overflow:visible;-webkit-mask-image:none;mask-image:none}}
 
 .pw-e .pw-sticky{background:var(--scene)}
+
+.pw-brand img{border-radius:8px}
