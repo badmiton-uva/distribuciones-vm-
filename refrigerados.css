@@ -46,7 +46,6 @@
 .cold-item-footer a{color:#14534d;text-decoration-thickness:1px;text-underline-offset:3px;font-size:.84rem;font-weight:650}
 .cold-item-footer span{font-size:.72rem;color:#687975}
 .cold-catalog-note{font-size:.83rem;line-height:1.5;color:#607570;margin-top:35px}
-@media(max-width:1450px){.cold-world .pw-header{flex-wrap:wrap}.cold-world .pw-header nav{order:3;width:100%;overflow:auto;justify-content:flex-start;padding:9px 0}.cold-world .pw-sticky{top:111px;height:calc(100svh - 111px)}}
 @media(max-width:900px){.cold-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.cold-catalog-intro{grid-template-columns:1fr}.cold-catalog-intro>p:last-child{margin-top:24px}}
 @media(max-width:760px){.cold-world .pw-opening h1,.cold-world .pw-end h2{font-size:clamp(3.7rem,13vw,6rem)}.cold-world .pw-sticky{top:auto;height:auto}.cold-world .pw-opening-art{min-height:420px}.cold-world .pw-opening-bottle{width:72vw;height:350px}.cold-world .pw-a-product{width:80vw;height:420px}.cold-grid{grid-template-columns:1fr}.cold-catalog{padding-left:22px;padding-right:22px}.cold-toolbar{margin-top:55px}.cold-search-label,.cold-search-label input{width:100%}}
 @media(prefers-reduced-motion:reduce){.cold-world .pw-a{height:auto}.cold-world .pw-a .pw-sticky{position:relative;top:auto;height:auto}}

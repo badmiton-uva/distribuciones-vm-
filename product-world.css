@@ -123,3 +123,6 @@
 .pw-e .pw-sticky{background:var(--scene)}
 
 .pw-brand img{border-radius:8px}
+
+/* cabecera común de las páginas de producto: con tantas secciones el menú pasa a una segunda fila en pantallas medianas */
+@media(max-width:1350px){.pw-header{flex-wrap:wrap;gap:4px 15px}.pw-header nav{order:3;width:100%;justify-content:center;overflow:auto;padding:8px 0}.pw-sticky{top:111px;height:calc(100svh - 111px)}}
