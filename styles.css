@@ -270,3 +270,10 @@ form{margin-top:48px;display:grid;gap:10px;grid-template-columns:1fr 1fr 1fr}
 /* Catálogo ampliado: navegación accesible también en pantallas medianas. */
 @media (max-width:1450px){.top{flex-wrap:wrap;gap:7px 16px;padding-block:10px}.top nav{order:3;flex:0 0 100%;display:flex;justify-content:flex-start;gap:clamp(16px,3vw,28px);overflow-x:auto;white-space:nowrap;padding:6px 0 2px;scrollbar-width:none}.top nav::-webkit-scrollbar{display:none}}
 @media (max-width:1000px){.top nav{justify-content:flex-start}}
+
+.vid-play{position:absolute;inset:0;z-index:2;display:grid;place-items:center;width:100%;border:0;background:rgba(0,0,0,.18);color:var(--red);cursor:pointer;transition:background .3s}
+.vid-play svg{width:clamp(64px,9vw,96px);filter:drop-shadow(0 6px 18px rgba(0,0,0,.35));transition:transform .3s var(--ease)}
+.vid-play:hover svg,.vid-play:focus-visible svg{transform:scale(1.08)}
+.vid-play:hover{background:rgba(0,0,0,.05)}
+.vid-play.is-loading{opacity:.55;pointer-events:none}
+.vid-ready .vid-play{display:none}

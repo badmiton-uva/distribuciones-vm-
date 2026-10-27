@@ -9,7 +9,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=14">
+<link rel="preload" as="image" href="assets/portada.webp" fetchpriority="high">
+<link rel="stylesheet" href="styles.css?v=15">
 <script>document.documentElement.classList.add('js')</script>
 <script src="motion-pref.js"></script>
 <link rel="icon" type="image/png" href="assets/logo.png">
@@ -28,7 +29,7 @@
 
 <!-- PORTADA -->
 <section class="hero" id="inicio" aria-labelledby="h-hero">
-  <div class="hero-media"><img class="hero-bg" src="assets/portada.jpg" width="1360" height="931" alt="Furgoneta de reparto de caja cerrada frente al Castillo de la Mota, en Medina del Campo" fetchpriority="high"></div>
+  <div class="hero-media"><img class="hero-bg" src="assets/portada.webp" width="1360" height="931" alt="Furgoneta de reparto de caja cerrada frente al Castillo de la Mota, en Medina del Campo" fetchpriority="high"></div>
   <div class="hero-in">
     <h1 id="h-hero">Distribuciones Valentín Martín</h1>
     <p class="hero-sub">Distribución para hostelería: alimentación, bebidas y menaje de primeras marcas, desde Medina del Campo y hasta 90 km a la redonda.</p>
@@ -44,7 +45,8 @@
     <h2 id="h-vid" class="sr">Vídeo de Distribuciones Valentín</h2>
     <div class="vid-frame">
       <div id="vid-player" data-id="-XPwp-jmOn0" data-start="11"></div>
-      <img class="vid-poster" src="https://i.ytimg.com/vi/-XPwp-jmOn0/maxresdefault.jpg" alt="" width="1280" height="720" loading="lazy">
+      <img class="vid-poster" src="https://i.ytimg.com/vi/-XPwp-jmOn0/maxresdefault.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async">
+      <button class="vid-play" type="button" aria-label="Reproducir el vídeo de Distribuciones Valentín"><svg viewBox="0 0 68 48" aria-hidden="true"><path d="M66.5 7.7A8.5 8.5 0 0 0 60.5 1.7C55.2.3 34 .3 34 .3S12.8.3 7.5 1.7A8.5 8.5 0 0 0 1.5 7.7C.1 13 .1 24 .1 24s0 11 1.4 16.3a8.5 8.5 0 0 0 6 6C12.8 47.7 34 47.7 34 47.7s21.2 0 26.5-1.4a8.5 8.5 0 0 0 6-6C67.9 35 67.9 24 67.9 24s0-11-1.4-16.3z" fill="currentColor"/><path d="M27 34V14l18 10z" fill="#fff"/></svg></button>
       <a class="vid-fallback" href="https://www.youtube.com/watch?v=-XPwp-jmOn0&amp;t=11s" target="_blank" rel="noopener">Ver el vídeo en YouTube <span aria-hidden="true">↗</span></a>
     </div>
   </div>
@@ -98,7 +100,7 @@
 <!-- CAFÉ MOCAY -->
 <section class="cafe" id="cafe" aria-labelledby="h-cafe">
   <div class="cafe-stage">
-    <img class="cafe-bg" src="assets/macro-close-up-look-of-roasted-coffee.jpg" width="1920" height="1280" alt="" loading="lazy">
+    <img class="cafe-bg" src="assets/macro-close-up-look-of-roasted-coffee.webp" width="1920" height="1280" alt="" loading="lazy" decoding="async">
     <img class="cafe-logo" src="assets/marcas/mocay-logo.svg" width="600" height="600" alt="Mocay, maestros del café">
     <div class="cafe-copy">
       <h2 id="h-cafe" class="big">Café Mocay</h2>
@@ -106,7 +108,7 @@
       <div class="actions"><a class="btn" href="cafe-mocay.html">Explorar Café Mocay</a><a class="btn ghost" href="#contacto">Consultar café Mocay</a></div>
     </div>
     <figure class="cafe-card">
-      <img src="assets/cliente/web-5.jpg" width="512" height="512" loading="lazy" alt="Mocay Academy: manos de un barista preparando café con leche">
+      <img src="assets/cliente/web-5.jpg" width="512" height="512" loading="lazy" decoding="async" alt="Mocay Academy: manos de un barista preparando café con leche">
     </figure>
   </div>
 </section>
@@ -119,7 +121,7 @@
     <div class="van-fig" id="van-fig">
       <div class="van-shadow" aria-hidden="true"></div>
       <div class="van-photo">
-        <img class="van-img" src="assets/furgoneta-valentin.webp" width="1024" height="981" alt="Furgoneta de reparto de Distribuciones Valentín con el logotipo en la cabina y la botella de Palacio de Bornos en el lateral" loading="lazy">
+        <img class="van-img" src="assets/furgoneta-valentin.webp" width="1024" height="981" alt="Furgoneta de reparto de Distribuciones Valentín con el logotipo en la cabina y la botella de Palacio de Bornos en el lateral" loading="lazy" decoding="async">
       </div>
     </div>
     <ol class="van-steps">
@@ -138,12 +140,12 @@
       <p>Productos de primeras marcas para tu cocina, tu barra y tu sala.</p>
     </div>
     <div class="cards">
-      <a class="card card-pack" href="#contacto"><img src="assets/marcas/mocay-cafe-arabica.jpg" width="515" height="515" loading="lazy" alt="Café Mocay Colombia Maestro, bolsa de 1 kg y caja de 6 unidades"><div class="card-in"><h3>Café</h3><p>Café Mocay</p></div></a>
-      <a class="card card-pack" href="pascual.html"><img src="assets/marcas/pascual-leche-extra-creme.jpg" width="515" height="515" loading="lazy" alt="Botella de leche Pascual Profesional Extra Crème"><div class="card-in"><h3>Lácteos</h3><p>Grupo Leche Pascual · Explorar la gama</p></div></a>
-      <a class="card card-pack card-duo" href="vinos.html"><span class="duo"><img src="assets/marcas/bornos-verdejo.png" width="187" height="622" loading="lazy" alt="Palacio de Bornos Verdejo"><img src="assets/marcas/bornos-sauvignon-2025.png" width="270" height="612" loading="lazy" alt="Palacio de Bornos Sauvignon Blanc"><img src="assets/marcas/bornos-fermentado.png" width="270" height="612" loading="lazy" alt="Palacio de Bornos Verdejo fermentado en barrica"></span><div class="card-in"><h3>Vinos</h3><p>Explorar la selección</p></div></a>
-      <a class="card card-photo" href="agua.html"><img src="assets/cliente/web-4.jpg" width="911" height="911" loading="lazy" alt="Pedras Salgadas y Pedras Limão"><div class="card-in"><h3>Aguas</h3><p>Bezoya · Aquarel · S.Pellegrino · Pedras</p></div></a>
-      <a class="card card-pack card-wide" href="despensa.html"><img src="assets/marcas/calvo-atun-oliva.png" width="1920" height="916" loading="lazy" alt="Calvo atún claro en aceite de oliva, pack de tres latas"><div class="card-in"><h3>Aceite y conservas</h3><p>Salsas, conservas y AOVE. Conservas Calvo</p></div></a>
-      <a class="card card-pack card-duo2" href="refrigerados.html"><span class="duo2"><img src="assets/marcas/campofrio-chorizo.png" width="600" height="384" loading="lazy" alt="Chorizo Campofrío"><img src="assets/marcas/campofrio-salchichon.png" width="600" height="384" loading="lazy" alt="Salchichón ibérico Campofrío"><img src="assets/marcas/campofrio-jamon-cocido.png" width="624" height="414" loading="lazy" alt="Jamón cocido extra Campofrío"></span><div class="card-in"><h3>Refrigerados</h3><p>Lácteos · Quesos · Preparados · Charcutería</p></div></a>
+      <a class="card card-pack" href="#contacto"><img src="assets/marcas/mocay-cafe-arabica.jpg" width="515" height="515" loading="lazy" decoding="async" alt="Café Mocay Colombia Maestro, bolsa de 1 kg y caja de 6 unidades"><div class="card-in"><h3>Café</h3><p>Café Mocay</p></div></a>
+      <a class="card card-pack" href="pascual.html"><img src="assets/marcas/pascual-leche-extra-creme.jpg" width="515" height="515" loading="lazy" decoding="async" alt="Botella de leche Pascual Profesional Extra Crème"><div class="card-in"><h3>Lácteos</h3><p>Grupo Leche Pascual · Explorar la gama</p></div></a>
+      <a class="card card-pack card-duo" href="vinos.html"><span class="duo"><img src="assets/marcas/bornos-verdejo.webp" width="187" height="622" loading="lazy" decoding="async" alt="Palacio de Bornos Verdejo"><img src="assets/marcas/bornos-sauvignon-2025.webp" width="270" height="612" loading="lazy" decoding="async" alt="Palacio de Bornos Sauvignon Blanc"><img src="assets/marcas/bornos-fermentado.webp" width="270" height="612" loading="lazy" decoding="async" alt="Palacio de Bornos Verdejo fermentado en barrica"></span><div class="card-in"><h3>Vinos</h3><p>Explorar la selección</p></div></a>
+      <a class="card card-photo" href="agua.html"><img src="assets/cliente/web-4.webp" width="911" height="911" loading="lazy" decoding="async" alt="Pedras Salgadas y Pedras Limão"><div class="card-in"><h3>Aguas</h3><p>Bezoya · Aquarel · S.Pellegrino · Pedras</p></div></a>
+      <a class="card card-pack card-wide" href="despensa.html"><img src="assets/marcas/calvo-atun-oliva.webp" width="1920" height="916" loading="lazy" decoding="async" alt="Calvo atún claro en aceite de oliva, pack de tres latas"><div class="card-in"><h3>Aceite y conservas</h3><p>Salsas, conservas y AOVE. Conservas Calvo</p></div></a>
+      <a class="card card-pack card-duo2" href="refrigerados.html"><span class="duo2"><img src="assets/marcas/campofrio-chorizo.png" width="600" height="384" loading="lazy" decoding="async" alt="Chorizo Campofrío"><img src="assets/marcas/campofrio-salchichon.png" width="600" height="384" loading="lazy" decoding="async" alt="Salchichón ibérico Campofrío"><img src="assets/marcas/campofrio-jamon-cocido.webp" width="624" height="414" loading="lazy" decoding="async" alt="Jamón cocido extra Campofrío"></span><div class="card-in"><h3>Refrigerados</h3><p>Lácteos · Quesos · Preparados · Charcutería</p></div></a>
       <a class="card" href="congelados.html"><div class="card-in"><h3>Congelados</h3><p>Gama de congelados para hostelería</p></div></a>
       <a class="card" href="#contacto"><div class="card-in"><h3>Menaje</h3><p>Vajilla, cubertería, cristalería, mantelería y auxiliar</p></div></a>
     </div>
@@ -263,7 +265,7 @@
         </ul></div>
       </details>
     </div>
-    <figure class="reparto-photo"><img src="assets/plaza.jpg" width="1920" height="1440" loading="lazy" alt="Plaza Mayor de la Hispanidad, en el centro de Medina del Campo"></figure>
+    <figure class="reparto-photo"><img src="assets/plaza.webp" width="1920" height="1440" loading="lazy" decoding="async" alt="Plaza Mayor de la Hispanidad, en el centro de Medina del Campo"></figure>
   </div>
 </section>
 
@@ -292,7 +294,7 @@
 
 <footer class="foot">
   <div class="wrap foot-grid">
-    <div><img class="foot-logo" src="assets/logo.png" width="400" height="400" alt="Distribuciones Valentín" loading="lazy"><p class="foot-name">Distribuciones Valentín</p><p>Medina del Campo, Valladolid</p></div>
+    <div><img class="foot-logo" src="assets/logo.png" width="400" height="400" alt="Distribuciones Valentín" loading="lazy" decoding="async"><p class="foot-name">Distribuciones Valentín</p><p>Medina del Campo, Valladolid</p></div>
     <div><p class="foot-h">Contacto</p><p><a href="tel:+34635098044">635 09 80 44</a></p><p><a href="mailto:oficina@distribucionesvm.es">oficina@distribucionesvm.es</a></p><address><p>Cl Labradores, n.º 45, parcela 24B</p><p>47400 Medina del Campo</p><p>Valladolid</p></address></div>
     <nav aria-label="Pie de página"><p class="foot-h">Secciones</p><a href="#catalogo">Catálogo</a><a href="cafe-mocay.html">Café</a><a href="pascual.html">Pascual</a><a href="vinos.html">Vinos</a><a href="agua.html">Aguas</a><a href="despensa.html">Despensa</a><a href="refrigerados.html">Refrigerados</a><a href="congelados.html">Congelados</a><a href="#reparto">Reparto</a><a href="#contacto">Contacto</a></nav>
     <div><p class="foot-h">Medina del Campo</p><p>Hora local <b id="clock">--:--</b></p><p><a href="#">Aviso legal</a> · <a href="#">Política de privacidad</a></p></div>
@@ -302,7 +304,7 @@
 
 <script src="assets/vendor/gsap.min.js" defer></script>
 <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
-<script src="main.js?v=11" defer></script>
+<script src="main.js?v=12" defer></script>
 <script src="site-header.js?v=1" defer></script>
 </body>
 </html>

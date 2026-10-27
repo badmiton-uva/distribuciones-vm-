@@ -7,27 +7,25 @@ window.ProductWorld.init({
       eyebrow:'Bodega Palacio de Bornos', title:'Verdejo. El origen en primer plano.',
       description:'Palacio de Bornos Verdejo, de la D.O. Rueda. Una botella para abrir el recorrido por la selección de vinos.',
       backword:'RUEDA', bottom:'01 — Palacio de Bornos',
-      product:{name:'Palacio de Bornos Verdejo', image:'assets/marcas/bornos-verdejo.png', width:187, height:622, alt:'Botella original de Palacio de Bornos Verdejo'}
+      product:{name:'Palacio de Bornos Verdejo', image:'assets/marcas/bornos-verdejo.webp', width:187, height:622, alt:'Botella original de Palacio de Bornos Verdejo'}
     },
     {
       template:'range', family:'Palacio de Bornos', color:'#efe5d3', ink:'#392b1f',
-      eyebrow:'Rueda en tres botellas', title:'La gama, a tu ritmo.',
-      description:'Recorre tres referencias de Palacio de Bornos presentes en la web de Distribuciones Valentín.',
+      eyebrow:'Rueda en dos botellas más', title:'La gama, a tu ritmo.',
+      description:'Dos referencias más de Palacio de Bornos, además del Verdejo, presentes en la web de Distribuciones Valentín.',
       products:[
-        {name:'Verdejo',description:'Palacio de Bornos Verdejo.',image:'assets/marcas/bornos-verdejo.png',width:187,height:622,alt:'Botella Palacio de Bornos Verdejo'},
-        {name:'Sauvignon Blanc',description:'Palacio de Bornos Sauvignon Blanc.',image:'assets/marcas/bornos-sauvignon-2025.png',width:270,height:612,alt:'Botella Palacio de Bornos Sauvignon Blanc'},
-        {name:'Verdejo fermentado',description:'Palacio de Bornos Verdejo fermentado en barrica.',image:'assets/marcas/bornos-fermentado.png',width:270,height:612,alt:'Botella Palacio de Bornos Verdejo fermentado en barrica'}
+        {name:'Sauvignon Blanc',description:'Palacio de Bornos Sauvignon Blanc.',image:'assets/marcas/bornos-sauvignon-2025.webp',width:270,height:612,alt:'Botella Palacio de Bornos Sauvignon Blanc'},
+        {name:'Verdejo fermentado',description:'Palacio de Bornos Verdejo fermentado en barrica.',image:'assets/marcas/bornos-fermentado.webp',width:270,height:612,alt:'Botella Palacio de Bornos Verdejo fermentado en barrica'}
       ]
     },
     {
       template:'editorial', family:'Otras bodegas', color:'#f4f0e9', ink:'#29231f',
       eyebrow:'Más nombres en la selección', title:'Cada botella, su carácter.',
-      description:'Cuatro referencias para descubrir más allá de la gama Bornos.',
+      description:'Tres referencias para descubrir más allá de la gama Bornos.',
       products:[
         {name:'La Caprichosa',description:'Verdejo sobre lías de Palacio de Bornos.',image:'assets/vinos/la-caprichosa.webp',width:280,height:1055,alt:'Botella La Caprichosa Verdejo sobre lías'},
         {name:'Pinna Fidelis Roble',description:'Vino de Pinna Fidelis, Ribera del Duero.',image:'assets/vinos/pinna-fidelis.webp',width:130,height:365,alt:'Botella Pinna Fidelis Roble'},
-        {name:'Lleiroso Crianza',description:'Botella Lleiroso Crianza, Ribera del Duero.',image:'assets/vinos/lleiroso.webp',width:435,height:1320,alt:'Botella Lleiroso Crianza'},
-        {name:'Pinkgoleta',description:'Vino clarete de Pazos de Baró.',image:'assets/vinos/pinkgoleta-cutout.webp',width:182,height:605,alt:'Botella Pinkgoleta de Pazos de Baró'}
+        {name:'Lleiroso Crianza',description:'Botella Lleiroso Crianza, Ribera del Duero.',image:'assets/vinos/lleiroso.webp',width:435,height:1320,alt:'Botella Lleiroso Crianza'}
       ]
     },
     {

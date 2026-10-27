@@ -21,18 +21,10 @@ window.ProductWorld.init({
     {
       template: 'editorial', family: 'Bebidas Pascual', color: '#ffedda', ink: '#512f1c',
       eyebrow: 'Una selección para cada momento', title: 'Color en la carta.',
-      description: 'Bifrutas Tropical y batidos Pascual en un recorrido lleno de color.',
+      description: 'Bifrutas Tropical, batidos y zumos Essential de Pascual en un recorrido lleno de color.',
       products: [
         {name:'Bifrutas Tropical', description:'Uno de los sabores de la gama Bifrutas.', image:'assets/pascual/bifrutas-tropical.webp', width:240, height:285, alt:'Brik original de Bifrutas Tropical'},
-        {name:'Batidos Pascual', description:'Vainilla, chocolate y fresa junto a ColaCao.', image:'assets/pascual/batidos.webp', width:430, height:385, alt:'Botellas originales de batidos Pascual y ColaCao'}
-      ]
-    },
-    {
-      template: 'story', family: 'Selección Pascual', color: '#dce59d', ink: '#244433',
-      eyebrow: 'Una historia de productos', title: 'De uno a otro. Sin perder el hilo.',
-      frames: [
-        {name:'Leche para la barra', description:'Leche Pascual Intense, presentada en su envase original.', image:'assets/pascual/intense-cutout.webp', width:240, height:688, alt:'Botella Leche Pascual Intense'},
-        {name:'Bebidas de fruta', description:'Bifrutas Tropical, dentro de la selección de bebidas.', image:'assets/pascual/bifrutas-tropical.webp', width:240, height:285, alt:'Brik Bifrutas Tropical'},
+        {name:'Batidos Pascual', description:'Vainilla, chocolate y fresa junto a ColaCao.', image:'assets/pascual/batidos.webp', width:430, height:385, alt:'Botellas originales de batidos Pascual y ColaCao'},
         {name:'Zumos Essential', description:'Una selección de botellas Pascual Essential.', image:'assets/pascual/essential.webp', width:680, height:480, alt:'Botellas originales de zumo Pascual Essential'}
       ]
     },

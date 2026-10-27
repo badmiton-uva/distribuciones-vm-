@@ -69,7 +69,7 @@
     });
     return ytReady;
   }
-  function makeVideo(scrubbed) {
+  function makeVideo(autoplay) {
     var host = document.getElementById('vid-player');
     if (!host) return Promise.resolve(null);
     var frame = host.parentNode, start = +host.dataset.start || 0, id = host.dataset.id;
@@ -81,11 +81,12 @@
         var p = new window.YT.Player('vid-player', {
           videoId: id,
           host: 'https://www.youtube-nocookie.com',
-          playerVars: Object.assign({ controls: 1, modestbranding: 1, rel: 0, playsinline: 1, start: start, fs: 1, iv_load_policy: 3 }, /^https?:$/.test(location.protocol) ? { origin: location.origin } : {}),
+          playerVars: Object.assign({ autoplay: autoplay ? 1 : 0, controls: 1, modestbranding: 1, rel: 0, playsinline: 1, start: start, fs: 1, iv_load_policy: 3 }, /^https?:$/.test(location.protocol) ? { origin: location.origin } : {}),
           events: {
             onReady: function (e) {
               clearTimeout(failTimer);
               frame.classList.add('vid-ready');
+              if (autoplay) e.target.playVideo();
               resolve(e.target);
             },
             onError: function () { fail(); resolve(null); }
@@ -96,8 +97,15 @@
     });
   }
 
+  function armVideo() {
+    var host = document.getElementById('vid-player');
+    var btn = host && host.parentNode.querySelector('.vid-play');
+    if (!btn) { makeVideo(false); return; }
+    btn.addEventListener('click', function () { btn.classList.add('is-loading'); makeVideo(true).then(function () { btn.remove(); }); }, { once: true });
+  }
+
   function start() {
-    if (!window.gsap || !window.ScrollTrigger || reduce) { html.classList.add('static'); makeVideo(false); return; }
+    if (!window.gsap || !window.ScrollTrigger || reduce) { html.classList.add('static'); armVideo(); return; }
     var gsap = window.gsap, ScrollTrigger = window.ScrollTrigger;
     gsap.registerPlugin(ScrollTrigger);
     html.classList.add('gsap');
@@ -167,16 +175,8 @@
       rise('.contacto .big', null, { y: 70 });
     })(); } catch (e) { window.__err = 'rise: ' + e.message; }
 
-    // vídeo: reproductor normal de YouTube (play manual); se prepara al acercarse a la sección
-    try {
-      var secV = document.getElementById('video');
-      if (secV) {
-        if ('IntersectionObserver' in window) {
-          var ioV = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { makeVideo(false); ioV.disconnect(); } }, { rootMargin: '120% 0px 120% 0px' });
-          ioV.observe(secV);
-        } else makeVideo(false);
-      }
-    } catch (e) { window.__err = 'vid: ' + e.message; }
+    // vídeo: el reproductor de YouTube se carga solo al pulsar play
+    try { armVideo();     } catch (e) { window.__err = 'vid: ' + e.message; }
 
     // recorrido: escenas ilustradas con zoom y fundido controlados por el scroll
     (function () {
