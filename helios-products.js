@@ -26,22 +26,6 @@ window.HELIOS_SECTIONS = [
     "alt": "Mermelada ecológica de melocotón · 350 g, Helios"
    },
    {
-    "name": "Mermelada Frutapunto de melocotón",
-    "description": "Mermelada de melocotón de la gama Frutapunto.",
-    "image": "assets/despensa/helios/mermelada-frutapunto-extra-de-melocoton.webp",
-    "width": 214,
-    "height": 463,
-    "alt": "Mermelada Frutapunto de melocotón, Helios"
-   },
-   {
-    "name": "Mermelada Frutapunto de fresa",
-    "description": "Mermelada de fresa de la gama Frutapunto.",
-    "image": "assets/despensa/helios/mermelada-frutapunto-extra-de-fresa.webp",
-    "width": 214,
-    "height": 462,
-    "alt": "Mermelada Frutapunto de fresa, Helios"
-   },
-   {
     "name": "Mermelada extra de manzana · 340 g",
     "description": "Mermelada de manzana para desayunos y meriendas.",
     "image": "assets/despensa/helios/mermelada-extra-de-manzana-340g.webp",
@@ -534,30 +518,6 @@ window.HELIOS_SECTIONS = [
     "alt": "Salsa napolitana · 380 g, Helios"
    },
    {
-    "name": "Salsa arrabbiata · 380 g",
-    "description": "Salsa de tomate de estilo arrabbiata para pasta.",
-    "image": "assets/despensa/helios/salsa-arrabbiata-380g.webp",
-    "width": 266,
-    "height": 466,
-    "alt": "Salsa arrabbiata · 380 g, Helios"
-   },
-   {
-    "name": "Salsa al basilico · 380 g",
-    "description": "Salsa de tomate con albahaca para acompañar pasta y otras recetas.",
-    "image": "assets/despensa/helios/salsa-basilico-380g.webp",
-    "width": 265,
-    "height": 466,
-    "alt": "Salsa al basilico · 380 g, Helios"
-   },
-   {
-    "name": "Kétchup Selección · 330 g",
-    "description": "Kétchup Helios en botella de vidrio.",
-    "image": "assets/despensa/extra/helios_ketchup-seleccion-330g.webp",
-    "width": 500,
-    "height": 500,
-    "alt": "Helios Kétchup Selección 330 g"
-   },
-   {
     "name": "Pisto casero · 570 g",
     "description": "Pisto de verduras en formato familiar.",
     "image": "assets/despensa/helios/pisto-570g.webp",
@@ -588,22 +548,10 @@ window.HELIOS_SECTIONS = [
   "family": "Helios · Verduras en conserva",
   "color": "#e3efd9",
   "ink": "#2f5226",
-  "eyebrow": "Verduras al natural y preparado para tortilla",
+  "eyebrow": "Verduras al natural",
   "title": "Verduras listas para usar",
   "note": "Imagen del catálogo oficial de Helios",
   "variants": [
-   {
-    "name": "Patata entera al natural · 660 g",
-    "description": "Patatas enteras conservadas al natural, listas para utilizar en guisos, guarniciones o ensaladas."
-   },
-   {
-    "name": "Maíz dulce · 340 g",
-    "description": "Maíz dulce en conserva para ensaladas y otras recetas.",
-    "image": "assets/despensa/extra/helios_maiz-dulce-340g.webp",
-    "width": 530,
-    "height": 530,
-    "alt": "Helios Maíz dulce 340 g"
-   },
    {
     "name": "Guisantes extrafinos · 340 g",
     "description": "Guisantes extrafinos en conserva.",
@@ -611,22 +559,6 @@ window.HELIOS_SECTIONS = [
     "width": 342,
     "height": 445,
     "alt": "Guisantes extrafinos · 340 g, Helios"
-   },
-   {
-    "name": "Torti-Ya sin cebolla",
-    "description": "Preparado de patata para elaborar tortilla sin cebolla.",
-    "image": "assets/despensa/extra/helios_torti-ya-sin-cebolla.webp",
-    "width": 720,
-    "height": 720,
-    "alt": "Helios Torti-Ya sin cebolla"
-   },
-   {
-    "name": "Torti-Ya con cebolla · 550 g",
-    "description": "Preparado de patata y cebolla para elaborar tortilla.",
-    "image": "assets/despensa/helios/torti-ya-con-cebolla.webp",
-    "width": 255,
-    "height": 465,
-    "alt": "Torti-Ya con cebolla · 550 g, Helios"
    },
    {
     "name": "Zanahorias en tiras",
@@ -798,22 +730,6 @@ window.HELIOS_SECTIONS = [
   "note": "Imagen del catálogo oficial de Helios",
   "variants": [
    {
-    "name": "Cóctel de frutas · lata de 420 g",
-    "description": "Selección de frutas en conserva.",
-    "image": "assets/despensa/helios/cocktail-de-frutas-420g.webp",
-    "width": 297,
-    "height": 458,
-    "alt": "Cóctel de frutas · lata de 420 g, Helios"
-   },
-   {
-    "name": "Pera en mitades · 420 g",
-    "description": "Mitades de pera en conserva.",
-    "image": "assets/despensa/helios/peras-420g.webp",
-    "width": 298,
-    "height": 458,
-    "alt": "Pera en mitades · 420 g, Helios"
-   },
-   {
     "name": "Cerezas rojas · 160 g",
     "description": "Cerezas rojas en frasco pequeño.",
     "image": "assets/despensa/helios/cereza-roja-160g.webp",
@@ -844,14 +760,6 @@ window.HELIOS_SECTIONS = [
     "width": 388,
     "height": 461,
     "alt": "Melocotón sin azúcar añadido · 840 g, Helios"
-   },
-   {
-    "name": "Mandarina en gajos · 312 g",
-    "description": "Gajos de mandarina en conserva.",
-    "image": "assets/despensa/helios/mandarina-en-gajos-312g.webp",
-    "width": 296,
-    "height": 345,
-    "alt": "Mandarina en gajos · 312 g, Helios"
    },
    {
     "name": "Melocotón en frasco · 700 g",

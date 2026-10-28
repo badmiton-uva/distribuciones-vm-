@@ -44,7 +44,7 @@ window.ProductWorld.init({
       products: [
         {name:'Mermeladas y confituras', description:'Gama de mermeladas y confituras Helios.', image:D+'helios-mermeladas.webp', width:421, height:302, cover:true, alt:'Tarro de mermelada de fresa Helios'},
         {name:'Tomate frito y salsas pasta', description:'Tomate frito mediterráneo y salsas para pasta.', image:D+'helios-tomate-frito.webp', width:425, height:302, cover:true, alt:'Tarro de tomate frito mediterráneo Helios'},
-        {name:'Vegetales', description:'Gama de vegetales Helios, con Torti-Ya.', image:D+'helios-vegetales.webp', width:423, height:302, cover:true, alt:'Tarro de Torti-Ya de Helios'}
+        {name:'Vegetales', description:'Gama de vegetales Helios.', image:D+'helios-vegetales.webp', width:423, height:302, cover:true, alt:'Tarro de Torti-Ya de Helios'}
       ]
     },
     ...(window.HELIOS_SECTIONS || []),
@@ -136,20 +136,6 @@ window.ProductWorld.init({
         {name:'Nuez en grano · 1 kg', description:'Nueces sin cáscara en formato de 1 kg, listas para utilizar en cocina y repostería.', image:D+'borges-nueces.webp', width:309, height:395, alt:'Bolsa Borges Selección de nueces de California en grano, imagen de la gama'},
         {name:'Pasas sultanas · 1 kg', description:'Pasas sultanas en formato de 1 kg, apropiadas para recetas, ensaladas y repostería.', image:'assets/despensa/extra/borges_pasas-sultanas-1kg.webp', width:540, height:540, alt:'Borges Pasas sultanas 1 kg'},
         {name:'Cóctel para ensaladas · 1 kg', description:'Mezcla de frutos secos para añadir a ensaladas, en formato de 1 kg.', image:'assets/despensa/extra/borges_coctel-para-ensaladas-1kg.webp', width:540, height:540, alt:'Borges Cóctel para ensaladas 1 kg'},
-        {name:'Granillo de almendra · 1 kg', description:'Almendra troceada en granillo, indicada para repostería, pastelería y decoración.', image:D+'borges-granillo-almendra.webp', width:823, height:510, alt:'Almendra en granillo Borges'}
-      ]
-    },
-    {
-      template: 'lineup', family: 'Borges · Individual', color: '#fbe7da', ink: '#7a1a14',
-      eyebrow: 'Frutos secos en formato individual', title: 'Un puñado de Borges.',
-      note: 'Imagen de la gama · puede diferir del formato o del sabor',
-      variants: [
-        {name:'Almendras · 80 g', description:'Almendras Borges en formato individual de 80 g.', image:D+'borges-almendras.webp', width:316, height:396, alt:'Bolsa Borges Selección de almendras fritas y saladas, imagen de la gama'},
-        {name:'Cacahuetes · 100 g', description:'Cacahuetes Borges en formato individual de 100 g.', image:D+'borges-cacahuetes.webp', width:319, height:400, alt:'Bolsa Borges Selección de cacahuetes fritos y salados, imagen de la gama'},
-        {name:'Pistachos · 80 g', description:'Pistachos Borges en formato individual de 80 g.', image:D+'borges-pistachos.webp', width:322, height:403, alt:'Bolsa Borges Selección de pistachos tostados y al punto de sal, imagen de la gama'},
-        {name:'Anacardos · 80 g', description:'Anacardos Borges en formato individual de 80 g.', image:D+'borges-anacardos.webp', width:358, height:496, alt:'Bolsa Borges de anacardos tostados, imagen de la gama'},
-        {name:'Nueces de California · 90 g', description:'Nueces de California en formato individual de 90 g.', image:D+'borges-nueces.webp', width:309, height:395, alt:'Bolsa Borges Selección de nueces de California en grano, imagen de la gama'},
-        {name:'Mix sabor barbacoa · 80 g', description:'Mezcla de frutos secos con sabor barbacoa en formato individual de 80 g.', image:D+'borges-mezcla-snack.webp', width:305, height:464, alt:'Bolsa Borges de mezcla de frutos secos, imagen de la gama'}
       ]
     },
     {

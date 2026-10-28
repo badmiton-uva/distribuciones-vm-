@@ -182,14 +182,6 @@ window.VILLACAMPO_SECTIONS = [
     "width": 477,
     "height": 620,
     "alt": "Champiñón entero · 3 kg, Villa Campo"
-   },
-   {
-    "name": "Mezcla de setas · 3 kg",
-    "description": "Mezcla de setas en conserva, en lata de 3 kg.",
-    "image": "assets/despensa/villacampo/villacampo-444-mezcla-setas-barreja-primera-3kg-lata.webp",
-    "width": 477,
-    "height": 620,
-    "alt": "Mezcla de setas · 3 kg, Villa Campo"
    }
   ]
  },
