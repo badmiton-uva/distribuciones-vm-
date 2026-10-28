@@ -15,3 +15,6 @@
 .water-world .pw-end .pw-kicker{color:#8adce0}
 @media(max-width:760px){.water-world .pw-opening-bottle{height:390px}.water-world .pw-d-frame{background:var(--frame-color)}}
 @media(prefers-reduced-motion:reduce){.water-world .pw-d-frame{background:var(--frame-color)}}
+/* Botellas altas en la gama horizontal: la fila de la imagen no debe crecer con la foto */
+.water-world .pw-b-image{grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr)}
+.water-world .pw-b-image img{max-width:100%;max-height:100%;height:auto;width:auto;object-fit:contain}
