@@ -39,7 +39,7 @@
     var active = Math.round(position);
     if (active !== lastActive) {
       lastActive = active;
-      index.innerHTML = String(active + 1).padStart(2, '0') + ' <span>/ 05</span>';
+      index.innerHTML = String(active + 1).padStart(2, '0') + ' <span>/ 04</span>';
       journey.setAttribute('data-active', chapters[active].getAttribute('data-chapter'));
     }
 
