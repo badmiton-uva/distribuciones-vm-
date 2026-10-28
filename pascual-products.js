@@ -10,6 +10,13 @@ window.ProductWorld.init({
       product: {name:'Leche Pascual Intense · 1,5 L', image:'assets/pascual/intense-cutout.webp', width:240, height:688, alt:'Botella original Leche Pascual Intense para hostelería de 1,5 litros'}
     },
     {
+      template: 'hero', family: 'Leche Pascual', color: '#efe3d6', ink: '#3a2418',
+      eyebrow: 'Pascual Profesional', title: 'Classic. Leche ideal para café.',
+      description: 'Leche de Bienestar Animal para hostelería. Nuestra leche Classic semidesnatada es una equilibrada combinación de sabor suave y la cremosidad de la leche, con las mismas cualidades de emulsión de la variedad entera por su contenido en proteína.',
+      backword: 'CLASSIC', bottom: 'Leche Classic semidesnatada · hostelería',
+      product: {name:'Leche Pascual Classic semidesnatada · caja de 10 L', image:'assets/pascual/classic-10l.webp', width:333, height:434, alt:'Caja de 10 litros de leche Pascual Profesional Classic, ideal para café'}
+    },
+    {
       template: 'range', family: 'Vivesoy Barista', color: '#e9eacb', ink: '#214b32',
       eyebrow: 'Tres variedades, una misma barra', title: 'Vegetal, en movimiento.',
       description: 'Tres bebidas vegetales Vivesoy Barista para descubrir en la barra.',
