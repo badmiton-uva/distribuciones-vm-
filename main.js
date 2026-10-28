@@ -119,11 +119,11 @@
 
     // revelados con retardo escalonado
     gsap.utils.toArray('[data-r]').forEach(function (el) { el.removeAttribute('data-r'); });
-    ScrollTrigger.batch('.reparto-copy, .con-sub, form', {
+    ScrollTrigger.batch('.con-sub, form', {
       start: 'top 88%', once: true,
       onEnter: function (b) { gsap.fromTo(b, { y: 36, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.9, ease: 'power3.out', stagger: 0.09, overwrite: true, onComplete: function () { gsap.set(b, { clearProps: 'transform' }); } }); }
     });
-    gsap.set('.reparto-copy, .con-sub, form', { autoAlpha: 0 });
+    gsap.set('.con-sub, form', { autoAlpha: 0 });
 
     // cifras
     gsap.utils.toArray('[data-count]').forEach(function (b) {
@@ -152,9 +152,6 @@
         .from('.cafe-copy .actions', { y: 24, autoAlpha: 0, duration: 0.8, ease: 'power3.out' }, 0.4)
         .from('.cafe-card', { x: mob ? 0 : 80, y: mob ? -30 : 0, autoAlpha: 0, rotation: mob ? 0 : 3, duration: 1.1, ease: 'power3.out' }, 0.5)
         .from('.cafe-logo', { autoAlpha: 0, scale: 0.85, duration: 1, ease: 'power3.out' }, 0.7);
-
-      /* zona de reparto: paralaje suave */
-      gsap.fromTo('.reparto-photo img', { scale: 1.2, yPercent: -6 }, { scale: 1.02, yPercent: 6, ease: 'none', scrollTrigger: { trigger: '.reparto-photo', start: 'top bottom', end: 'bottom top', scrub: true } });
     });
 
     // aparición progresiva: cada bloque entra al ritmo del scroll (y se deshace al subir)
@@ -171,7 +168,6 @@
       rise('.fig', null, { y: 70, step: 3 });
       rise('.cat-head', null, { y: 60 });
       rise('.card', null, { y: 110, scale: 0.94, step: 4, end: 52 });
-      rise('.reparto-photo', null, { y: 100, scale: 0.95 });
       rise('.contacto .big', null, { y: 70 });
     })(); } catch (e) { window.__err = 'rise: ' + e.message; }
 

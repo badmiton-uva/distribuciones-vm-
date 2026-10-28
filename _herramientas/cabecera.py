@@ -21,7 +21,6 @@ MENU = [
     ('Despensa', 'despensa.html'),
     ('Refrigerados', 'refrigerados.html'),
     ('Congelados', 'congelados.html'),
-    ('Reparto', 'index.html#reparto'),
 ]
 # página -> (texto del elemento activo, ¿cabecera fija sobre la portada?)
 PAGES = {
