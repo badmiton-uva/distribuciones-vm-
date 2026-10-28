@@ -48,8 +48,9 @@ window.ProductWorld.init({
       eyebrow:'Agua con gas y sabores', title:'Una forma distinta de brindar.',
       frames:[
         {name:'Pedras Salgadas',description:'Agua mineral con gas de origen natural, presentada en botella de vidrio.',image:'assets/agua/pedras-75-alt.webp',width:800,height:1200,alt:'Botella Pedras Salgadas de 75 centilitros',color:'#dcead3'},
-        {name:'Pedras Limão',description:'Una propuesta con limón para ampliar la carta de bebidas.',image:'assets/agua/pedras-limon.webp',width:1120,height:1120,alt:'Botella Pedras con limón',color:'#f1e9aa'},
-        {name:'Frutos vermelhos',description:'Pedras con frutos rojos, otra expresión de la gama.',image:'assets/agua/pedras-frutos.webp',width:1400,height:1991,alt:'Botella Pedras Frutos Vermelhos con frutos rojos',color:'#e8d8d9'}
+        {name:'Pedras Limão',description:'Una propuesta con limón para ampliar la carta de bebidas.',image:'assets/agua/pedras-limao-botella.webp',width:126,height:408,alt:'Botella Pedras con limón',color:'#f1e9aa'},
+        {name:'Frutos vermelhos',description:'Pedras con frutos rojos, otra expresión de la gama.',image:'assets/agua/pedras-frutos-vermelhos-botella.webp',width:133,height:428,alt:'Botella Pedras Frutos Vermelhos con frutos rojos',color:'#e8d8d9'},
+        {name:'Pedras Tangerina',description:'Pedras con mandarina, otra expresión de la gama.',image:'assets/agua/pedras-tangerina-botella.webp',width:133,height:428,alt:'Botella Pedras Tangerina con mandarina',color:'#f8e0bd'}
       ]
     },
     {

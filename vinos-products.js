@@ -17,7 +17,7 @@ window.ProductWorld.init({
       variants:[
         {name:'La Caprichosa · Verdejo 2025', description:'Verdejo sobre lías de Palacio de Bornos.', image:B+'la-caprichosa-verdejo.webp', width:119, height:478, alt:'Botella La Caprichosa Verdejo sobre lías'},
         {name:'Verdejo fermentado en barrica · 2023', description:'Blanco de Palacio de Bornos fermentado en barrica.', image:'assets/marcas/bornos-fermentado.webp', width:270, height:612, alt:'Botella Palacio de Bornos Verdejo fermentado en barrica'},
-        {name:'Bornos Semidulce Verdejo', description:'Verdejo semidulce de Palacio de Bornos.'},
+        {name:'Bornos Semidulce Verdejo', description:'Verdejo semidulce de Palacio de Bornos.', image:B+'bornos-semidulce-verdejo.webp', width:135, height:546, alt:'Botella Palacio de Bornos Verdejo Semidulce'},
         {name:'Sauvignon Blanc', description:'Palacio de Bornos Sauvignon Blanc.', image:'assets/marcas/bornos-sauvignon-2025.webp', width:270, height:612, alt:'Botella Palacio de Bornos Sauvignon Blanc'}
       ]
     },
@@ -27,7 +27,7 @@ window.ProductWorld.init({
       note:'Una imagen por variedad',
       variants:[
         {name:'Bornos Frizzante Verdejo · 5,5 º', description:'Frizzante Verdejo de Palacio de Bornos.', image:B+'bornos-frizzante-cutout.webp', width:430, height:1070, alt:'Botella Palacio de Bornos Frizzante Verdejo'},
-        {name:'Bornos Rosado Frizzante · 5,5 º', description:'Frizzante rosado de Palacio de Bornos.'},
+        {name:'Bornos Rosado Frizzante · 5,5 º', description:'Frizzante rosado de Palacio de Bornos.', image:B+'bornos-rosado-frizzante.webp', width:206, height:746, alt:'Botella Bornos Frizzante Rosado 5,5 grados'},
         {name:'Laué Frizzante Verdejo · lata de 250 ml', description:'Frizzante Verdejo de Palacio de Bornos en lata.', image:B+'laue-frizzante.webp', width:260, height:570, alt:'Lata Laué Frizzante Verdejo'},
         {name:'Laué Frizzante Verdejo · pack de 4 latas de 250 ml', description:'Pack de cuatro latas de Laué Frizzante Verdejo. Imagen de una lata individual.', image:B+'laue-frizzante.webp', width:260, height:570, alt:'Lata Laué Frizzante Verdejo, imagen del formato individual'}
       ]
@@ -48,7 +48,7 @@ window.ProductWorld.init({
       eyebrow:'Palacio de Bornos · Espumosos', title:'Para brindar.',
       note:'Una imagen por variedad',
       variants:[
-        {name:'Espumoso Palacio de Bornos Brut', description:'Vino espumoso Brut de Palacio de Bornos.'},
+        {name:'Espumoso Palacio de Bornos Brut', description:'Vino espumoso Brut de Palacio de Bornos.', image:B+'bornos-espumoso-brut.webp', width:208, height:756, alt:'Botella Palacio de Bornos Verdejo Brut, espumoso de Rueda'},
         {name:'Espumoso Palacio de Bornos Nature', description:'Vino espumoso Nature de Palacio de Bornos.'},
         {name:'Espumoso Palacio de Bornos Semiseco', description:'Vino espumoso semiseco de Palacio de Bornos.'},
         {name:'Espumoso Palacio de Bornos Rosado', description:'Vino espumoso rosado de Palacio de Bornos.'}
