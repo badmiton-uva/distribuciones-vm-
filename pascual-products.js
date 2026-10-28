@@ -75,11 +75,10 @@ window.ProductWorld.init({
     {
       template: 'lineup', family: 'Natillas Pascual', color: '#ead9cb', ink: '#4a2a1b',
       eyebrow: 'Vaso individual de 120 g', title: 'Natillas, a cucharadas.',
-      note: 'Imagen de la gama · natillas de chocolate',
-      product: {name:'Natillas de chocolate', image:'assets/pascual/natillas.webp', width:464, height:511, alt:'Vaso de natillas de chocolate Pascual, imagen de la gama'},
+      note: 'Una imagen por variedad',
       variants: [
-        {name:'Natillas de vainilla · 120 g', description:'Natillas Pascual de vainilla en vaso individual.'},
-        {name:'Natillas de chocolate · 120 g', description:'Natillas Pascual de chocolate en vaso individual.'}
+        {name:'Natillas de vainilla · 120 g', description:'Natillas Pascual de vainilla en vaso individual.', image:'assets/pascual/natillas-pack-vainilla.webp', width:700, height:569, alt:'Pack de cuatro natillas de vainilla de Pascual'},
+        {name:'Natillas de chocolate · 120 g', description:'Natillas Pascual de chocolate en vaso individual.', image:'assets/pascual/natillas.webp', width:464, height:511, alt:'Vaso de natillas de chocolate Pascual'}
       ]
     }
   ]
