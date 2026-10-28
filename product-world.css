@@ -94,7 +94,7 @@
 @media(max-height:780px) and (min-width:761px){.pw-e-head h2{font-size:clamp(2.2rem,3.6vw,3.8rem);margin:6px 0 12px}.pw-e-list li{padding:3px 0}.pw-e-list b{font-size:1rem}.pw-e-list small{font-size:.9rem}}
 
 /* lineup con una imagen por variedad: se cruzan con el scroll; sin imagen, un marcador identificado */
-.pw-e-art:has(.pw-e-multi){grid-template-columns:1fr;grid-template-rows:1fr}
+.pw-e-art:has(.pw-e-multi){grid-template-columns:1fr;grid-template-rows:minmax(0,1fr)}
 .pw-e-multi{grid-area:1/1;opacity:0;transition:opacity .4s ease;max-width:min(34vw,520px);max-height:74%;mix-blend-mode:multiply;filter:none}
 .pw-e-multi.is-current{opacity:1}
 .pw-e-art:has(.pw-e-multi) .pw-e-disc{display:none}
