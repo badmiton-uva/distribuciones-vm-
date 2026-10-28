@@ -1,0 +1,6 @@
+/* Portada del prototipo: foto real en círculo en lugar del envase */
+.pw-opening-photo{position:relative;z-index:1;width:min(39vw,570px);height:min(39vw,570px);max-width:none;border-radius:50%;object-fit:cover;object-position:50% 62%;box-shadow:25px 35px 40px rgba(72,47,31,.18)}
+.pw-contact-list{list-style:none;margin:26px 0 8px;padding:0;display:grid;gap:8px;font-size:1.15rem}
+.pw-contact-list a{text-decoration:none;font-weight:600;overflow-wrap:anywhere}
+.pw-contact-list li:last-child{opacity:.75;font-size:1rem}
+@media(max-width:760px){.pw-opening-photo{width:min(78vw,440px);height:min(78vw,440px)}}
