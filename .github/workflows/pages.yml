@@ -2,7 +2,7 @@ name: Publicar en GitHub Pages
 
 on:
   push:
-    branches: [claude/sweet-bohr-lergl3]
+    branches: [claude/sweet-bohr-lergl3, claude/funny-shannon-8m2ip8]
   workflow_dispatch:
 
 permissions:
