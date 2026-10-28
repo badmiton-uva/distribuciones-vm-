@@ -23,7 +23,7 @@ window.ProductWorld.init({
       eyebrow:'Más nombres en la selección', title:'Cada botella, su carácter.',
       description:'Tres referencias para descubrir más allá de la gama Bornos.',
       products:[
-        {name:'La Caprichosa',description:'Verdejo sobre lías de Palacio de Bornos.',image:'assets/vinos/la-caprichosa.webp',width:280,height:1055,alt:'Botella La Caprichosa Verdejo sobre lías'},
+        {name:'La Caprichosa',description:'Verdejo sobre lías de Palacio de Bornos.',image:'assets/vinos/la-caprichosa-verdejo.webp',width:119,height:478,alt:'Botella La Caprichosa Verdejo sobre lías'},
         {name:'Pinna Fidelis Roble',description:'Vino de Pinna Fidelis, Ribera del Duero.',image:'assets/vinos/pinna-fidelis.webp',width:130,height:365,alt:'Botella Pinna Fidelis Roble'},
         {name:'Lleiroso Crianza',description:'Botella Lleiroso Crianza, Ribera del Duero.',image:'assets/vinos/lleiroso.webp',width:435,height:1320,alt:'Botella Lleiroso Crianza'}
       ]
