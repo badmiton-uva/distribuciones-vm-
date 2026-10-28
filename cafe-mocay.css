@@ -212,3 +212,20 @@ button,a{-webkit-tap-highlight-color:transparent}
 
 .m-rain{position:absolute;inset:0;overflow:hidden;z-index:1;pointer-events:none}
 .m-bean{position:absolute;top:0;left:0;max-width:none;will-change:transform}
+
+/* Catálogo de infusiones (pirámide y clásicas) */
+.m-infus{padding:clamp(72px,9vw,140px) var(--gutter);background:var(--paper)}
+.m-infus-head{max-width:1320px;margin:0 auto clamp(36px,5vw,72px)}
+.m-infus-head h2{font-size:clamp(2.6rem,1.4rem + 4.6vw,6rem);font-weight:500;line-height:.95;letter-spacing:-.05em;margin:14px 0 18px}
+.m-infus-head p:not(.m-eyebrow){max-width:52ch;margin:0;color:var(--muted)}
+.m-inf-group{max-width:1320px;margin:0 auto clamp(48px,6vw,88px)}
+.m-inf-group h3{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 18px;margin:0 0 28px;padding-bottom:16px;border-bottom:1px solid rgba(20,16,13,.18);font-size:clamp(1.4rem,1.1rem + 1.2vw,2.2rem);font-weight:500;letter-spacing:-.03em}
+.m-inf-group h3 span{font-size:1rem;font-weight:400;letter-spacing:0;color:var(--muted)}
+.m-inf-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(24px,3vw,44px) clamp(16px,2vw,32px)}
+.m-inf-card{display:flex;flex-direction:column;align-items:center;text-align:center;min-width:0}
+.m-inf-card img{width:100%;max-width:240px;height:auto;mix-blend-mode:multiply}
+.m-inf-card h4{margin:10px 0 6px;font-size:1.05rem;font-weight:700;text-transform:uppercase;letter-spacing:.02em;line-height:1.15}
+.m-inf-card p{margin:0;max-width:30ch;font-size:.92rem;line-height:1.4;color:var(--muted)}
+.m-inf-grid-box{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:1000px){.m-inf-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:700px){.m-inf-grid,.m-inf-grid-box{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 12px}.m-inf-card h4{font-size:.9rem}.m-inf-card p{font-size:.84rem}}
