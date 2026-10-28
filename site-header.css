@@ -30,9 +30,3 @@
 }
 /* las secciones fijadas con scroll cuelgan de la cabecera cuando es de dos filas */
 @media(max-width:1350px){.pw-sticky{top:111px;height:calc(100svh - 111px)}}
-/* Botón flotante de WhatsApp (se genera con _herramientas/cabecera.py) */
-.wa-float{position:fixed;z-index:70;right:max(16px,env(safe-area-inset-right));bottom:max(16px,env(safe-area-inset-bottom));display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 20px 0 16px;border-radius:999px;background:#0e7c3f;color:#fff;text-decoration:none;font:600 .95rem/1 Jost,Arial,sans-serif;box-shadow:0 8px 24px rgba(0,0,0,.28)}
-.wa-float svg{flex:none}
-.wa-float:focus-visible{outline:3px solid #fff;outline-offset:3px;box-shadow:0 0 0 6px #0e7c3f}
-@media(hover:hover) and (pointer:fine){.wa-float:hover{background:#0a6030}}
-@media(max-width:420px){.wa-float{min-height:48px;padding:0 16px 0 13px;font-size:.88rem}}
