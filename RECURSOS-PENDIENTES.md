@@ -70,3 +70,8 @@ Por indicación de Pablo se ha quitado todo lo relacionado con la cerveza (panel
 ## Vídeo de YouTube tras la portada
 Sección `#video`: vídeo `-XPwp-jmOn0` (título en YouTube: «video web cabecera», canal de Quique Martín Gallego), enlazado en la web actual del cliente. Empieza en el segundo 11 y avanza o retrocede con el scroll. Se carga con el reproductor oficial de YouTube (youtube-nocookie). Confirmar que el cliente es el titular del vídeo. Si el vídeo se vuelve privado, la sección muestra solo su miniatura.
 Quitada también la sección «Vinos y aguas» (Bornos y Pedras) por indicación de Pablo; las marcas siguen en el catálogo.
+
+
+## Teléfono y horario (confirmado por el responsable)
+- El 635 09 80 44 **no tiene WhatsApp**: se quitó el botón flotante de WhatsApp de todas las páginas.
+- Lo atiende una persona de forma habitual, de 7:00 a 15:00. A partir de las 15:00 las llamadas entrantes llegan al móvil particular de Valentín. Aparece en el contacto y el pie de la portada.
