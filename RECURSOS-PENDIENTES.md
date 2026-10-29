@@ -75,3 +75,10 @@ Quitada también la sección «Vinos y aguas» (Bornos y Pedras) por indicación
 ## Teléfono y horario (confirmado por el responsable)
 - El 635 09 80 44 **no tiene WhatsApp**: se quitó el botón flotante de WhatsApp de todas las páginas.
 - Lo atiende una persona de forma habitual, de 7:00 a 15:00. A partir de las 15:00 las llamadas entrantes llegan al móvil particular de Valentín. Aparece en el contacto y el pie de la portada.
+
+
+## Datos de empresa (confirmados por el responsable)
+- 44 años de experiencia, desde 1982 (cifra de la portada).
+- Proceso de alta de cliente y formas de pago: sección «Hazte cliente en 3 pasos» de la portada.
+- Clientes que podrían dar su opinión (pendiente de pedirles permiso; no se publican nombres ni testimonios hasta tenerlo por escrito): Bar La Clave, Hotel Villa de Ferias, Restaurante La Mejillonera, Cervecería Baviera, Restaurante Los Toreros (Tordesillas) y Bar Alejandros (Tordesillas).
+- Ficha de cliente (a mano): el responsable adjuntó un modelo; no se ha publicado.
