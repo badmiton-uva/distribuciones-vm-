@@ -133,9 +133,20 @@
       h('div', { class: 'ent-body' }, pre, copiar));
   }
 
+  function bloqueWeb(cw) {
+    var texto = { pendiente: 'Cambios preparados en una copia. Tu web real no se ha tocado.', aplicado: 'Aplicado en tu copia de la web. Falta publicarlo en internet.', publicado: 'Publicado en internet.' }[cw.estado];
+    return h('div', { class: 'cw' },
+      h('p', { class: 'pend-t', text: 'Cambios en la web' }),
+      h('p', { class: 'cw-t', text: texto }),
+      h('ul', { class: 'pend' }, cw.archivos.map(function (a) { return h('li', { text: a.ruta + ' (' + a.estado + ')' }); })),
+      cw.resumen ? h('p', { class: 'pend-t', text: cw.resumen }) : null,
+      cw.vista_previa ? h('a', { class: 'link-btn', href: cw.vista_previa, target: '_blank', rel: 'noopener', text: 'Ver vista previa de la web con los cambios' }) : null);
+  }
+
   function tarjeta(r) {
     var rev = r.revision || { estado: 'pendiente' };
     var et = ETIQUETA[rev.estado] || ETIQUETA.pendiente;
+    var cw = r.cambio_web;
     var hecho = rev.estado === 'aprobado';
     var cont = h('div', { class: 'actions' });
     var el = h('article', { class: 'card', id: 'res-' + r.id, 'aria-label': r.titulo },
@@ -144,15 +155,18 @@
       r.agentes.length ? h('div', { class: 'tags' }, r.agentes.map(function (a) { return h('span', { class: 'tag', text: a }); })) : null,
       h('p', { class: 'resumen', text: r.resumen }),
       r.pendiente.length ? h('div', null, h('p', { class: 'pend-t', text: 'Pendiente de confirmar' }), h('ul', { class: 'pend' }, r.pendiente.map(function (x) { return h('li', { text: x }); }))) : null,
+      cw ? bloqueWeb(cw) : null,
       r.entregables.map(entregable),
       rev.comentario ? h('p', { class: 'pend-t', text: 'Tu comentario: ' + rev.comentario }) : null,
       cont);
 
-    var aprobar = h('button', { class: 'btn sm', type: 'button', text: hecho ? 'Aprobado' : 'Aprobar' });
+    var aprobar = h('button', { class: 'btn sm', type: 'button', text: hecho ? 'Aprobado' : (cw && cw.estado === 'pendiente' ? 'Aprobar y aplicar a la web' : 'Aprobar') });
     aprobar.disabled = hecho;
     aprobar.addEventListener('click', function () {
       aprobar.disabled = true;
-      post('/api/resultados/' + r.id + '/decision', { decision: 'aprobado' }).then(refrescar).catch(function (e) { aprobar.disabled = false; mostrarAviso(e.message); });
+      var ruta = cw && cw.estado === 'pendiente' ? '/aplicar' : '/decision';
+      var cuerpo = ruta === '/decision' ? { decision: 'aprobado' } : {};
+      post('/api/resultados/' + r.id + ruta, cuerpo).then(refrescar).catch(function (e) { aprobar.disabled = false; mostrarAviso(e.message); });
     });
     var pedir = h('button', { class: 'btn ghost sm', type: 'button', text: 'Pedir cambios' });
     pedir.addEventListener('click', function () {
@@ -172,6 +186,19 @@
       cont.replaceWith(caja);
       ta.focus();
     });
+    if (cw && cw.estado !== 'pendiente') {
+      // El cambio ya está aplicado: solo queda publicar (o ya está publicado)
+      var pub = h('button', { class: 'btn sm', type: 'button', text: cw.estado === 'publicado' ? 'Publicado en internet' : 'Publicar en internet' });
+      pub.disabled = cw.estado === 'publicado';
+      var armado = false;
+      pub.addEventListener('click', function () {
+        if (!armado) { armado = true; pub.textContent = 'Confirmar: publicar ahora'; setTimeout(function () { armado = false; if (!pub.disabled) pub.textContent = 'Publicar en internet'; }, 5000); return; }
+        pub.disabled = true; pub.textContent = 'Publicando…';
+        post('/api/resultados/' + r.id + '/publicar').then(refrescar).catch(function (e) { pub.disabled = false; pub.textContent = 'Publicar en internet'; mostrarAviso(e.message); });
+      });
+      cont.append(pub);
+      return el;
+    }
     cont.append(aprobar, pedir);
     return el;
   }
@@ -179,7 +206,7 @@
   function pintarResultados(lista) {
     var orden = [];
     lista.forEach(function (r) {
-      var sig = JSON.stringify([r.titulo, r.resumen, r.revision, r.entregables.length, r.pendiente.length]);
+      var sig = JSON.stringify([r.titulo, r.resumen, r.revision, r.entregables.length, r.pendiente.length, r.cambio_web]);
       var c = cards[r.id];
       if (!c || c.sig !== sig) {
         // si el usuario está escribiendo cambios en esta tarjeta, no la tocamos

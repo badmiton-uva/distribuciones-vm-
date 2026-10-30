@@ -4,3 +4,4 @@ results/*.json
 node_modules/
 state/logs/
 state/catalogo/
+state/worktrees/

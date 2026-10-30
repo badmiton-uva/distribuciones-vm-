@@ -15,10 +15,12 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 const { spawn } = require('child_process');
+const web = require('./tools/web-cambio');
 
 const ROOT = __dirname;
 const PORT = Number(process.env.PORT) || 3737;
 const HOST = '127.0.0.1'; // solo accesible desde este ordenador
+const PREVIEW_PORT = PORT + 1; // vista previa de cambios de web (otro origen, solo lectura)
 const CLAUDE_BIN = process.env.CLAUDE_BIN || 'claude';
 const TIMEOUT_MS = (Number(process.env.FABRICA_TIMEOUT_MIN) || 15) * 60 * 1000;
 
@@ -132,7 +134,20 @@ function leerResultado(id) {
     requiere_aprobacion: r.requiere_aprobacion !== false,
     pendiente: Array.isArray(r.pendiente) ? r.pendiente.map(String) : [],
     revision: r.revision || { estado: 'pendiente' },
+    cambio_web: normalizarCambioWeb(id, r.cambio_web),
     creado,
+  };
+}
+
+function normalizarCambioWeb(id, cw) {
+  if (!cw || typeof cw !== 'object') return null;
+  const conCopia = cw.estado === 'pendiente' && fs.existsSync(path.join(web.WT, id));
+  return {
+    rama: String(cw.rama || ''),
+    archivos: Array.isArray(cw.archivos) ? cw.archivos.map((a) => ({ estado: String(a.estado || ''), ruta: String(a.ruta || '') })) : [],
+    resumen: String(cw.resumen || ''),
+    estado: ['pendiente', 'aplicado', 'publicado'].includes(cw.estado) ? cw.estado : 'pendiente',
+    vista_previa: conCopia ? `http://localhost:${PREVIEW_PORT}/${id}/` : null,
   };
 }
 
@@ -155,6 +170,9 @@ function decidir(id, decision, comentario) {
     crearPeticion(
       `Corrige el resultado anterior "${titulo}" (id ${id}; está en results/${id}.json).\n` +
         `Cambios pedidos: ${comentario || '(sin detalle: mejora el resultado)'}\n` +
+        (raw.cambio_web && raw.cambio_web.estado === 'pendiente'
+          ? `Es un cambio de la web que parte de la rama ${raw.cambio_web.rama}: el especialista web debe crear su copia con "node tools/web-cambio.js crear <tu id> ${raw.cambio_web.rama}".\n`
+          : '') +
         `Genera una versión nueva con tu id de petición actual.`,
       { origen: 'cambios', relacionada: id }
     );
@@ -191,6 +209,18 @@ function copiarCatalogo() {
   } catch (_) { /* si la carpeta se usa fuera de la web, no pasa nada */ }
 }
 
+function adjuntarCambioWeb(id) {
+  // El servidor, no el agente, comprueba si hay un cambio de web real en Git. Así no se puede "declarar" uno falso.
+  try {
+    const cw = web.info(id);
+    if (!cw) return;
+    const raw = readJSON(fRes(id), null);
+    if (!raw) return;
+    raw.cambio_web = { rama: cw.rama, archivos: cw.archivos, resumen: cw.resumen, estado: 'pendiente' };
+    writeJSON(fRes(id), raw);
+  } catch (e) { log('No se pudo leer el cambio de web:', e.message); }
+}
+
 function entornoSinClaves() {
   const env = { ...process.env };
   // Para usar solo la suscripción: fuera cualquier clave o proveedor de pago.
@@ -223,7 +253,7 @@ function procesar(id) {
 
     const args = [
       '-p', prompt,
-      '--allowedTools', 'Read,Write,Edit,Glob,Grep,Agent,Task,WebSearch,WebFetch,Bash(node tools/estado.js:*)',
+      '--allowedTools', 'Read,Write,Edit,Glob,Grep,Agent,Task,WebSearch,WebFetch,Bash(node tools/estado.js:*),Bash(node tools/web-cambio.js:*),Bash(node --check:*)',
       '--disallowedTools', 'Edit(context/**),Write(context/**),Edit(agents/**),Write(agents/**),Edit(server.js),Write(server.js)',
     ];
 
@@ -241,6 +271,7 @@ function procesar(id) {
       const p2 = readJSON(fPet(id), pet);
       const res = leerResultado(id);
       if (!error && res) {
+        adjuntarCambioWeb(id);
         p2.estado = 'terminada';
         delete p2.error;
         log(`✔ ${id} terminada`);
@@ -402,6 +433,29 @@ async function api(req, res, url) {
     return out ? enviar(res, 200, out) : enviar(res, 404, { error: 'No existe ese resultado.' });
   }
 
+  if ((r = ruta.match(/^\/api\/resultados\/([a-z0-9-]+)\/(aplicar|publicar)$/)) && m === 'POST') {
+    const raw = readJSON(fRes(r[1]), null);
+    if (!raw || !raw.cambio_web) return enviar(res, 404, { error: 'Ese resultado no tiene cambios de web.' });
+    const cw = raw.cambio_web;
+    try {
+      if (r[2] === 'aplicar') {
+        if (cw.estado !== 'pendiente') return enviar(res, 400, { error: 'Este cambio ya está aplicado.' });
+        web.aplicar(r[1], raw.titulo);
+        cw.estado = 'aplicado';
+        raw.revision = { estado: 'aprobado', comentario: '', fecha: ahora() };
+      } else {
+        if (cw.estado !== 'aplicado') return enviar(res, 400, { error: 'Primero hay que aplicar el cambio.' });
+        web.publicar();
+        cw.estado = 'publicado';
+      }
+    } catch (e) {
+      return enviar(res, 409, { error: e.message });
+    }
+    raw.cambio_web = cw;
+    writeJSON(fRes(r[1]), raw);
+    return enviar(res, 200, leerResultado(r[1]));
+  }
+
   return enviar(res, 404, { error: 'No encontrado.' });
 }
 
@@ -435,6 +489,35 @@ const servidor = http.createServer(async (req, res) => {
     if (!res.headersSent) enviar(res, 400, { error: 'Petición no válida.' });
   }
 });
+
+/* Vista previa de los cambios de web: otro puerto = otro origen, así esa web no puede hablar con la API de la fábrica. Solo lectura. */
+const PREVIEW_HOSTS = new Set([`localhost:${PREVIEW_PORT}`, `127.0.0.1:${PREVIEW_PORT}`]);
+const vistaPrevia = http.createServer((req, res) => {
+  try {
+    if (!PREVIEW_HOSTS.has(req.headers.host || '') || req.method !== 'GET') return enviar(res, 403, 'No permitido', 'text/plain; charset=utf-8');
+    const url = new URL(req.url, `http://${req.headers.host}`);
+    const m = decodeURIComponent(url.pathname).match(/^\/([a-z0-9-]+)(\/.*)?$/);
+    if (!m) return enviar(res, 404, 'No encontrado', 'text/plain; charset=utf-8');
+    const base = path.join(web.WT, m[1]);
+    if (!fs.existsSync(base)) return enviar(res, 404, 'Esa vista previa ya no existe.', 'text/plain; charset=utf-8');
+    if (!m[2]) { res.writeHead(301, { Location: `/${m[1]}/` }); return res.end(); }
+    let rel = m[2];
+    if (rel.endsWith('/')) rel += 'index.html';
+    const file = path.normalize(path.join(base, rel));
+    if (!file.startsWith(base + path.sep) || file.startsWith(path.join(base, '.git'))) return enviar(res, 403, 'Prohibido', 'text/plain; charset=utf-8');
+    fs.readFile(file, (err, data) => {
+      if (err) return enviar(res, 404, 'No encontrado', 'text/plain; charset=utf-8');
+      const ext = path.extname(file).toLowerCase();
+      res.writeHead(200, {
+        'Content-Type': { ...TIPOS, '.mp4': 'video/mp4', '.webm': 'video/webm', '.gif': 'image/gif', '.ico': 'image/x-icon' }[ext] || 'application/octet-stream',
+        'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff', 'Referrer-Policy': 'no-referrer',
+      });
+      res.end(data);
+    });
+  } catch (_) { enviar(res, 400, 'Petición no válida', 'text/plain; charset=utf-8'); }
+});
+vistaPrevia.on('error', (e) => log(`La vista previa no está disponible (puerto ${PREVIEW_PORT}): ${e.message}`));
+vistaPrevia.listen(PREVIEW_PORT, HOST);
 
 servidor.listen(PORT, HOST, () => {
   log(`Fábrica de Agentes lista en http://localhost:${PORT}`);

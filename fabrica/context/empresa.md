@@ -63,4 +63,5 @@
 2. No se inventan precios, descuentos, stock ni plazos. Lo que no esté aquí se marca como pendiente.
 3. No se comparten datos de un cliente con otro.
 4. Las quejas se responden en el mismo día laborable. [RELLENAR si no es así]
-5. [RELLENAR] otras reglas internas
+5. Los cambios en la web se hacen siempre en una copia de prueba y solo se aplican o publican cuando una persona lo aprueba.
+6. [RELLENAR] otras reglas internas

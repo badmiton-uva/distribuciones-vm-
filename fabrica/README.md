@@ -37,7 +37,7 @@ Opciones (variables de entorno, todas opcionales):
 
 | Variable | Para qué | Por defecto |
 |---|---|---|
-| `PORT` | Cambiar el puerto | `3737` |
+| `PORT` | Cambiar el puerto (la vista previa usa el siguiente) | `3737` |
 | `CLAUDE_BIN` | Ruta de Claude Code si no está en el PATH | `claude` |
 | `FABRICA_TIMEOUT_MIN` | Minutos máximos por petición | `15` |
 
@@ -63,13 +63,14 @@ Ejemplo: `PORT=3800 node server.js` (en Windows PowerShell: `$env:PORT=3800; nod
 | Carpeta / archivo | Qué es |
 |---|---|
 | `agents/capataz.md` | Instrucciones del coordinador |
-| `agents/*.md` | Un archivo por especialista |
+| `agents/*.md` | Un archivo por especialista (incluido `web.md`, que cambia la web) |
 | `context/empresa.md` | Todo lo que saben los agentes de la empresa |
 | `inbox/` | Peticiones nuevas (las crea la web) |
 | `results/` | Resultados terminados (los crea el capataz) |
 | `schedules.md` | Tareas que se hacen solas |
 | `web/` | La página (HTML, CSS y JS) |
-| `state/` | Estados y registros internos. No tocar |
+| `tools/` | Pequeños programas que usan los agentes (estado y cambios de web) |
+| `state/` | Estados, registros y copias de trabajo. No tocar |
 
 ---
 
@@ -106,6 +107,19 @@ Mueve su archivo fuera de `agents/` (por ejemplo a una carpeta `archivo`). No bo
 
 Importante: las tareas solo se ejecutan **con el servidor encendido**. Si lo enciendes después de la hora, esa tarea se lanza una vez ese mismo día.
 Cada ejecución consume parte de tu suscripción, así que programa solo lo que de verdad te sirva.
+
+### Pedir cambios en la web
+Escribe en el chat lo que quieras, por ejemplo: *"Cambia el texto de la portada por…"* o *"Añade una sección de novedades a la página de café"*. El capataz se lo pasa al agente **Web**, que usa Claude Code para editar los archivos de la web.
+
+Para que no pase nada raro, funciona así:
+1. El agente trabaja en una **copia aparte** (una rama de Git, `fabrica/<id>`, dentro de `state/worktrees/`). Tu web real **no se toca**.
+2. En "Resultados" aparece la lista de archivos cambiados y un enlace **"Ver vista previa"** (`http://localhost:3738/...`) para ver la web con los cambios.
+3. **Aprobar y aplicar a la web:** une el cambio a tu rama actual de la web (en tu ordenador).
+4. **Publicar en internet:** hace `git push` de esa rama. Pide confirmación con un segundo clic. La web se actualiza cuando tu sistema de publicación (GitHub Pages) la despliegue.
+5. **Pedir cambios:** el agente rehace el cambio a partir de la misma copia.
+
+Reglas de seguridad: el agente solo puede ejecutar `node tools/web-cambio.js`; no toca las carpetas `fabrica/` ni `.github/` (si lo intenta, se revierte); no publica nada por su cuenta. Necesitas **Git** instalado y que la carpeta `fabrica` esté dentro del repositorio de la web, con la web sin cambios sin guardar al aplicar.
+Importante: `Publicar` sube la rama en la que estás. Mira en `.github/workflows/pages.yml` qué ramas despliegan la web.
 
 ### Aprobar o pedir cambios
 En la sección "Resultados" de la web, cada tarjeta tiene dos botones:
