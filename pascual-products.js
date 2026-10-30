@@ -19,6 +19,13 @@ window.ProductWorld.init({
       ]
     },
     {
+      template: 'hero', family: 'Leche Classic', color: '#f1e6da', ink: '#3a2418',
+      eyebrow: 'Botella de 1,5 litros', title: 'Classic, también en botella.',
+      description: 'Leche Classic semidesnatada en botella de 1,5 litros, con un precio más ajustado e ideal para la cafetería.',
+      backword: 'CLASSIC', bottom: 'Leche Classic · 1,5 L · precio más ajustado, ideal para la cafetería',
+      product: {name:'Leche Pascual Classic · 1,5 L', image:'assets/pascual/classic-botella-1-5l.webp', width:168, height:512, alt:'Botella de Leche Pascual Profesional Classic de 1,5 litros'}
+    },
+    {
       template: 'story', family: 'Leche Classic', color: '#3a2418', ink: '#f5ead9', dark: true,
       eyebrow: 'Ventajas del formato', title: 'Por qué el bag in box.',
       frames: [
