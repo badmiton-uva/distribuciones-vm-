@@ -168,3 +168,14 @@ details.ent .ent-a{color:var(--muted);font-size:.8rem;display:block}
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
   .hero h1,.lead,.hero .btn{opacity:1}
 }
+
+/* Ajustes (modo artefacto) */
+.set-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:900px){.set-grid{grid-template-columns:1fr}}
+.set{display:flex;flex-direction:column;gap:8px}
+.set h3{font-size:1.15rem}
+.set label{font-size:.88rem;color:var(--muted);margin-top:6px}
+.set input,.set select,.set textarea{background:var(--s2);border:1px solid var(--line-2);border-radius:12px;padding:10px 12px;color:var(--text);outline:0;width:100%;font:inherit}
+.set textarea{resize:vertical;line-height:1.5}
+.set input:focus,.set select:focus,.set textarea:focus{border-color:rgba(255,255,255,.34)}
+.set .actions{align-items:center}

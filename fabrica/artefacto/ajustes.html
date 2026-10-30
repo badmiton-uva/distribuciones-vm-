@@ -1,0 +1,25 @@
+  <section id="ajustes" class="settings" aria-labelledby="h-aj" hidden>
+    <div class="sec-head">
+      <h2 id="h-aj">Ajustes</h2>
+      <p class="muted">Cambia lo que saben y cómo trabajan los agentes. Se guarda en tu cuenta y se aplica a la siguiente petición.</p>
+    </div>
+    <div class="set-grid">
+      <div class="panel set">
+        <h3>Información de la empresa</h3>
+        <p class="muted">Precios, condiciones, clientes, tono y preguntas frecuentes. Los agentes solo darán por cierto lo que ponga aquí. Rellena las líneas con [RELLENAR].</p>
+        <label for="set-ctx" class="sr">Información de la empresa</label>
+        <textarea id="set-ctx" rows="16"></textarea>
+        <div class="actions"><button id="set-ctx-save" class="btn sm" type="button">Guardar información</button><span id="set-ctx-msg" class="muted" role="status"></span></div>
+      </div>
+      <div class="panel set">
+        <h3>Agentes</h3>
+        <label for="set-ag">Agente</label><select id="set-ag"></select>
+        <label for="set-nom">Nombre</label><input id="set-nom" type="text" maxlength="60">
+        <label for="set-fn">Qué hace (una frase)</label><input id="set-fn" type="text" maxlength="300">
+        <label for="set-ins">Instrucciones</label><textarea id="set-ins" rows="10"></textarea>
+        <div class="actions"><button id="set-ag-save" class="btn sm" type="button">Guardar agente</button><button id="set-borrar" class="btn ghost sm" type="button">Quitar agente</button><span id="set-ag-msg" class="muted" role="status"></span></div>
+        <div class="actions"><button id="set-reset" class="btn ghost sm" type="button">Restaurar valores originales</button></div>
+      </div>
+    </div>
+  </section>
+

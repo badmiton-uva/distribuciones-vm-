@@ -3,6 +3,7 @@
 (function () {
   'use strict';
 
+  var ART = window.FABRICA_MODO === 'artefacto'; // dentro de Claude: sin servidor local
   var API = window.FABRICA_API || ''; // vacío = mismo servidor. Ver README para integrarlo en otra web.
   var POLL_MS = 2500;
 
@@ -134,12 +135,15 @@
   }
 
   function bloqueWeb(cw) {
-    var texto = { pendiente: 'Cambios preparados en una copia. Tu web real no se ha tocado.', aplicado: 'Aplicado en tu copia de la web. Falta publicarlo en internet.', publicado: 'Publicado en internet.' }[cw.estado];
+    var textos = ART
+      ? { pendiente: 'Orden de cambio preparada. Tu web real no se ha tocado.', aprobado: 'Aprobado. Para aplicarlo, dile a Claude Code: "aplica los cambios de web pendientes".', aplicado: 'Aplicado por Claude Code en una rama. Para publicarlo, dile a Claude Code: "publica el cambio".', publicado: 'Publicado en internet.' }
+      : { pendiente: 'Cambios preparados en una copia. Tu web real no se ha tocado.', aplicado: 'Aplicado en tu copia de la web. Falta publicarlo en internet.', publicado: 'Publicado en internet.' };
     return h('div', { class: 'cw' },
       h('p', { class: 'pend-t', text: 'Cambios en la web' }),
-      h('p', { class: 'cw-t', text: texto }),
-      h('ul', { class: 'pend' }, cw.archivos.map(function (a) { return h('li', { text: a.ruta + ' (' + a.estado + ')' }); })),
+      h('p', { class: 'cw-t', text: textos[cw.estado] || '' }),
+      cw.archivos.length ? h('ul', { class: 'pend' }, cw.archivos.map(function (a) { return h('li', { text: a.ruta + ' (' + a.estado + ')' }); })) : null,
       cw.resumen ? h('p', { class: 'pend-t', text: cw.resumen }) : null,
+      cw.nota ? h('p', { class: 'pend-t', text: 'Nota: ' + cw.nota }) : null,
       cw.vista_previa ? h('a', { class: 'link-btn', href: cw.vista_previa, target: '_blank', rel: 'noopener', text: 'Ver vista previa de la web con los cambios' }) : null);
   }
 
@@ -160,7 +164,7 @@
       rev.comentario ? h('p', { class: 'pend-t', text: 'Tu comentario: ' + rev.comentario }) : null,
       cont);
 
-    var aprobar = h('button', { class: 'btn sm', type: 'button', text: hecho ? 'Aprobado' : (cw && cw.estado === 'pendiente' ? 'Aprobar y aplicar a la web' : 'Aprobar') });
+    var aprobar = h('button', { class: 'btn sm', type: 'button', text: hecho ? 'Aprobado' : (cw && cw.estado === 'pendiente' ? (ART ? 'Aprobar para aplicar en la web' : 'Aprobar y aplicar a la web') : 'Aprobar') });
     aprobar.disabled = hecho;
     aprobar.addEventListener('click', function () {
       aprobar.disabled = true;
@@ -186,6 +190,7 @@
       cont.replaceWith(caja);
       ta.focus();
     });
+    if (cw && cw.estado !== 'pendiente' && ART) return el;
     if (cw && cw.estado !== 'pendiente') {
       // El cambio ya está aplicado: solo queda publicar (o ya está publicado)
       var pub = h('button', { class: 'btn sm', type: 'button', text: cw.estado === 'publicado' ? 'Publicado en internet' : 'Publicar en internet' });
