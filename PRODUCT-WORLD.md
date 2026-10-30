@@ -59,3 +59,8 @@ Todas estas imágenes proceden de webs de marcas o distribuidores. Sus derechos 
 `congelados.html` + `congelados-products.js` + `congelados.css`: 64 productos en 5 escenas `lineup` (panes y barras, croissants, bollería dulce, snacks salados y pastelería). Los textos son los facilitados por el cliente.
 
 **Imágenes.** Las 64 fotografías proceden del catálogo oficial de Panamar (archivos guardados desde el navegador; la web del catálogo bloquea las descargas automáticas). Para regenerar la sección con otras imágenes: `python3 -I _herramientas/congelados/build.py <carpeta_con_las_imagenes>`. `mapa.json` indica qué archivo del catálogo corresponde a cada producto; los marcados como `aproximado` usan el producto más cercano del catálogo (Baguettina Express 120 g, Barra Verité 250 g, Croissant Art Supreme 80 g, Napolitana Decorada de Crema 118 g y Lámina de Hojaldre 60 × 40 cm).
+
+
+## Leche Classic bag in box (Pascual)
+
+En `pascual-products.js`, tras la portada, van tres escenas de Leche Classic: la caja de 10 L (hero), «Bag in box de 10 litros» (editorial, con el banner del nuevo formato y el enfriador de leche) y «Por qué el bag in box» (story, cuatro ventajas con sus iconos dorados recortados de las imágenes aportadas). Los textos de las ventajas son los facilitados por el cliente. El 33 % de rentabilidad figura con su nota original («comprobado por nuestros maestros baristas»). Las imágenes del latte art, el dispensador suelto, la jarra roja y el sello del 33 % que se pegaron en el chat no llegaron como archivos; el banner `classic-bag-in-box.webp` ya muestra enfriador, taza y jarra roja.

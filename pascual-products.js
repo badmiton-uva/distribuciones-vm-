@@ -10,6 +10,25 @@ window.ProductWorld.init({
       product: {name:'Leche Pascual Classic semidesnatada · caja de 10 L', image:'assets/pascual/classic-10l.webp', width:333, height:434, alt:'Caja de 10 litros de leche Pascual Profesional Classic, ideal para café'}
     },
     {
+      template: 'editorial', family: 'Leche Classic', color: '#f1e6da', ink: '#3a2418',
+      eyebrow: 'Nuevo formato para hostelería', title: 'Bag in box de 10 litros.',
+      description: 'Leche Classic en caja de 10 litros, para llenar el enfriador de leche con una sola acción.',
+      products: [
+        {name:'Bag in box · 10 L', description:'La caja de 10 L de Leche Classic junto al enfriador de leche, la taza y la jarra Classic.', image:'assets/pascual/classic-bag-in-box.webp', width:1400, height:787, cover:true, alt:'Nuevo formato para hostelería: caja bag in box de Leche Classic de 10 L, enfriador de leche, taza y jarra roja'},
+        {name:'Enfriador de leche', description:'Con una sola acción llenas tu enfriador con 10 L de nuestra mejor leche.', image:'assets/pascual/classic-enfriador.webp', width:275, height:275, cover:true, alt:'Enfriador de leche Pascual'}
+      ]
+    },
+    {
+      template: 'story', family: 'Leche Classic', color: '#3a2418', ink: '#f5ead9', dark: true,
+      eyebrow: 'Ventajas del formato', title: 'Por qué el bag in box.',
+      frames: [
+        {name:'Menos residuos, más sostenible', description:'Los números no engañan: 49 % menos de residuos y 7 % menos de CO2 por litro movido (vs. botella de 1,5 L).', image:'assets/pascual/ventaja-residuos.webp', width:270, height:270, alt:'Icono de reciclaje', color:'#3a2418'},
+        {name:'Mayor rentabilidad', description:'Mejor precio, como la emulsión de la leche es mejor, tu rentabilidad puede aumentar hasta un 33 % (comprobado por nuestros maestros baristas).', image:'assets/pascual/ventaja-rentabilidad.webp', width:213, height:237, alt:'Icono del euro', color:'#4a2e20'},
+        {name:'Almacenamiento más eficiente', description:'Hemos pensado que una forma cúbica sería la mejor y más óptima manera de poder almacenar nuestra leche.', image:'assets/pascual/ventaja-almacenamiento.webp', width:273, height:273, alt:'Icono de estantería con cajas', color:'#3a2418'},
+        {name:'Mayor rapidez en la operación', description:'Ya no tendrás que ir abriendo mil botellas una a una: a partir de ahora, con una sola acción llenarás tu enfriador con 10 L de nuestra mejor leche.', image:'assets/pascual/ventaja-rapidez.webp', width:291, height:291, alt:'Icono de reloj', color:'#4a2e20'}
+      ]
+    },
+    {
       template: 'hero', family: 'Leche Pascual', color: '#f4efe7', ink: '#271e1b',
       eyebrow: 'La barra empieza aquí', title: 'Intense. La leche entra en escena.',
       description: 'Leche Pascual Intense para hostelería, en botella de 1,5 litros. Un producto protagonista para descubrir de cerca.',
