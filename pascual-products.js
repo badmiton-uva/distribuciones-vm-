@@ -3,18 +3,18 @@ window.ProductWorld.init({
   mount: '#familias',
   sections: [
     {
+      template: 'hero', family: 'Leche Pascual', color: '#efe3d6', ink: '#3a2418',
+      eyebrow: 'Pascual Profesional', title: 'Classic. Para la barra y el café.',
+      description: 'Leche semidesnatada Classic, más ajustada en precio e ideal para la barra y el café. Leche de Bienestar Animal para hostelería, de sabor suave y con la cremosidad de la leche. Tiene las mismas cualidades de emulsión que la variedad entera por su contenido en proteína.',
+      backword: 'CLASSIC', bottom: '01 — Leche semidesnatada · más ajustada en precio',
+      product: {name:'Leche Pascual Classic semidesnatada · caja de 10 L', image:'assets/pascual/classic-10l.webp', width:333, height:434, alt:'Caja de 10 litros de leche Pascual Profesional Classic, ideal para café'}
+    },
+    {
       template: 'hero', family: 'Leche Pascual', color: '#f4efe7', ink: '#271e1b',
       eyebrow: 'La barra empieza aquí', title: 'Intense. La leche entra en escena.',
       description: 'Leche Pascual Intense para hostelería, en botella de 1,5 litros. Un producto protagonista para descubrir de cerca.',
-      backword: 'INTENSE', bottom: '01 — Leche para hostelería',
+      backword: 'INTENSE', bottom: '02 — Leche para hostelería',
       product: {name:'Leche Pascual Intense · 1,5 L', image:'assets/pascual/intense-cutout.webp', width:240, height:688, alt:'Botella original Leche Pascual Intense para hostelería de 1,5 litros'}
-    },
-    {
-      template: 'hero', family: 'Leche Pascual', color: '#efe3d6', ink: '#3a2418',
-      eyebrow: 'Pascual Profesional', title: 'Classic. Leche ideal para café.',
-      description: 'Leche de Bienestar Animal para hostelería. Nuestra leche Classic semidesnatada es una equilibrada combinación de sabor suave y la cremosidad de la leche, con las mismas cualidades de emulsión de la variedad entera por su contenido en proteína.',
-      backword: 'CLASSIC', bottom: 'Leche Classic semidesnatada · hostelería',
-      product: {name:'Leche Pascual Classic semidesnatada · caja de 10 L', image:'assets/pascual/classic-10l.webp', width:333, height:434, alt:'Caja de 10 litros de leche Pascual Profesional Classic, ideal para café'}
     },
     {
       template: 'range', family: 'Vivesoy Barista', color: '#e9eacb', ink: '#214b32',
