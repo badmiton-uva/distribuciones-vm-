@@ -1,0 +1,6 @@
+state/*.json
+inbox/*.json
+results/*.json
+node_modules/
+state/logs/
+state/catalogo/

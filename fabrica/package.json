@@ -1,0 +1,12 @@
+{
+  "name": "fabrica-de-agentes-vm",
+  "version": "1.0.0",
+  "description": "Fábrica de Agentes de IA de Distribuciones Valentín. Funciona con Claude Code y tu suscripción, sin API de pago.",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

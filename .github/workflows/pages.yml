@@ -28,7 +28,7 @@ jobs:
       - name: Preparar sitio
         run: |
           mkdir _site
-          rsync -a --exclude='.git*' --exclude='_site' --exclude='_herramientas' --exclude='*.md' ./ _site/
+          rsync -a --exclude='.git*' --exclude='_site' --exclude='_herramientas' --exclude='fabrica' --exclude='*.md' ./ _site/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site

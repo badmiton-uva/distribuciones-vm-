@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Fábrica de Agentes · Distribuciones Valentín</title>
+<meta name="description" content="Pide un trabajo a tu equipo de agentes de IA y revisa los resultados antes de que salga nada al exterior.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#chat">Saltar al chat</a>
+
+<header class="top">
+  <a class="brand" href="#inicio" aria-label="Fábrica de Agentes, inicio">
+    <span class="brand-dot" aria-hidden="true"></span>
+    <span>Fábrica de Agentes</span>
+  </a>
+  <nav aria-label="Principal">
+    <a href="#chat">Chat</a>
+    <a href="#resultados">Resultados</a>
+    <a href="#como">Cómo funciona</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<div id="aviso" class="aviso" role="status" hidden></div>
+
+<main id="inicio">
+  <section class="hero" aria-labelledby="h-hero">
+    <p class="eyebrow">Distribuciones Valentín</p>
+    <h1 id="h-hero">Un equipo de agentes que trabaja para tu distribuidora.</h1>
+    <p class="lead">Cuéntale al capataz lo que necesitas. Él lo reparte entre los especialistas y te entrega el resultado listo para revisar. Nada sale a un cliente sin tu aprobación.</p>
+    <a class="btn" href="#chat" id="btn-pedir">Pedir un trabajo</a>
+  </section>
+
+  <section id="chat" class="work" aria-label="Chat con el capataz y equipo">
+    <div class="panel chat">
+      <div class="panel-head">
+        <div>
+          <h2>Capataz</h2>
+          <p class="muted">Escribe tu petición con tus palabras.</p>
+        </div>
+        <span class="pill" id="estado-capataz"><i class="dot libre"></i><span>Libre</span></span>
+      </div>
+
+      <div id="log" class="log" role="log" aria-live="polite" aria-label="Conversación con el capataz" tabindex="0">
+        <div class="empty" id="log-vacio">
+          <p>Todavía no hay peticiones. Prueba con una de estas:</p>
+          <div class="chips" id="ejemplos">
+            <button type="button" class="chip">Prepara un presupuesto para un bar que pide café, leche y aguas cada semana</button>
+            <button type="button" class="chip">Escribe 3 publicaciones para Instagram sobre nuestro café Mocay</button>
+            <button type="button" class="chip">Redacta una respuesta a un cliente que recibió un pedido incompleto</button>
+          </div>
+        </div>
+      </div>
+
+      <form id="form" class="composer" novalidate>
+        <label for="texto" class="sr">Tu petición para el capataz</label>
+        <textarea id="texto" name="texto" rows="2" maxlength="4000" placeholder="¿Qué necesitas que hagamos hoy?" required></textarea>
+        <button class="send" type="submit" aria-label="Enviar petición">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 19V5m0 0-6 6m6-6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </form>
+      <p class="hint">Intro para enviar · Mayús + Intro para una línea nueva</p>
+    </div>
+
+    <aside class="panel team" aria-labelledby="h-team">
+      <div class="panel-head">
+        <div>
+          <h2 id="h-team">Equipo</h2>
+          <p class="muted">Quién hace qué ahora mismo.</p>
+        </div>
+      </div>
+      <ul id="agentes" class="agentes" aria-live="polite"></ul>
+    </aside>
+  </section>
+
+  <section id="resultados" class="results" aria-labelledby="h-res">
+    <div class="sec-head">
+      <h2 id="h-res">Resultados</h2>
+      <p class="muted">Todo lo que se ha terminado. Revísalo y decide: aprobar o pedir cambios.</p>
+    </div>
+    <div id="tarjetas" class="cards"></div>
+    <p id="res-vacio" class="muted empty-line">Aquí aparecerán los trabajos terminados.</p>
+  </section>
+
+  <section id="como" class="how" aria-labelledby="h-how">
+    <div class="sec-head">
+      <h2 id="h-how">Cómo funciona</h2>
+    </div>
+    <ol class="steps">
+      <li><span class="n">1</span><h3>Pides</h3><p>Escribes lo que necesitas en el chat, como se lo dirías a un empleado.</p></li>
+      <li><span class="n">2</span><h3>Trabajan</h3><p>El capataz reparte el trabajo entre ventas, presupuestos, marketing y el resto del equipo, en paralelo.</p></li>
+      <li><span class="n">3</span><h3>Decides</h3><p>Recibes un resumen y los borradores. Tú apruebas o pides cambios. Los agentes nunca envían nada solos.</p></li>
+    </ol>
+  </section>
+
+  <section id="contacto" class="contact" aria-labelledby="h-con">
+    <div class="sec-head">
+      <h2 id="h-con">Contacto</h2>
+      <p class="muted">¿Quieres añadir un agente o cambiar cómo trabajan? Escríbenos.</p>
+    </div>
+    <div class="contact-grid">
+      <a class="panel link-card" href="tel:+34635098044"><span class="muted">Teléfono</span><strong>635 09 80 44</strong></a>
+      <a class="panel link-card" href="mailto:oficina@distribucionesvm.es"><span class="muted">Correo</span><strong>oficina@distribucionesvm.es</strong></a>
+      <div class="panel link-card"><span class="muted">Dirección</span><strong>Cl Labradores, 45, parcela 24B · 47400 Medina del Campo</strong></div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>Distribuciones Valentín · Fábrica de Agentes · Funciona en local con tu suscripción de Claude.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
