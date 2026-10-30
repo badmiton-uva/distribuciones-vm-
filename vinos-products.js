@@ -37,10 +37,10 @@ window.ProductWorld.init({
       eyebrow:'Palacio de Bornos · Tintos', title:'Tintos de Ribera.',
       note:'Una imagen por variedad',
       variants:[
-        {name:'Dominio de Bornos Roble · 2024', description:'Tinto roble 2024 de Dominio de Bornos.'},
-        {name:'Lleiroso Crianza · 2022', description:'Lleiroso Crianza 2022, Ribera del Duero.', image:B+'lleiroso.webp', width:435, height:1320, alt:'Botella Lleiroso Crianza'},
-        {name:'Lleiroso Reserva · 2021', description:'Lleiroso Reserva 2021, Ribera del Duero.'},
-        {name:'Lleiroso Crianza · Magnum 2021', description:'Lleiroso Crianza 2021 en formato magnum, Ribera del Duero.'}
+        {name:'Dominio de Bornos Roble · 2024', description:'Tinto roble 2024 de Dominio de Bornos.', image:B+'dominio-de-bornos-roble.webp', width:128, height:494, alt:'Botella Dominio de Bornos Roble, Ribera del Duero'},
+        {name:'Lleiroso Crianza · 2022', description:'Lleiroso Crianza 2022, Ribera del Duero.', image:B+'lleiroso-crianza-tempranillo.webp', width:130, height:489, alt:'Botella Lleiroso Crianza, Ribera del Duero'},
+        {name:'Lleiroso Reserva · 2021', description:'Lleiroso Reserva 2021, Ribera del Duero.', image:B+'lleiroso-reserva-2021.webp', width:130, height:490, alt:'Botella Lleiroso Reserva, Ribera del Duero'},
+        {name:'Lleiroso Crianza · Magnum 2021', description:'Lleiroso Crianza 2021 en formato magnum, Ribera del Duero. Imagen de la botella estándar.', image:B+'lleiroso-crianza-tempranillo.webp', width:130, height:489, alt:'Botella Lleiroso Crianza, imagen del formato estándar'}
       ]
     },
     {
@@ -49,9 +49,9 @@ window.ProductWorld.init({
       note:'Una imagen por variedad',
       variants:[
         {name:'Espumoso Palacio de Bornos Brut', description:'Vino espumoso Brut de Palacio de Bornos.', image:B+'bornos-espumoso-brut.webp', width:208, height:756, alt:'Botella Palacio de Bornos Verdejo Brut, espumoso de Rueda'},
-        {name:'Espumoso Palacio de Bornos Nature', description:'Vino espumoso Nature de Palacio de Bornos.'},
-        {name:'Espumoso Palacio de Bornos Semiseco', description:'Vino espumoso semiseco de Palacio de Bornos.'},
-        {name:'Espumoso Palacio de Bornos Rosado', description:'Vino espumoso rosado de Palacio de Bornos.'}
+        {name:'Espumoso Palacio de Bornos Nature', description:'Vino espumoso Nature de Palacio de Bornos.', image:B+'bornos-espumoso-brut-nature.webp', width:222, height:755, alt:'Botella Palacio de Bornos Verdejo Brut Nature, espumoso de Rueda'},
+        {name:'Espumoso Palacio de Bornos Semiseco', description:'Vino espumoso semiseco de Palacio de Bornos.', image:B+'bornos-espumoso-semiseco.webp', width:208, height:755, alt:'Botella Palacio de Bornos Verdejo Semiseco, espumoso de Rueda'},
+        {name:'Espumoso Palacio de Bornos Rosado', description:'Vino espumoso rosado de Palacio de Bornos.', image:B+'bornos-espumoso-rosado-semiseco.webp', width:208, height:755, alt:'Botella Palacio de Bornos Rosado Semiseco, espumoso de Rueda'}
       ]
     },
     {
