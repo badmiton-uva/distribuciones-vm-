@@ -27,11 +27,23 @@ window.ProductWorld.init({
       ]
     },
     {
+      template: 'lineup', family: 'Bifrutas', color: '#ffd9b0', ink: '#6b2f0e',
+      eyebrow: 'Sabor Original', title: 'Bifrutas, en cuatro sabores.',
+      note: 'Una imagen por variedad',
+      variants: [
+        {name:'Tropical · 330 ml', description:'Bifrutas Sabor Original Tropical, con vitaminas A, C y E, en brik de 330 ml.', image:'assets/pascual/bifrutas-tropical-330ml.webp', width:216, height:508, alt:'Brik de Bifrutas Sabor Original Tropical de 330 ml'},
+        {name:'Tropical · 200 ml', description:'Bifrutas Sabor Original Tropical, con vitaminas A, C y E, en brik de 200 ml.', image:'assets/pascual/bifrutas-tropical-200ml.webp', width:206, height:400, alt:'Brik pequeño de Bifrutas Sabor Original Tropical de 200 ml'},
+        {name:'Tropical · brik grande', description:'Bifrutas Sabor Original Tropical, con vitaminas A, C y E, en brik grande.', image:'assets/pascual/bifrutas-tropical-brik-grande.webp', width:188, height:500, alt:'Brik grande de Bifrutas Sabor Original Tropical'},
+        {name:'Paraíso · 330 ml', description:'Bifrutas Sabor Original Paraíso, con vitaminas A, C y E, en brik de 330 ml.', image:'assets/pascual/bifrutas-paraiso-330ml.webp', width:213, height:502, alt:'Brik de Bifrutas Sabor Original Paraíso de 330 ml'},
+        {name:'Pacífico · 330 ml', description:'Bifrutas Sabor Original Pacífico, con vitaminas A, C y E, en brik de 330 ml.', image:'assets/pascual/bifrutas-pacifico-330ml.webp', width:215, height:510, alt:'Brik de Bifrutas Sabor Original Pacífico de 330 ml'},
+        {name:'Mediterráneo · 330 ml', description:'Bifrutas Sabor Original Mediterráneo, con vitaminas A, C y E, en brik de 330 ml.', image:'assets/pascual/bifrutas-mediterraneo-330ml.webp', width:215, height:509, alt:'Brik de Bifrutas Sabor Original Mediterráneo de 330 ml'}
+      ]
+    },
+    {
       template: 'editorial', family: 'Bebidas Pascual', color: '#ffedda', ink: '#512f1c',
       eyebrow: 'Una selección para cada momento', title: 'Color en la carta.',
-      description: 'Bifrutas Tropical, batidos y zumos Essential de Pascual en un recorrido lleno de color.',
+      description: 'Batidos y zumos Essential de Pascual en un recorrido lleno de color.',
       products: [
-        {name:'Bifrutas Tropical', description:'Uno de los sabores de la gama Bifrutas.', image:'assets/pascual/bifrutas-tropical.webp', width:240, height:285, alt:'Brik original de Bifrutas Tropical'},
         {name:'Batidos Pascual', description:'Vainilla, chocolate y fresa junto a ColaCao.', image:'assets/pascual/batidos.webp', width:430, height:385, alt:'Botellas originales de batidos Pascual y ColaCao'},
         {name:'Zumos Essential', description:'Una selección de botellas Pascual Essential.', image:'assets/pascual/essential.webp', width:680, height:480, alt:'Botellas originales de zumo Pascual Essential'}
       ]
