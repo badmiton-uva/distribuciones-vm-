@@ -69,7 +69,8 @@ window.ProductWorld.init({
       eyebrow:'Más nombres en la selección', title:'Otras referencias.',
       note:'Una imagen por variedad',
       variants:[
-        {name:'Pinna Fidelis Roble', description:'Vino de Pinna Fidelis, Ribera del Duero.', image:B+'pinna-fidelis.webp', width:130, height:365, alt:'Botella Pinna Fidelis Roble'}
+        {name:'Pinna Fidelis Roble', description:'Vino de Pinna Fidelis, Ribera del Duero.', image:B+'pinna-fidelis.webp', width:130, height:365, alt:'Botella Pinna Fidelis Roble'},
+        {name:'Pinna Fidelis Crianza', description:'Crianza de Pinna Fidelis, Ribera del Duero.', image:B+'pinna-fidelis-crianza.webp', width:140, height:560, alt:'Botella Pinna Fidelis Crianza, Ribera del Duero'}
       ]
     }
   ]
